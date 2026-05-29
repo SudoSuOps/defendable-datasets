@@ -1,0 +1,1 @@
+{"template":"notice","variables":["recipient","issue","deadline"],"output":"Editable notice template with bracketed variables."}

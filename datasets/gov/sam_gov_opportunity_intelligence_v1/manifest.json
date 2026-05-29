@@ -1,0 +1,1 @@
+{ "id": "sam_gov_opportunity_intelligence_v1", "status": "demo", "card": "dataset.card.md", "samples": "samples/", "receipts": "receipts/", "splits": "splits/" }

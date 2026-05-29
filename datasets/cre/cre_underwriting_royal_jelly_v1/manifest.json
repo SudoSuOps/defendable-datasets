@@ -1,0 +1,9 @@
+{
+  "id": "cre_underwriting_royal_jelly_v1",
+  "registry_path": "data/registry/datasets.json",
+  "status": "demo",
+  "card": "dataset.card.md",
+  "samples": "samples/",
+  "receipts": "receipts/",
+  "splits": "splits/"
+}

@@ -1,0 +1,9 @@
+[
+  { "id": "instruction-tuning", "name": "Instruction Tuning" },
+  { "id": "classification", "name": "Classification" },
+  { "id": "extraction", "name": "Extraction" },
+  { "id": "ranking", "name": "Ranking" },
+  { "id": "summarization", "name": "Summarization" },
+  { "id": "qa", "name": "Question Answering" },
+  { "id": "entity-resolution", "name": "Entity Resolution" }
+]

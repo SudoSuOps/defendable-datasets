@@ -1,0 +1,1 @@
+{ "id": "general_agent_instruction_pairs_v1", "status": "demo", "card": "dataset.card.md", "samples": "samples/", "receipts": "receipts/", "splits": "splits/" }

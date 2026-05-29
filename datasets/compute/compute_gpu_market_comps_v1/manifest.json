@@ -1,0 +1,9 @@
+{
+  "id": "compute_gpu_market_comps_v1",
+  "registry_path": "data/registry/datasets.json",
+  "status": "demo",
+  "card": "dataset.card.md",
+  "samples": "samples/",
+  "receipts": "receipts/",
+  "splits": "splits/"
+}

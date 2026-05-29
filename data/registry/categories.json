@@ -1,0 +1,12 @@
+[
+  { "id": "underwriting", "domain_id": "commercial-real-estate", "name": "Underwriting" },
+  { "id": "market-comps", "domain_id": "compute-valuation", "name": "Market Comps" },
+  { "id": "appeals", "domain_id": "medical-billing", "name": "Appeals" },
+  { "id": "dispute-letters", "domain_id": "credit-repair", "name": "Dispute Letters" },
+  { "id": "opportunity-intelligence", "domain_id": "government-contracting", "name": "Opportunity Intelligence" },
+  { "id": "templates", "domain_id": "legal-letters", "name": "Templates" },
+  { "id": "site-assessment", "domain_id": "energy", "name": "Site Assessment" },
+  { "id": "lead-intelligence", "domain_id": "local-services", "name": "Lead Intelligence" },
+  { "id": "ops-qa", "domain_id": "mining-crypto", "name": "Operations Q&A" },
+  { "id": "agent-instructions", "domain_id": "general-instruction-tuning", "name": "Agent Instructions" }
+]

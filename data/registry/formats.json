@@ -1,0 +1,7 @@
+[
+  { "id": "jsonl", "name": "JSONL", "extension": ".jsonl" },
+  { "id": "csv", "name": "CSV", "extension": ".csv" },
+  { "id": "parquet", "name": "Parquet", "extension": ".parquet" },
+  { "id": "markdown", "name": "Markdown", "extension": ".md" },
+  { "id": "yaml", "name": "YAML", "extension": ".yaml" }
+]

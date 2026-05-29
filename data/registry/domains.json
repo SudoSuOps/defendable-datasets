@@ -1,0 +1,12 @@
+[
+  { "id": "commercial-real-estate", "name": "Commercial Real Estate", "description": "Underwriting, rent rolls, site intelligence, and acquisition diligence." },
+  { "id": "compute-valuation", "name": "Compute Valuation", "description": "GPU markets, infrastructure pricing, utilization, and resale signals." },
+  { "id": "medical-billing", "name": "Medical Billing", "description": "Appeals, denial codes, reimbursement workflows, and payer communications." },
+  { "id": "credit-repair", "name": "Credit Repair", "description": "FCRA workflows, dispute letters, bureau responses, and compliance patterns." },
+  { "id": "government-contracting", "name": "Government Contracting", "description": "SAM.gov opportunities, NAICS intelligence, vendors, and award research." },
+  { "id": "legal-letters", "name": "Legal Letters", "description": "Templates, notices, demand letters, and structured legal drafting examples." },
+  { "id": "energy", "name": "Energy", "description": "Site assessment, infrastructure feasibility, usage profiles, and project scoring." },
+  { "id": "local-services", "name": "Local Services", "description": "Local business lead data, service demand, and outreach readiness." },
+  { "id": "mining-crypto", "name": "Mining / Crypto", "description": "Mining operations, facility Q&A, rig economics, and operating procedures." },
+  { "id": "general-instruction-tuning", "name": "General Instruction Tuning", "description": "Agent instructions, evaluation pairs, and broadly useful supervised fine-tuning examples." }
+]

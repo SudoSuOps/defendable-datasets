@@ -1,0 +1,1 @@
+{"instruction":"Normalize this rent roll into underwriting fields.","input":"Unit A, 1200 sqft, monthly rent 2400, vacancy false.","output":{"unit":"A","sqft":1200,"rent_monthly":2400,"occupied":true}}
