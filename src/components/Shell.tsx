@@ -29,11 +29,11 @@ export function Shell({ children }: { children: React.ReactNode }) {
           <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
             <Link href="/" className="flex items-center gap-3">
               <Image
-                src="/defendablelogo.png"
-                alt="Defendable logo"
-                width={38}
-                height={38}
-                className="hidden rounded-md md:block"
+                src="/defendable-icon.png"
+                alt=""
+                width={34}
+                height={34}
+                className="hidden size-8 object-contain md:block"
                 priority
               />
               <div className="grid size-9 place-items-center rounded-md border border-amber-300/30 bg-amber-300/10 text-amber-200 md:hidden">
@@ -70,11 +70,11 @@ export function Shell({ children }: { children: React.ReactNode }) {
             <div>
               <div className="flex items-center gap-3">
                 <Image
-                  src="/defendablelogo.png"
-                  alt="Defendable logo"
-                  width={40}
-                  height={40}
-                  className="hidden rounded-md md:block"
+                  src="/defendable-icon.png"
+                  alt=""
+                  width={36}
+                  height={36}
+                  className="hidden size-9 object-contain md:block"
                 />
                 <div className="grid size-9 place-items-center rounded-md border border-amber-300/30 bg-amber-300/10 text-amber-200 md:hidden">
                   DD
