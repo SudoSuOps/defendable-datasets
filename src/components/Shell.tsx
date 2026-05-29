@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Database, ExternalLink, GitBranch, Mail, MessageSquare, Package, ScrollText, ShieldCheck } from "lucide-react";
 import { PackProvider } from "./PackProvider";
 import { TipJar } from "./TipJar";
+import { HelpAgentWidget } from "./HelpAgentWidget";
 
 const nav = [
   { href: "/graph", label: "Graph", icon: GitBranch },
@@ -144,6 +145,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
             No proof, no honey. Datasets are the asset.
           </div>
         </footer>
+        <HelpAgentWidget />
       </div>
     </PackProvider>
   );

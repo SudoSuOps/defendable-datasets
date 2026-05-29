@@ -99,6 +99,18 @@ Current policy:
 - Gated files require an access request or member identity.
 - The deployable Cloudflare Worker scaffold lives in `/workers/download-gate`.
 
+## Support AI
+
+The site includes a small customer-service assistant, Hack. The frontend calls same-origin `/api/help`.
+On Cloudflare Pages, configure:
+
+```text
+HELP_AGENT_URL=https://your-ollama-compatible-agent-endpoint
+HELP_AGENT_MODEL=hf.co/LiquidAI/LFM2.5-8B-A1B-GGUF:Q4_K_M
+```
+
+Keep the model host behind a Cloudflare Tunnel or Worker-accessible gateway. Do not expose LAN IPs or SSH services from the public site.
+
 ## CLI
 
 Run registry checks and generate receipts before opening pull requests:
