@@ -182,3 +182,9 @@ Add datasets from the graph, registry, or detail page. Visit `/pack` and export:
 ## Community Model
 
 Free datasets for the community. Contributors should submit metadata, proof, hashes, license clarity, and small reviewable samples first. Large data files move through NAS or object storage with gated delivery.
+
+## Support
+
+Tips help support the compute used to cook, hash, verify, and publish datasets.
+
+BTC: `bc1qnfvjpvv08shp8spdfznwmftkmh8895h56kvfqj`

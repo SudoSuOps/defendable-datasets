@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Database, ExternalLink, GitBranch, Mail, MessageSquare, Package, ScrollText, ShieldCheck } from "lucide-react";
 import { PackProvider } from "./PackProvider";
+import { TipJar } from "./TipJar";
 
 const nav = [
   { href: "/graph", label: "Graph", icon: GitBranch },
@@ -135,6 +136,9 @@ export function Shell({ children }: { children: React.ReactNode }) {
                 </a>
               </div>
             </div>
+          </div>
+          <div className="mx-auto max-w-7xl px-4 pb-10 sm:px-6 lg:px-8">
+            <TipJar compact />
           </div>
           <div className="border-t border-white/10 px-4 py-4 text-center text-xs text-slate-500">
             No proof, no honey. Datasets are the asset.

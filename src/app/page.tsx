@@ -1,6 +1,7 @@
 import { ArrowRight, Database, FileCheck2, GitBranch, Package } from "lucide-react";
 import { datasets, domains, formatBytes, formatNumber } from "@/lib/registry/data";
 import { ButtonLink, Panel } from "@/components/ui";
+import { TipJar } from "@/components/TipJar";
 
 export default function Home() {
   const records = datasets.reduce((sum, dataset) => sum + dataset.record_count, 0);
@@ -111,6 +112,12 @@ export default function Home() {
           <ButtonLink href="/docs" variant="secondary">
             Read the docs <ArrowRight className="ml-2 size-4" />
           </ButtonLink>
+        </div>
+      </section>
+
+      <section className="px-4 pb-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <TipJar />
         </div>
       </section>
     </main>
