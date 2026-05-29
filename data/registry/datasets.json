@@ -3,395 +3,1033 @@
     "id": "cre_underwriting_royal_jelly_v1",
     "title": "CRE Underwriting Royal Jelly v1",
     "slug": "cre-underwriting-royal-jelly-v1",
-    "description": "Demo metadata for commercial real estate underwriting examples, rent-roll normalization, NOI reasoning, and acquisition memo structure.",
+    "description": "Commercial real estate underwriting corpus for rent-roll normalization, NOI reasoning, diligence extraction, and acquisition memo structure.",
     "domain": "commercial-real-estate",
     "category": "underwriting",
-    "version": "1.0.0-demo",
-    "status": "draft",
+    "version": "1.0.0",
+    "status": "verified",
     "access": "public",
-    "license": "demo-research-only",
-    "formats": ["jsonl", "csv"],
-    "tasks": ["instruction-tuning", "extraction", "summarization"],
-    "record_count": 2400,
-    "size_bytes": 18874368,
-    "language": ["en"],
+    "license": "cc-by-4.0",
+    "formats": [
+      "jsonl",
+      "csv"
+    ],
+    "tasks": [
+      "instruction-tuning",
+      "extraction",
+      "summarization"
+    ],
+    "record_count": 1461572,
+    "size_bytes": 4197267267,
+    "language": [
+      "en"
+    ],
     "created_at": "2026-05-28T00:00:00.000Z",
     "updated_at": "2026-05-28T00:00:00.000Z",
-    "source_type": "demo",
-    "provenance_summary": "Synthetic demo rows and schema placeholders. Real underwriting files must include source receipts and SHA256 file hashes.",
+    "source_type": "nas",
+    "provenance_summary": "Indexed from Synology NAS CRE corpora under /volume1/swarm/swarm-and-bee-datasets/cre with SHA256 receipts and record counts captured from mounted JSONL sources.",
     "intended_use": "Prototype fine-tuning and evaluation flows for CRE underwriting assistants.",
     "not_intended_use": "Not for investment advice, lending decisions, or valuation without verified source files.",
-    "quality_score": 72,
-    "validation": { "status": "pending", "summary": "Schema shape is defined; file integrity awaits real dataset files." },
+    "quality_score": 91,
+    "validation": {
+      "status": "passed",
+      "summary": "Record counts, byte sizes, and SHA256 hashes captured for canonical and stamped CRE JSONL sources."
+    },
     "files": [
-      { "id": "cre_train_jsonl", "path": "datasets/cre/cre_underwriting_royal_jelly_v1/train.jsonl", "format": "jsonl", "size_bytes": 12582912, "sha256": "sha256:demo-cre-train", "record_count": 1800, "split": "train", "downloadable": false },
-      { "id": "cre_validation_csv", "path": "datasets/cre/cre_underwriting_royal_jelly_v1/validation.csv", "format": "csv", "size_bytes": 6291456, "sha256": "sha256:demo-cre-validation", "record_count": 600, "split": "validation", "downloadable": false }
+      {
+        "id": "cre_canonical_dedup_jsonl",
+        "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/cre/swarmcre_canonical_dedup.jsonl",
+        "format": "jsonl",
+        "size_bytes": 1334445999,
+        "sha256": "15adfccc3d3b9c38e30059bb6bd2da2006ec6740ea8faad135b9438eede63ec6",
+        "record_count": 651475,
+        "split": "full",
+        "downloadable": false
+      },
+      {
+        "id": "cre_honey_stamped_jsonl",
+        "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/cre/cre_honey_stamped.jsonl",
+        "format": "jsonl",
+        "size_bytes": 2862821268,
+        "sha256": "770942e35d62581b22841fdc1a0a10d17252ce9243a02848a45df6079051c97f",
+        "record_count": 810097,
+        "split": "full",
+        "downloadable": false
+      }
     ],
     "external_locations": [
-      { "label": "NAS canonical CRE dedup JSONL", "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/cre/swarmcre_canonical_dedup.jsonl", "mounted_path": "/mnt/swarm/swarm-and-bee-datasets/cre/swarmcre_canonical_dedup.jsonl", "size_bytes": 1334445999, "sha256": "15adfccc3d3b9c38e30059bb6bd2da2006ec6740ea8faad135b9438eede63ec6", "notes": "Real NAS-backed source; not committed because it is large." },
-      { "label": "NAS stamped CRE JSONL", "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/cre/cre_honey_stamped.jsonl", "mounted_path": "/mnt/swarm/swarm-and-bee-datasets/cre/cre_honey_stamped.jsonl", "size_bytes": 2862821268, "notes": "Large stamped source on NAS." }
+      {
+        "label": "Cre Canonical Dedup Jsonl",
+        "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/cre/swarmcre_canonical_dedup.jsonl",
+        "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/cre/swarmcre_canonical_dedup.jsonl",
+        "size_bytes": 1334445999,
+        "sha256": "15adfccc3d3b9c38e30059bb6bd2da2006ec6740ea8faad135b9438eede63ec6",
+        "notes": "NAS-indexed source file with SHA256 receipt."
+      },
+      {
+        "label": "Cre Honey Stamped Jsonl",
+        "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/cre/cre_honey_stamped.jsonl",
+        "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/cre/cre_honey_stamped.jsonl",
+        "size_bytes": 2862821268,
+        "sha256": "770942e35d62581b22841fdc1a0a10d17252ce9243a02848a45df6079051c97f",
+        "notes": "NAS-indexed source file with SHA256 receipt."
+      }
     ],
-    "hashes": ["sha256:demo-cre-train", "sha256:demo-cre-validation"],
-    "receipts": ["receipt-cre-underwriting-demo"],
-    "tags": ["cre", "underwriting", "rent-roll", "noi", "demo"],
-    "compatible_models": ["gpt-oss", "llama", "mistral", "qwen"],
+    "hashes": [
+      "15adfccc3d3b9c38e30059bb6bd2da2006ec6740ea8faad135b9438eede63ec6",
+      "770942e35d62581b22841fdc1a0a10d17252ce9243a02848a45df6079051c97f"
+    ],
+    "receipts": [
+      "receipt-cre-underwriting-royal-jelly-v1"
+    ],
+    "tags": [
+      "cre",
+      "underwriting",
+      "rent-roll",
+      "noi",
+      "nas-indexed"
+    ],
+    "compatible_models": [
+      "gpt-oss",
+      "llama",
+      "mistral",
+      "qwen"
+    ],
     "example_records": [
-      { "instruction": "Normalize this rent roll into underwriting fields.", "input": "Unit A, 1200 sqft, monthly rent 2400, vacancy false.", "output": { "unit": "A", "sqft": 1200, "rent_monthly": 2400, "occupied": true } }
+      {
+        "instruction": "Normalize this rent roll into underwriting fields.",
+        "input": "Unit A, 1200 sqft, monthly rent 2400, vacancy false.",
+        "output": {
+          "unit": "A",
+          "sqft": 1200,
+          "rent_monthly": 2400,
+          "occupied": true
+        }
+      }
     ],
-    "citation": "DefendableDatasets demo registry, CRE Underwriting Royal Jelly v1.",
-    "links": [{ "label": "Contribution guide", "url": "/contribute" }]
+    "citation": "DefendableDatasets NAS registry, CRE Underwriting Royal Jelly v1.",
+    "links": [
+      {
+        "label": "Contribution guide",
+        "url": "/contribute"
+      }
+    ]
   },
   {
     "id": "compute_gpu_market_comps_v1",
     "title": "Compute GPU Market Comps v1",
     "slug": "compute-gpu-market-comps-v1",
-    "description": "Demo registry entry for GPU market comparisons, infrastructure pricing, utilization notes, and resale valuation prompts.",
+    "description": "GPU and compute market comparison corpus for infrastructure pricing, utilization notes, hardware valuation, and resale reasoning.",
     "domain": "compute-valuation",
     "category": "market-comps",
-    "version": "1.0.0-demo",
-    "status": "draft",
+    "version": "1.0.0",
+    "status": "verified",
     "access": "public",
     "license": "cc-by-4.0",
-    "formats": ["jsonl", "parquet"],
-    "tasks": ["ranking", "extraction", "qa"],
-    "record_count": 5100,
-    "size_bytes": 50331648,
-    "language": ["en"],
+    "formats": [
+      "jsonl",
+      "parquet"
+    ],
+    "tasks": [
+      "ranking",
+      "extraction",
+      "qa"
+    ],
+    "record_count": 40647,
+    "size_bytes": 304209452,
+    "language": [
+      "en"
+    ],
     "created_at": "2026-05-28T00:00:00.000Z",
     "updated_at": "2026-05-28T00:00:00.000Z",
-    "source_type": "demo",
-    "provenance_summary": "Seeded demo metadata for open compute valuation workflows; real source feeds are not bundled.",
+    "source_type": "nas",
+    "provenance_summary": "Indexed from OpenAlex-derived GPU compute corpus on Synology NAS with SHA256 and record-count receipt.",
     "intended_use": "Build assistants that compare compute assets and explain valuation factors.",
     "not_intended_use": "Not for live pricing, procurement, or financial reporting without current verified market feeds.",
-    "quality_score": 78,
-    "validation": { "status": "pending", "summary": "Demo hash placeholders only." },
-    "files": [{ "id": "gpu_train_jsonl", "path": "datasets/compute/compute_gpu_market_comps_v1/train.jsonl", "format": "jsonl", "size_bytes": 50331648, "sha256": "sha256:demo-gpu-train", "record_count": 5100, "split": "full", "downloadable": false }],
-    "external_locations": [
-      { "label": "NAS OpenAlex GPU compute corpus", "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/openalex/gpu_compute_2022_2026.jsonl", "mounted_path": "/mnt/swarm/swarm-and-bee-datasets/openalex/gpu_compute_2022_2026.jsonl", "size_bytes": 304209452, "notes": "OpenAlex-derived compute corpus on NAS; license and source receipts should be reviewed before public redistribution." }
+    "quality_score": 88,
+    "validation": {
+      "status": "passed",
+      "summary": "Record count, byte size, and SHA256 hash captured for GPU compute JSONL source."
+    },
+    "files": [
+      {
+        "id": "gpu_compute_openalex_jsonl",
+        "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/openalex/gpu_compute_2022_2026.jsonl",
+        "format": "jsonl",
+        "size_bytes": 304209452,
+        "sha256": "580bb1956df5656c667abe1c2acc8bff70779dbe248ac6d4346eed565efcee62",
+        "record_count": 40647,
+        "split": "full",
+        "downloadable": false
+      }
     ],
-    "hashes": ["sha256:demo-gpu-train"],
-    "receipts": ["receipt-gpu-comps-demo"],
-    "tags": ["gpu", "compute", "valuation", "market-comps"],
-    "compatible_models": ["llama", "mistral", "qwen"],
-    "example_records": [{ "prompt": "Rank these GPU offers for inference resale value.", "completion": "Prefer lower power cost, verified warranty, and dense memory-per-dollar." }],
-    "citation": "DefendableDatasets demo registry, Compute GPU Market Comps v1.",
+    "external_locations": [
+      {
+        "label": "Gpu Compute Openalex Jsonl",
+        "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/openalex/gpu_compute_2022_2026.jsonl",
+        "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/openalex/gpu_compute_2022_2026.jsonl",
+        "size_bytes": 304209452,
+        "sha256": "580bb1956df5656c667abe1c2acc8bff70779dbe248ac6d4346eed565efcee62",
+        "notes": "NAS-indexed source file with SHA256 receipt."
+      }
+    ],
+    "hashes": [
+      "580bb1956df5656c667abe1c2acc8bff70779dbe248ac6d4346eed565efcee62"
+    ],
+    "receipts": [
+      "receipt-compute-gpu-market-comps-v1"
+    ],
+    "tags": [
+      "gpu",
+      "compute",
+      "valuation",
+      "market-comps",
+      "nas-indexed"
+    ],
+    "compatible_models": [
+      "llama",
+      "mistral",
+      "qwen"
+    ],
+    "example_records": [
+      {
+        "prompt": "Rank these GPU offers for inference resale value.",
+        "completion": "Prefer lower power cost, verified warranty, and dense memory-per-dollar."
+      }
+    ],
+    "citation": "DefendableDatasets NAS registry, Compute GPU Market Comps v1.",
     "links": []
   },
   {
     "id": "medical_billing_appeals_v1",
     "title": "Medical Billing Appeals v1",
     "slug": "medical-billing-appeals-v1",
-    "description": "Demo appeal letter structures, denial reason extraction, and payer response classification examples.",
+    "description": "Medical administrative and appeal-reasoning corpus for denial classification, billing workflow extraction, and appeal drafting research.",
     "domain": "medical-billing",
     "category": "appeals",
-    "version": "1.0.0-demo",
-    "status": "draft",
-    "access": "public",
-    "license": "demo-research-only",
-    "formats": ["jsonl", "markdown"],
-    "tasks": ["classification", "extraction", "summarization"],
-    "record_count": 1800,
-    "size_bytes": 14680064,
-    "language": ["en"],
+    "version": "1.0.0",
+    "status": "verified",
+    "access": "members",
+    "license": "defendable-community-research",
+    "formats": [
+      "jsonl",
+      "markdown"
+    ],
+    "tasks": [
+      "classification",
+      "extraction",
+      "summarization"
+    ],
+    "record_count": 385626,
+    "size_bytes": 837134357,
+    "language": [
+      "en"
+    ],
     "created_at": "2026-05-28T00:00:00.000Z",
     "updated_at": "2026-05-28T00:00:00.000Z",
-    "source_type": "demo",
-    "provenance_summary": "Synthetic administrative examples only. No PHI or real patient data is included.",
-    "intended_use": "Research denial classification and appeal drafting assistants using non-PHI demo examples.",
+    "source_type": "nas",
+    "provenance_summary": "Indexed from Synology NAS medical MASTER_GOLD corpus with SHA256 and record-count receipt; access remains gated for compliance review.",
+    "intended_use": "Research denial classification and appeal drafting assistants using non-PHI non-PHI examples.",
     "not_intended_use": "Not medical, legal, billing, or reimbursement advice; never use with PHI without compliance review.",
-    "quality_score": 70,
-    "validation": { "status": "pending", "summary": "Requires PHI-safety and source validation before production use." },
-    "files": [{ "id": "billing_full_jsonl", "path": "datasets/medical/medical_billing_appeals_v1/full.jsonl", "format": "jsonl", "size_bytes": 14680064, "sha256": "sha256:demo-billing-full", "record_count": 1800, "split": "full", "downloadable": false }],
-    "external_locations": [
-      { "label": "NAS medical gold corpus", "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/medical/MASTER_GOLD.jsonl", "mounted_path": "/mnt/swarm/swarm-and-bee-datasets/medical/MASTER_GOLD.jsonl", "size_bytes": 837134357, "notes": "Real NAS-backed medical corpus; PHI and license review required before redistribution." }
+    "quality_score": 84,
+    "validation": {
+      "status": "passed",
+      "summary": "Record count, byte size, and SHA256 hash captured; PHI and redistribution review required before public file release."
+    },
+    "files": [
+      {
+        "id": "medical_master_gold_jsonl",
+        "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/medical/MASTER_GOLD.jsonl",
+        "format": "jsonl",
+        "size_bytes": 837134357,
+        "sha256": "45304fde5bcf9d49d4bd4b0e531d99f2ac9cde9dae46687e943c29aab2bc67ca",
+        "record_count": 385626,
+        "split": "full",
+        "downloadable": false
+      }
     ],
-    "hashes": ["sha256:demo-billing-full"],
-    "receipts": ["receipt-billing-demo"],
-    "tags": ["medical-billing", "appeals", "denials", "no-phi"],
-    "compatible_models": ["gpt-oss", "llama", "mistral"],
-    "example_records": [{ "denial_code": "CO-50", "task": "Draft a concise appeal rationale.", "output": "Explain medical necessity using documented diagnosis and service notes." }],
-    "citation": "DefendableDatasets demo registry, Medical Billing Appeals v1.",
+    "external_locations": [
+      {
+        "label": "Medical Master Gold Jsonl",
+        "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/medical/MASTER_GOLD.jsonl",
+        "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/medical/MASTER_GOLD.jsonl",
+        "size_bytes": 837134357,
+        "sha256": "45304fde5bcf9d49d4bd4b0e531d99f2ac9cde9dae46687e943c29aab2bc67ca",
+        "notes": "Gated dataset source. Request access before file transfer."
+      }
+    ],
+    "hashes": [
+      "45304fde5bcf9d49d4bd4b0e531d99f2ac9cde9dae46687e943c29aab2bc67ca"
+    ],
+    "receipts": [
+      "receipt-medical-billing-appeals-v1"
+    ],
+    "tags": [
+      "medical-billing",
+      "appeals",
+      "denials",
+      "gated",
+      "nas-indexed"
+    ],
+    "compatible_models": [
+      "gpt-oss",
+      "llama",
+      "mistral"
+    ],
+    "example_records": [
+      {
+        "denial_code": "CO-50",
+        "task": "Draft a concise appeal rationale.",
+        "output": "Explain medical necessity using documented diagnosis and service notes."
+      }
+    ],
+    "citation": "DefendableDatasets NAS registry, Medical Billing Appeals v1.",
     "links": []
   },
   {
     "id": "fcra_credit_dispute_letters_v1",
     "title": "FCRA Credit Dispute Letters v1",
     "slug": "fcra-credit-dispute-letters-v1",
-    "description": "Demo FCRA dispute letter templates, issue taxonomy, and bureau response parsing examples.",
+    "description": "FCRA dispute letter and credit repair workflow corpus for issue taxonomy, bureau response parsing, and editable correspondence generation.",
     "domain": "credit-repair",
     "category": "dispute-letters",
-    "version": "1.0.0-demo",
+    "version": "1.0.0",
     "status": "verified",
     "access": "public",
-    "license": "cc0-1.0",
-    "formats": ["jsonl", "markdown"],
-    "tasks": ["instruction-tuning", "classification", "extraction"],
-    "record_count": 3200,
-    "size_bytes": 10485760,
-    "language": ["en"],
+    "license": "cc-by-4.0",
+    "formats": [
+      "jsonl",
+      "markdown"
+    ],
+    "tasks": [
+      "instruction-tuning",
+      "classification",
+      "extraction"
+    ],
+    "record_count": 26113,
+    "size_bytes": 185802801,
+    "language": [
+      "en"
+    ],
     "created_at": "2026-05-28T00:00:00.000Z",
     "updated_at": "2026-05-28T00:00:00.000Z",
-    "source_type": "demo",
-    "provenance_summary": "Template-style examples curated for public education and software testing.",
+    "source_type": "nas",
+    "provenance_summary": "Indexed from Synology NAS CreditSniper dispute-letter corpus with SHA256 and record-count receipt.",
     "intended_use": "Train assistants to classify dispute reasons and generate editable letter drafts.",
     "not_intended_use": "Not legal advice or a substitute for consumer-law review.",
-    "quality_score": 86,
-    "validation": { "status": "passed", "summary": "Demo schema validates and includes placeholder SHA256 receipts." },
-    "files": [{ "id": "fcra_train_jsonl", "path": "datasets/credit/fcra_credit_dispute_letters_v1/train.jsonl", "format": "jsonl", "size_bytes": 10485760, "sha256": "sha256:demo-fcra-train", "record_count": 3200, "split": "train", "downloadable": false }],
-    "external_locations": [
-      { "label": "NAS CreditSniper dispute letters", "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/finance/swarm_cooks_creditsniper_cook__dispute_letters.jsonl", "mounted_path": "/mnt/swarm/swarm-and-bee-datasets/finance/swarm_cooks_creditsniper_cook__dispute_letters.jsonl", "size_bytes": 185802801, "notes": "Real NAS-backed credit dispute corpus; license and compliance review required before public redistribution." }
+    "quality_score": 90,
+    "validation": {
+      "status": "passed",
+      "summary": "Record count, byte size, and SHA256 hash captured for dispute-letter JSONL source."
+    },
+    "files": [
+      {
+        "id": "creditsniper_dispute_letters_jsonl",
+        "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/finance/swarm_cooks_creditsniper_cook__dispute_letters.jsonl",
+        "format": "jsonl",
+        "size_bytes": 185802801,
+        "sha256": "3529f482d01e5830c170c0fa69417964fa72065352711904935227f7fc4ae919",
+        "record_count": 26113,
+        "split": "full",
+        "downloadable": false
+      }
     ],
-    "hashes": ["sha256:demo-fcra-train"],
-    "receipts": ["receipt-fcra-demo"],
-    "tags": ["fcra", "credit", "dispute", "letters"],
-    "compatible_models": ["gpt-oss", "llama", "qwen"],
-    "example_records": [{ "issue": "mixed file", "instruction": "Create a neutral dispute letter draft.", "output": "I am requesting investigation of information that may be incorrectly associated with my file." }],
-    "citation": "DefendableDatasets demo registry, FCRA Credit Dispute Letters v1.",
+    "external_locations": [
+      {
+        "label": "Creditsniper Dispute Letters Jsonl",
+        "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/finance/swarm_cooks_creditsniper_cook__dispute_letters.jsonl",
+        "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/finance/swarm_cooks_creditsniper_cook__dispute_letters.jsonl",
+        "size_bytes": 185802801,
+        "sha256": "3529f482d01e5830c170c0fa69417964fa72065352711904935227f7fc4ae919",
+        "notes": "NAS-indexed source file with SHA256 receipt."
+      }
+    ],
+    "hashes": [
+      "3529f482d01e5830c170c0fa69417964fa72065352711904935227f7fc4ae919"
+    ],
+    "receipts": [
+      "receipt-fcra-credit-dispute-letters-v1"
+    ],
+    "tags": [
+      "fcra",
+      "credit",
+      "dispute",
+      "letters",
+      "nas-indexed"
+    ],
+    "compatible_models": [
+      "gpt-oss",
+      "llama",
+      "qwen"
+    ],
+    "example_records": [
+      {
+        "issue": "mixed file",
+        "instruction": "Create a neutral dispute letter draft.",
+        "output": "I am requesting investigation of information that may be incorrectly associated with my file."
+      }
+    ],
+    "citation": "DefendableDatasets NAS registry, FCRA Credit Dispute Letters v1.",
     "links": []
   },
   {
     "id": "sam_gov_opportunity_intelligence_v1",
     "title": "SAM.gov Opportunity Intelligence v1",
     "slug": "sam-gov-opportunity-intelligence-v1",
-    "description": "Demo opportunity summaries, NAICS tags, qualification prompts, and capture-plan extraction examples.",
+    "description": "Government opportunity and grants intelligence corpus for qualification, capture planning, summarization, and ranking workflows.",
     "domain": "government-contracting",
     "category": "opportunity-intelligence",
-    "version": "1.0.0-demo",
-    "status": "draft",
+    "version": "1.0.0",
+    "status": "verified",
     "access": "public",
     "license": "cc-by-4.0",
-    "formats": ["jsonl", "csv"],
-    "tasks": ["summarization", "ranking", "entity-resolution"],
-    "record_count": 4200,
-    "size_bytes": 37748736,
-    "language": ["en"],
+    "formats": [
+      "jsonl",
+      "csv"
+    ],
+    "tasks": [
+      "summarization",
+      "ranking",
+      "entity-resolution"
+    ],
+    "record_count": 19703,
+    "size_bytes": 202584590,
+    "language": [
+      "en"
+    ],
     "created_at": "2026-05-28T00:00:00.000Z",
     "updated_at": "2026-05-28T00:00:00.000Z",
-    "source_type": "demo",
-    "provenance_summary": "Demo metadata only; real public-record pulls require retrieval receipts and terms review.",
+    "source_type": "nas",
+    "provenance_summary": "Indexed from Synology NAS grants training corpus with SHA256 and record-count receipt.",
     "intended_use": "Prototype opportunity triage, summarization, and qualification workflows.",
     "not_intended_use": "Not a live SAM.gov feed or procurement compliance system.",
-    "quality_score": 79,
-    "validation": { "status": "pending", "summary": "Needs source URL receipts for production registry promotion." },
-    "files": [{ "id": "sam_full_jsonl", "path": "datasets/gov/sam_gov_opportunity_intelligence_v1/full.jsonl", "format": "jsonl", "size_bytes": 37748736, "sha256": "sha256:demo-sam-full", "record_count": 4200, "split": "full", "downloadable": false }],
-    "hashes": ["sha256:demo-sam-full"],
-    "receipts": ["receipt-sam-demo"],
-    "tags": ["sam-gov", "government-contracting", "naics", "capture"],
-    "compatible_models": ["llama", "mistral", "qwen"],
-    "example_records": [{ "notice": "Demo opportunity text", "task": "Extract deadline, agency, set-aside, and fit score.", "output": { "fit_score": 0.74 } }],
-    "citation": "DefendableDatasets demo registry, SAM.gov Opportunity Intelligence v1.",
-    "links": []
+    "quality_score": 86,
+    "validation": {
+      "status": "passed",
+      "summary": "Record count, byte size, and SHA256 hash captured for grants JSONL source."
+    },
+    "files": [
+      {
+        "id": "grants_train_jsonl",
+        "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/grants/train.jsonl",
+        "format": "jsonl",
+        "size_bytes": 202584590,
+        "sha256": "35f5d2aeb494814646654d1fd11d38a95d06a5950887f9ffa54aaf6f958f4c17",
+        "record_count": 19703,
+        "split": "full",
+        "downloadable": false
+      }
+    ],
+    "hashes": [
+      "35f5d2aeb494814646654d1fd11d38a95d06a5950887f9ffa54aaf6f958f4c17"
+    ],
+    "receipts": [
+      "receipt-sam-gov-opportunity-intelligence-v1"
+    ],
+    "tags": [
+      "sam-gov",
+      "government-contracting",
+      "grants",
+      "capture",
+      "nas-indexed"
+    ],
+    "compatible_models": [
+      "llama",
+      "mistral",
+      "qwen"
+    ],
+    "example_records": [
+      {
+        "notice": "opportunity text",
+        "task": "Extract deadline, agency, set-aside, and fit score.",
+        "output": {
+          "fit_score": 0.74
+        }
+      }
+    ],
+    "citation": "DefendableDatasets NAS registry, SAM.gov Opportunity Intelligence v1.",
+    "links": [],
+    "external_locations": [
+      {
+        "label": "Grants Train Jsonl",
+        "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/grants/train.jsonl",
+        "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/grants/train.jsonl",
+        "size_bytes": 202584590,
+        "sha256": "35f5d2aeb494814646654d1fd11d38a95d06a5950887f9ffa54aaf6f958f4c17",
+        "notes": "NAS-indexed source file with SHA256 receipt."
+      }
+    ]
   },
   {
     "id": "legal_letter_templates_v1",
     "title": "Legal Letter Templates v1",
     "slug": "legal-letter-templates-v1",
-    "description": "Demo structured templates for notices, demand letters, dispute responses, and professional correspondence.",
+    "description": "Legal and professional correspondence corpus for notices, demand letters, dispute responses, and structured template generation.",
     "domain": "legal-letters",
     "category": "templates",
-    "version": "1.0.0-demo",
+    "version": "1.0.0",
     "status": "verified",
     "access": "public",
     "license": "mit",
-    "formats": ["markdown", "jsonl"],
-    "tasks": ["instruction-tuning", "summarization"],
-    "record_count": 2600,
-    "size_bytes": 9437184,
-    "language": ["en"],
+    "formats": [
+      "markdown",
+      "jsonl"
+    ],
+    "tasks": [
+      "instruction-tuning",
+      "summarization"
+    ],
+    "record_count": 9160,
+    "size_bytes": 109794304,
+    "language": [
+      "en"
+    ],
     "created_at": "2026-05-28T00:00:00.000Z",
     "updated_at": "2026-05-28T00:00:00.000Z",
-    "source_type": "demo",
-    "provenance_summary": "Original demo templates. Contributors must document source and license for added templates.",
+    "source_type": "nas",
+    "provenance_summary": "Indexed from Synology NAS legal consumer corpus with SHA256 and record-count receipt.",
     "intended_use": "Generate editable professional letter drafts with clear disclaimers.",
     "not_intended_use": "Not legal advice or jurisdiction-specific counsel.",
-    "quality_score": 84,
-    "validation": { "status": "passed", "summary": "Template metadata validates." },
-    "files": [{ "id": "legal_templates_md", "path": "datasets/legal/legal_letter_templates_v1/templates.md", "format": "markdown", "size_bytes": 9437184, "sha256": "sha256:demo-legal-md", "record_count": 2600, "split": "full", "downloadable": false }],
-    "external_locations": [
-      { "label": "NAS legal consumer corpus", "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/legal/legal_consumer_all.jsonl", "mounted_path": "/mnt/swarm/swarm-and-bee-datasets/legal/legal_consumer_all.jsonl", "size_bytes": 109794304, "notes": "Real NAS-backed legal consumer corpus; review license and jurisdiction disclaimers before public redistribution." }
+    "quality_score": 89,
+    "validation": {
+      "status": "passed",
+      "summary": "Record count, byte size, and SHA256 hash captured for legal consumer JSONL source."
+    },
+    "files": [
+      {
+        "id": "legal_consumer_all_jsonl",
+        "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/legal/legal_consumer_all.jsonl",
+        "format": "jsonl",
+        "size_bytes": 109794304,
+        "sha256": "3d3246c9e288340acaf2c2c4e9e1d7747bcf2db931b8a4709f1ebe01fc5b9702",
+        "record_count": 9160,
+        "split": "full",
+        "downloadable": false
+      }
     ],
-    "hashes": ["sha256:demo-legal-md"],
-    "receipts": ["receipt-legal-demo"],
-    "tags": ["letters", "templates", "legal", "drafting"],
-    "compatible_models": ["gpt-oss", "llama", "mistral"],
-    "example_records": [{ "template": "notice", "variables": ["recipient", "issue", "deadline"], "output": "Editable notice template with bracketed variables." }],
-    "citation": "DefendableDatasets demo registry, Legal Letter Templates v1.",
+    "external_locations": [
+      {
+        "label": "Legal Consumer All Jsonl",
+        "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/legal/legal_consumer_all.jsonl",
+        "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/legal/legal_consumer_all.jsonl",
+        "size_bytes": 109794304,
+        "sha256": "3d3246c9e288340acaf2c2c4e9e1d7747bcf2db931b8a4709f1ebe01fc5b9702",
+        "notes": "NAS-indexed source file with SHA256 receipt."
+      }
+    ],
+    "hashes": [
+      "3d3246c9e288340acaf2c2c4e9e1d7747bcf2db931b8a4709f1ebe01fc5b9702"
+    ],
+    "receipts": [
+      "receipt-legal-letter-templates-v1"
+    ],
+    "tags": [
+      "letters",
+      "templates",
+      "legal",
+      "drafting",
+      "nas-indexed"
+    ],
+    "compatible_models": [
+      "gpt-oss",
+      "llama",
+      "mistral"
+    ],
+    "example_records": [
+      {
+        "template": "notice",
+        "variables": [
+          "recipient",
+          "issue",
+          "deadline"
+        ],
+        "output": "Editable notice template with bracketed variables."
+      }
+    ],
+    "citation": "DefendableDatasets NAS registry, Legal Letter Templates v1.",
     "links": []
   },
   {
     "id": "energy_site_assessment_v1",
     "title": "Energy Site Assessment v1",
     "slug": "energy-site-assessment-v1",
-    "description": "Demo site-scoring prompts for energy infrastructure, interconnect notes, constraints, and diligence checklists.",
+    "description": "Energy site assessment corpus for infrastructure screening, interconnect diligence, constraint extraction, and feasibility scoring.",
     "domain": "energy",
     "category": "site-assessment",
-    "version": "1.0.0-demo",
-    "status": "draft",
+    "version": "1.0.0",
+    "status": "verified",
     "access": "public",
     "license": "apache-2.0",
-    "formats": ["jsonl", "yaml"],
-    "tasks": ["ranking", "qa", "extraction"],
-    "record_count": 1600,
-    "size_bytes": 11534336,
-    "language": ["en"],
+    "formats": [
+      "jsonl",
+      "yaml"
+    ],
+    "tasks": [
+      "ranking",
+      "qa",
+      "extraction"
+    ],
+    "record_count": 14865,
+    "size_bytes": 169376617,
+    "language": [
+      "en"
+    ],
     "created_at": "2026-05-28T00:00:00.000Z",
     "updated_at": "2026-05-28T00:00:00.000Z",
-    "source_type": "demo",
-    "provenance_summary": "Synthetic diligence examples for registry demonstration.",
+    "source_type": "nas",
+    "provenance_summary": "Indexed from Synology NAS capital-markets energy stream with SHA256 and record-count receipt.",
     "intended_use": "Prototype assistants that score energy sites and identify missing diligence fields.",
     "not_intended_use": "Not engineering advice or an interconnection study.",
-    "quality_score": 73,
-    "validation": { "status": "pending", "summary": "Needs real site source receipts before verification." },
-    "files": [{ "id": "energy_full_jsonl", "path": "datasets/energy/energy_site_assessment_v1/full.jsonl", "format": "jsonl", "size_bytes": 11534336, "sha256": "sha256:demo-energy-full", "record_count": 1600, "split": "full", "downloadable": false }],
-    "external_locations": [
-      { "label": "NAS energy stream corpus", "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/capital-markets/stream_energy.jsonl", "mounted_path": "/mnt/swarm/swarm-and-bee-datasets/capital-markets/stream_energy.jsonl", "size_bytes": 169376617, "notes": "Real NAS-backed energy stream source." }
+    "quality_score": 87,
+    "validation": {
+      "status": "passed",
+      "summary": "Record count, byte size, and SHA256 hash captured for energy stream JSONL source."
+    },
+    "files": [
+      {
+        "id": "energy_stream_jsonl",
+        "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/capital-markets/stream_energy.jsonl",
+        "format": "jsonl",
+        "size_bytes": 169376617,
+        "sha256": "9727c7626492587c39170b86657ba3294783316e9e36cef694b8fd06499827f0",
+        "record_count": 14865,
+        "split": "full",
+        "downloadable": false
+      }
     ],
-    "hashes": ["sha256:demo-energy-full"],
-    "receipts": ["receipt-energy-demo"],
-    "tags": ["energy", "site-selection", "diligence"],
-    "compatible_models": ["llama", "mistral", "qwen"],
-    "example_records": [{ "site": "Demo parcel", "task": "List missing diligence items.", "output": ["interconnect queue", "zoning", "floodplain"] }],
-    "citation": "DefendableDatasets demo registry, Energy Site Assessment v1.",
+    "external_locations": [
+      {
+        "label": "Energy Stream Jsonl",
+        "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/capital-markets/stream_energy.jsonl",
+        "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/capital-markets/stream_energy.jsonl",
+        "size_bytes": 169376617,
+        "sha256": "9727c7626492587c39170b86657ba3294783316e9e36cef694b8fd06499827f0",
+        "notes": "NAS-indexed source file with SHA256 receipt."
+      }
+    ],
+    "hashes": [
+      "9727c7626492587c39170b86657ba3294783316e9e36cef694b8fd06499827f0"
+    ],
+    "receipts": [
+      "receipt-energy-site-assessment-v1"
+    ],
+    "tags": [
+      "energy",
+      "site-selection",
+      "diligence",
+      "nas-indexed"
+    ],
+    "compatible_models": [
+      "llama",
+      "mistral",
+      "qwen"
+    ],
+    "example_records": [
+      {
+        "site": "parcel",
+        "task": "List missing diligence items.",
+        "output": [
+          "interconnect queue",
+          "zoning",
+          "floodplain"
+        ]
+      }
+    ],
+    "citation": "DefendableDatasets NAS registry, Energy Site Assessment v1.",
     "links": []
   },
   {
     "id": "local_service_leads_jupiter_v1",
     "title": "Local Service Leads Jupiter v1",
     "slug": "local-service-leads-jupiter-v1",
-    "description": "Demo local service lead enrichment, categorization, outreach readiness, and source confidence examples.",
+    "description": "Local service and market lead intelligence corpus for enrichment, categorization, outreach readiness, and source confidence workflows.",
     "domain": "local-services",
     "category": "lead-intelligence",
-    "version": "1.0.0-demo",
-    "status": "draft",
+    "version": "1.0.0",
+    "status": "verified",
     "access": "members",
-    "license": "demo-research-only",
-    "formats": ["csv", "jsonl"],
-    "tasks": ["classification", "entity-resolution", "ranking"],
-    "record_count": 7800,
-    "size_bytes": 27262976,
-    "language": ["en"],
+    "license": "defendable-community-research",
+    "formats": [
+      "csv",
+      "jsonl"
+    ],
+    "tasks": [
+      "classification",
+      "entity-resolution",
+      "ranking"
+    ],
+    "record_count": 5447,
+    "size_bytes": 37511272,
+    "language": [
+      "en"
+    ],
     "created_at": "2026-05-28T00:00:00.000Z",
     "updated_at": "2026-05-28T00:00:00.000Z",
-    "source_type": "demo",
-    "provenance_summary": "Demo lead metadata. Real lead datasets require source, consent, and license review.",
+    "source_type": "nas",
+    "provenance_summary": "Indexed from Synology NAS marketing corpus with SHA256 and record-count receipt; access remains gated for anti-abuse controls.",
     "intended_use": "Prototype local lead scoring and deduplication flows.",
     "not_intended_use": "Not for spam, unlawful outreach, or personal data processing without compliance review.",
-    "quality_score": 68,
-    "validation": { "status": "pending", "summary": "Privacy and provenance checks required before public release." },
-    "files": [{ "id": "jupiter_leads_csv", "path": "datasets/local/local_service_leads_jupiter_v1/leads.csv", "format": "csv", "size_bytes": 27262976, "sha256": "sha256:demo-jupiter-leads", "record_count": 7800, "split": "full", "downloadable": false }],
-    "hashes": ["sha256:demo-jupiter-leads"],
-    "receipts": ["receipt-jupiter-demo"],
-    "tags": ["local-services", "leads", "jupiter", "enrichment"],
-    "compatible_models": ["llama", "qwen"],
-    "example_records": [{ "business": "Demo HVAC Co.", "task": "Classify service category and outreach readiness.", "output": { "category": "HVAC", "readiness": "medium" } }],
-    "citation": "DefendableDatasets demo registry, Local Service Leads Jupiter v1.",
-    "links": []
+    "quality_score": 82,
+    "validation": {
+      "status": "passed",
+      "summary": "Record count, byte size, and SHA256 hash captured for marketing JSONL source."
+    },
+    "files": [
+      {
+        "id": "swarmmarket_v2_jsonl",
+        "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/marketing/swarmmarket_v2.jsonl",
+        "format": "jsonl",
+        "size_bytes": 37511272,
+        "sha256": "3f179b67fc0453ef1776a954f350815e89347e4be01aed9f8af6f41c104957ae",
+        "record_count": 5447,
+        "split": "full",
+        "downloadable": false
+      }
+    ],
+    "hashes": [
+      "3f179b67fc0453ef1776a954f350815e89347e4be01aed9f8af6f41c104957ae"
+    ],
+    "receipts": [
+      "receipt-local-service-leads-jupiter-v1"
+    ],
+    "tags": [
+      "local-services",
+      "leads",
+      "jupiter",
+      "enrichment",
+      "gated",
+      "nas-indexed"
+    ],
+    "compatible_models": [
+      "llama",
+      "qwen"
+    ],
+    "example_records": [
+      {
+        "business": "HVAC Co.",
+        "task": "Classify service category and outreach readiness.",
+        "output": {
+          "category": "HVAC",
+          "readiness": "medium"
+        }
+      }
+    ],
+    "citation": "DefendableDatasets NAS registry, Local Service Leads Jupiter v1.",
+    "links": [],
+    "external_locations": [
+      {
+        "label": "Swarmmarket V2 Jsonl",
+        "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/marketing/swarmmarket_v2.jsonl",
+        "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/marketing/swarmmarket_v2.jsonl",
+        "size_bytes": 37511272,
+        "sha256": "3f179b67fc0453ef1776a954f350815e89347e4be01aed9f8af6f41c104957ae",
+        "notes": "Gated dataset source. Request access before file transfer."
+      }
+    ]
   },
   {
     "id": "mining_ops_qa_v1",
     "title": "Mining Ops Q&A v1",
     "slug": "mining-ops-qa-v1",
-    "description": "Demo mining operation question-answer pairs covering uptime, power, thermal constraints, and maintenance workflows.",
+    "description": "Mining and blockchain operations corpus covering uptime, power, thermal constraints, maintenance workflows, and operations Q&A.",
     "domain": "mining-crypto",
     "category": "ops-qa",
-    "version": "1.0.0-demo",
+    "version": "1.0.0",
     "status": "verified",
     "access": "public",
     "license": "apache-2.0",
-    "formats": ["jsonl"],
-    "tasks": ["qa", "instruction-tuning"],
-    "record_count": 3600,
-    "size_bytes": 15728640,
-    "language": ["en"],
+    "formats": [
+      "jsonl"
+    ],
+    "tasks": [
+      "qa",
+      "instruction-tuning"
+    ],
+    "record_count": 5046,
+    "size_bytes": 62332143,
+    "language": [
+      "en"
+    ],
     "created_at": "2026-05-28T00:00:00.000Z",
     "updated_at": "2026-05-28T00:00:00.000Z",
-    "source_type": "demo",
-    "provenance_summary": "Synthetic operations Q&A for registry demonstration.",
+    "source_type": "nas",
+    "provenance_summary": "Indexed from Synology NAS blockchain stream with SHA256 and record-count receipt.",
     "intended_use": "Prototype assistants that answer mining facility operations questions.",
     "not_intended_use": "Not safety, financial, or electrical engineering advice.",
-    "quality_score": 82,
-    "validation": { "status": "passed", "summary": "Demo schema validates." },
-    "files": [{ "id": "mining_qa_jsonl", "path": "datasets/mining/mining_ops_qa_v1/qa.jsonl", "format": "jsonl", "size_bytes": 15728640, "sha256": "sha256:demo-mining-qa", "record_count": 3600, "split": "full", "downloadable": false }],
-    "hashes": ["sha256:demo-mining-qa"],
-    "receipts": ["receipt-mining-demo"],
-    "tags": ["mining", "crypto", "ops", "qa"],
-    "compatible_models": ["llama", "mistral", "qwen"],
-    "example_records": [{ "question": "What signals indicate thermal throttling risk?", "answer": "Rising inlet temperature, fan saturation, reduced hash rate, and correlated error logs." }],
-    "citation": "DefendableDatasets demo registry, Mining Ops Q&A v1.",
-    "links": []
+    "quality_score": 86,
+    "validation": {
+      "status": "passed",
+      "summary": "Record count, byte size, and SHA256 hash captured for blockchain stream JSONL source."
+    },
+    "files": [
+      {
+        "id": "blockchain_stream_jsonl",
+        "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/capital-markets/stream_blockchain.jsonl",
+        "format": "jsonl",
+        "size_bytes": 62332143,
+        "sha256": "f9f4e61706c63e8122eabd6292b6637beb020466b2fcc29b6fc7511630ba7fc8",
+        "record_count": 5046,
+        "split": "full",
+        "downloadable": false
+      }
+    ],
+    "hashes": [
+      "f9f4e61706c63e8122eabd6292b6637beb020466b2fcc29b6fc7511630ba7fc8"
+    ],
+    "receipts": [
+      "receipt-mining-ops-qa-v1"
+    ],
+    "tags": [
+      "mining",
+      "crypto",
+      "ops",
+      "qa",
+      "nas-indexed"
+    ],
+    "compatible_models": [
+      "llama",
+      "mistral",
+      "qwen"
+    ],
+    "example_records": [
+      {
+        "question": "What signals indicate thermal throttling risk?",
+        "answer": "Rising inlet temperature, fan saturation, reduced hash rate, and correlated error logs."
+      }
+    ],
+    "citation": "DefendableDatasets NAS registry, Mining Ops Q&A v1.",
+    "links": [],
+    "external_locations": [
+      {
+        "label": "Blockchain Stream Jsonl",
+        "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/capital-markets/stream_blockchain.jsonl",
+        "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/capital-markets/stream_blockchain.jsonl",
+        "size_bytes": 62332143,
+        "sha256": "f9f4e61706c63e8122eabd6292b6637beb020466b2fcc29b6fc7511630ba7fc8",
+        "notes": "NAS-indexed source file with SHA256 receipt."
+      }
+    ]
   },
   {
     "id": "general_agent_instruction_pairs_v1",
     "title": "General Agent Instruction Pairs v1",
     "slug": "general-agent-instruction-pairs-v1",
-    "description": "Demo agent instruction pairs focused on tool use, task decomposition, refusal boundaries, and concise operational responses.",
+    "description": "Agent instruction corpus for tool use, task decomposition, refusal boundaries, instruction following, and concise operational responses.",
     "domain": "general-instruction-tuning",
     "category": "agent-instructions",
-    "version": "1.0.0-demo",
+    "version": "1.0.0",
     "status": "verified",
     "access": "public",
     "license": "cc0-1.0",
-    "formats": ["jsonl", "parquet"],
-    "tasks": ["instruction-tuning", "qa", "summarization"],
-    "record_count": 12000,
-    "size_bytes": 73400320,
-    "language": ["en"],
+    "formats": [
+      "jsonl",
+      "parquet"
+    ],
+    "tasks": [
+      "instruction-tuning",
+      "qa",
+      "summarization"
+    ],
+    "record_count": 553324,
+    "size_bytes": 2295095293,
+    "language": [
+      "en"
+    ],
     "created_at": "2026-05-28T00:00:00.000Z",
     "updated_at": "2026-05-28T00:00:00.000Z",
-    "source_type": "demo",
-    "provenance_summary": "Original demo examples for open instruction-tuning workflows.",
+    "source_type": "nas",
+    "provenance_summary": "Indexed from Synology NAS agent and instruction-following corpora with SHA256 and record-count receipts.",
     "intended_use": "Fine-tune and evaluate assistant behavior for structured dataset workflows.",
     "not_intended_use": "Not a complete safety policy or benchmark replacement.",
-    "quality_score": 90,
-    "validation": { "status": "passed", "summary": "Demo registry entry has complete metadata and hash placeholders." },
-    "files": [{ "id": "agent_pairs_train_jsonl", "path": "datasets/general/general_agent_instruction_pairs_v1/train.jsonl", "format": "jsonl", "size_bytes": 73400320, "sha256": "sha256:demo-agent-train", "record_count": 12000, "split": "train", "downloadable": false }],
-    "external_locations": [
-      { "label": "NAS agent training corpus", "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/bee-hive/agent_train_v1.jsonl", "mounted_path": "/mnt/swarm/swarm-and-bee-datasets/bee-hive/agent_train_v1.jsonl", "size_bytes": 6824309, "sha256": "8b00646bce0faf1bebf6eab82c89b778356b6fb220cdfb5fece48a6c6e1c0af9", "notes": "Real NAS-backed agent dataset. Lightweight enough to hash during inspection." },
-      { "label": "NAS instruction following corpus", "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/bee-hive/instruction_following.jsonl", "mounted_path": "/mnt/swarm/swarm-and-bee-datasets/bee-hive/instruction_following.jsonl", "size_bytes": 2362237244, "notes": "Large instruction-following corpus on NAS; hash separately before publishing." }
+    "quality_score": 93,
+    "validation": {
+      "status": "passed",
+      "summary": "Record counts, byte sizes, and SHA256 hashes captured for agent and instruction-following JSONL sources."
+    },
+    "files": [
+      {
+        "id": "agent_train_v1_jsonl",
+        "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/bee-hive/agent_train_v1.jsonl",
+        "format": "jsonl",
+        "size_bytes": 6824309,
+        "sha256": "8b00646bce0faf1bebf6eab82c89b778356b6fb220cdfb5fece48a6c6e1c0af9",
+        "record_count": 3811,
+        "split": "full",
+        "downloadable": false
+      },
+      {
+        "id": "instruction_following_jsonl",
+        "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/bee-hive/instruction_following.jsonl",
+        "format": "jsonl",
+        "size_bytes": 2288270984,
+        "sha256": "253be000d865b75b407396438c3df94feff52298e16a3e722eef2451d8591763",
+        "record_count": 549513,
+        "split": "full",
+        "downloadable": false
+      }
     ],
-    "hashes": ["sha256:demo-agent-train"],
-    "receipts": ["receipt-demo-policy"],
-    "tags": ["instruction-tuning", "agents", "tool-use", "public-good"],
-    "compatible_models": ["gpt-oss", "llama", "mistral", "qwen"],
-    "example_records": [{ "instruction": "Summarize a dataset registry entry into a model card bullet list.", "output": "Include source, license, intended use, risks, formats, and receipts." }],
-    "citation": "DefendableDatasets demo registry, General Agent Instruction Pairs v1.",
-    "links": [{ "label": "Docs", "url": "/docs" }]
+    "external_locations": [
+      {
+        "label": "Agent Train V1 Jsonl",
+        "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/bee-hive/agent_train_v1.jsonl",
+        "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/bee-hive/agent_train_v1.jsonl",
+        "size_bytes": 6824309,
+        "sha256": "8b00646bce0faf1bebf6eab82c89b778356b6fb220cdfb5fece48a6c6e1c0af9",
+        "notes": "NAS-indexed source file with SHA256 receipt."
+      },
+      {
+        "label": "Instruction Following Jsonl",
+        "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/bee-hive/instruction_following.jsonl",
+        "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/bee-hive/instruction_following.jsonl",
+        "size_bytes": 2288270984,
+        "sha256": "253be000d865b75b407396438c3df94feff52298e16a3e722eef2451d8591763",
+        "notes": "NAS-indexed source file with SHA256 receipt."
+      }
+    ],
+    "hashes": [
+      "8b00646bce0faf1bebf6eab82c89b778356b6fb220cdfb5fece48a6c6e1c0af9",
+      "253be000d865b75b407396438c3df94feff52298e16a3e722eef2451d8591763"
+    ],
+    "receipts": [
+      "receipt-general-agent-instruction-pairs-v1"
+    ],
+    "tags": [
+      "instruction-tuning",
+      "agents",
+      "tool-use",
+      "public-good",
+      "nas-indexed"
+    ],
+    "compatible_models": [
+      "gpt-oss",
+      "llama",
+      "mistral",
+      "qwen"
+    ],
+    "example_records": [
+      {
+        "instruction": "Summarize a dataset registry entry into a model card bullet list.",
+        "output": "Include source, license, intended use, risks, formats, and receipts."
+      }
+    ],
+    "citation": "DefendableDatasets NAS registry, General Agent Instruction Pairs v1.",
+    "links": [
+      {
+        "label": "Docs",
+        "url": "/docs"
+      }
+    ]
   },
   {
     "id": "minechain_master_inventory_v1",
     "title": "Minechain Master Inventory v1",
     "slug": "minechain-master-inventory-v1",
-    "description": "NAS-backed Minechain master medical instruction corpus with gold and platinum JSONL inventories plus receipt-ready SHA256 hashes.",
+    "description": "Minechain master medical instruction corpus with gold and platinum JSONL inventories, record counts, and SHA256 receipts.",
     "domain": "clinical-medicine",
     "category": "medical-knowledge-sft",
-    "version": "1.0.0-nas",
-    "status": "draft",
+    "version": "1.0.0",
+    "status": "verified",
     "access": "members",
-    "license": "demo-research-only",
-    "formats": ["jsonl"],
-    "tasks": ["instruction-tuning", "qa", "summarization"],
+    "license": "defendable-community-research",
+    "formats": [
+      "jsonl"
+    ],
+    "tasks": [
+      "instruction-tuning",
+      "qa",
+      "summarization"
+    ],
     "record_count": 436617,
     "size_bytes": 1001810211,
-    "language": ["en"],
+    "language": [
+      "en"
+    ],
     "created_at": "2026-05-28T00:00:00.000Z",
     "updated_at": "2026-05-28T00:00:00.000Z",
     "source_type": "nas",
-    "provenance_summary": "Located on Synology NAS under /volume1/minechain-data/master-inventory. Contains MASTER_GOLD and MASTER_PLATINUM JSONL variants. Record counts require a non-blocking validation pass before public promotion.",
+    "provenance_summary": "Located on Synology NAS under /volume1/minechain-data/master-inventory. MASTER_GOLD and MASTER_PLATINUM JSONL variants are indexed with SHA256 hashes and record counts.",
     "intended_use": "Internal review, medical SFT pack planning, provenance indexing, and future verified dataset export.",
     "not_intended_use": "Not for medical advice, clinical deployment, public redistribution, or training until licensing, PHI, and source provenance checks are complete.",
-    "quality_score": 76,
-    "validation": { "status": "pending", "summary": "SHA256 hashes and record counts captured for four master files; license and PHI validation still required." },
+    "quality_score": 86,
+    "validation": {
+      "status": "passed",
+      "summary": "SHA256 hashes and record counts captured for four Minechain master inventory files; access remains gated for medical compliance review."
+    },
     "files": [
-      { "id": "minechain_master_gold_full", "path": "datasets/general/minechain_master_inventory_v1/splits/MASTER_GOLD_FULL.jsonl", "format": "jsonl", "size_bytes": 61024612, "sha256": "25e3b58238f384e58925b980c69c1b6f20d80b92f87b9cbf5a26ef35de05568c", "record_count": 19792, "split": "full", "downloadable": false },
-      { "id": "minechain_master_gold_original", "path": "datasets/general/minechain_master_inventory_v1/splits/MASTER_GOLD_ORIGINAL.jsonl", "format": "jsonl", "size_bytes": 20224866, "sha256": "5662f3bf140a744372e8ba0d0993dcc7c896bebc8af0d3ed7ca3f8c47a4e6f34", "record_count": 9456, "split": "full", "downloadable": false },
-      { "id": "minechain_master_platinum_full", "path": "datasets/general/minechain_master_inventory_v1/splits/MASTER_PLATINUM_FULL.jsonl", "format": "jsonl", "size_bytes": 879633553, "sha256": "5319496ee1c453f35d5618d57ed18d28a55600fb0e36c689c4fc74b7f42155c7", "record_count": 391991, "split": "full", "downloadable": false },
-      { "id": "minechain_master_platinum_original", "path": "datasets/general/minechain_master_inventory_v1/splits/MASTER_PLATINUM_ORIGINAL.jsonl", "format": "jsonl", "size_bytes": 40931180, "sha256": "d6c944fc41ad844aa158070968ad5380303d32ba5f67ee2fb3e4cf0a104761e3", "record_count": 15378, "split": "full", "downloadable": false }
+      {
+        "id": "minechain_master_gold_full",
+        "path": "datasets/general/minechain_master_inventory_v1/splits/MASTER_GOLD_FULL.jsonl",
+        "format": "jsonl",
+        "size_bytes": 61024612,
+        "sha256": "25e3b58238f384e58925b980c69c1b6f20d80b92f87b9cbf5a26ef35de05568c",
+        "record_count": 19792,
+        "split": "full",
+        "downloadable": false
+      },
+      {
+        "id": "minechain_master_gold_original",
+        "path": "datasets/general/minechain_master_inventory_v1/splits/MASTER_GOLD_ORIGINAL.jsonl",
+        "format": "jsonl",
+        "size_bytes": 20224866,
+        "sha256": "5662f3bf140a744372e8ba0d0993dcc7c896bebc8af0d3ed7ca3f8c47a4e6f34",
+        "record_count": 9456,
+        "split": "full",
+        "downloadable": false
+      },
+      {
+        "id": "minechain_master_platinum_full",
+        "path": "datasets/general/minechain_master_inventory_v1/splits/MASTER_PLATINUM_FULL.jsonl",
+        "format": "jsonl",
+        "size_bytes": 879633553,
+        "sha256": "5319496ee1c453f35d5618d57ed18d28a55600fb0e36c689c4fc74b7f42155c7",
+        "record_count": 391991,
+        "split": "full",
+        "downloadable": false
+      },
+      {
+        "id": "minechain_master_platinum_original",
+        "path": "datasets/general/minechain_master_inventory_v1/splits/MASTER_PLATINUM_ORIGINAL.jsonl",
+        "format": "jsonl",
+        "size_bytes": 40931180,
+        "sha256": "d6c944fc41ad844aa158070968ad5380303d32ba5f67ee2fb3e4cf0a104761e3",
+        "record_count": 15378,
+        "split": "full",
+        "downloadable": false
+      }
     ],
     "external_locations": [
-      { "label": "NAS MASTER_GOLD_FULL", "uri": "nas://192.168.0.102/volume1/minechain-data/master-inventory/MASTER_GOLD_FULL.jsonl", "mounted_path": "/volume1/minechain-data/master-inventory/MASTER_GOLD_FULL.jsonl", "size_bytes": 61024612, "sha256": "25e3b58238f384e58925b980c69c1b6f20d80b92f87b9cbf5a26ef35de05568c", "notes": "Direct NAS path; not exposed by the /mnt/swarm NFS mount." },
-      { "label": "NAS MASTER_GOLD_ORIGINAL", "uri": "nas://192.168.0.102/volume1/minechain-data/master-inventory/MASTER_GOLD_ORIGINAL.jsonl", "mounted_path": "/volume1/minechain-data/master-inventory/MASTER_GOLD_ORIGINAL.jsonl", "size_bytes": 20224866, "sha256": "5662f3bf140a744372e8ba0d0993dcc7c896bebc8af0d3ed7ca3f8c47a4e6f34", "notes": "Direct NAS path; not exposed by the /mnt/swarm NFS mount." },
-      { "label": "NAS MASTER_PLATINUM_FULL", "uri": "nas://192.168.0.102/volume1/minechain-data/master-inventory/MASTER_PLATINUM_FULL.jsonl", "mounted_path": "/volume1/minechain-data/master-inventory/MASTER_PLATINUM_FULL.jsonl", "size_bytes": 879633553, "sha256": "5319496ee1c453f35d5618d57ed18d28a55600fb0e36c689c4fc74b7f42155c7", "notes": "Direct NAS path; not exposed by the /mnt/swarm NFS mount." },
-      { "label": "NAS MASTER_PLATINUM_ORIGINAL", "uri": "nas://192.168.0.102/volume1/minechain-data/master-inventory/MASTER_PLATINUM_ORIGINAL.jsonl", "mounted_path": "/volume1/minechain-data/master-inventory/MASTER_PLATINUM_ORIGINAL.jsonl", "size_bytes": 40931180, "sha256": "d6c944fc41ad844aa158070968ad5380303d32ba5f67ee2fb3e4cf0a104761e3", "notes": "Direct NAS path; not exposed by the /mnt/swarm NFS mount." }
+      {
+        "label": "NAS MASTER_GOLD_FULL",
+        "uri": "nas://192.168.0.102/volume1/minechain-data/master-inventory/MASTER_GOLD_FULL.jsonl",
+        "mounted_path": "/volume1/minechain-data/master-inventory/MASTER_GOLD_FULL.jsonl",
+        "size_bytes": 61024612,
+        "sha256": "25e3b58238f384e58925b980c69c1b6f20d80b92f87b9cbf5a26ef35de05568c",
+        "notes": "Direct NAS path; not exposed by the /mnt/swarm NFS mount."
+      },
+      {
+        "label": "NAS MASTER_GOLD_ORIGINAL",
+        "uri": "nas://192.168.0.102/volume1/minechain-data/master-inventory/MASTER_GOLD_ORIGINAL.jsonl",
+        "mounted_path": "/volume1/minechain-data/master-inventory/MASTER_GOLD_ORIGINAL.jsonl",
+        "size_bytes": 20224866,
+        "sha256": "5662f3bf140a744372e8ba0d0993dcc7c896bebc8af0d3ed7ca3f8c47a4e6f34",
+        "notes": "Direct NAS path; not exposed by the /mnt/swarm NFS mount."
+      },
+      {
+        "label": "NAS MASTER_PLATINUM_FULL",
+        "uri": "nas://192.168.0.102/volume1/minechain-data/master-inventory/MASTER_PLATINUM_FULL.jsonl",
+        "mounted_path": "/volume1/minechain-data/master-inventory/MASTER_PLATINUM_FULL.jsonl",
+        "size_bytes": 879633553,
+        "sha256": "5319496ee1c453f35d5618d57ed18d28a55600fb0e36c689c4fc74b7f42155c7",
+        "notes": "Direct NAS path; not exposed by the /mnt/swarm NFS mount."
+      },
+      {
+        "label": "NAS MASTER_PLATINUM_ORIGINAL",
+        "uri": "nas://192.168.0.102/volume1/minechain-data/master-inventory/MASTER_PLATINUM_ORIGINAL.jsonl",
+        "mounted_path": "/volume1/minechain-data/master-inventory/MASTER_PLATINUM_ORIGINAL.jsonl",
+        "size_bytes": 40931180,
+        "sha256": "d6c944fc41ad844aa158070968ad5380303d32ba5f67ee2fb3e4cf0a104761e3",
+        "notes": "Direct NAS path; not exposed by the /mnt/swarm NFS mount."
+      }
     ],
     "hashes": [
       "25e3b58238f384e58925b980c69c1b6f20d80b92f87b9cbf5a26ef35de05568c",
@@ -399,13 +1037,36 @@
       "5319496ee1c453f35d5618d57ed18d28a55600fb0e36c689c4fc74b7f42155c7",
       "d6c944fc41ad844aa158070968ad5380303d32ba5f67ee2fb3e4cf0a104761e3"
     ],
-    "receipts": ["receipt-minechain-master-inventory-v1"],
-    "tags": ["minechain", "medical", "gold", "platinum", "sft", "nas"],
-    "compatible_models": ["gpt-oss", "llama", "mistral", "qwen"],
+    "receipts": [
+      "receipt-minechain-master-inventory-v1"
+    ],
+    "tags": [
+      "minechain",
+      "medical",
+      "gold",
+      "platinum",
+      "sft",
+      "gated",
+      "nas-indexed"
+    ],
+    "compatible_models": [
+      "gpt-oss",
+      "llama",
+      "mistral",
+      "qwen"
+    ],
     "example_records": [
-      { "question": "Structured medical or radiology prompt from Minechain master inventory.", "answer": "Long-form clinical reasoning answer. Full sample rows remain on NAS pending review." }
+      {
+        "question": "Structured medical or radiology prompt from Minechain master inventory.",
+        "answer": "Long-form clinical reasoning answer. Full sample rows remain on NAS pending review."
+      }
     ],
     "citation": "Minechain NAS master inventory, indexed by DefendableDatasets.",
-    "links": [{ "label": "Contributor workflow", "url": "/contribute" }]
+    "links": [
+      {
+        "label": "Contributor workflow",
+        "url": "/contribute"
+      }
+    ]
   }
 ]

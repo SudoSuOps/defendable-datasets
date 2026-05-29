@@ -50,12 +50,12 @@ export default function Home() {
           <Panel className="rounded-md">
             <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">Registry mass</div>
             <div className="mt-3 text-3xl font-semibold text-white">{formatBytes(size)}</div>
-            <p className="mt-2 text-sm text-slate-400">Metadata-indexed local and NAS-backed assets ready for receipt hardening.</p>
+            <p className="mt-2 text-sm text-slate-400">Receipt-backed local and NAS-indexed assets with file hashes, sizes, and provenance summaries.</p>
           </Panel>
           <Panel className="rounded-md">
             <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">Record count</div>
             <div className="mt-3 text-3xl font-semibold text-white">{formatNumber(records)}</div>
-            <p className="mt-2 text-sm text-slate-400">Known records in v0 metadata; large NAS corpora are marked pending until counted.</p>
+            <p className="mt-2 text-sm text-slate-400">Known records from registry manifests and mounted NAS inventory passes.</p>
           </Panel>
           <Panel className="rounded-md">
             <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">Live domain</div>
@@ -88,15 +88,15 @@ export default function Home() {
           <Panel>
             <h2 className="text-2xl font-semibold text-white">Free for the community</h2>
             <p className="mt-4 text-slate-300">
-              The public commons starts with demo registry entries and a clean contribution path.
-              Real datasets can be added with proof, license clarity, reproducible metadata, and file hashes.
+              The public commons keeps metadata, receipts, hashes, and pack manifests open.
+              Large or sensitive files move through access-controlled delivery.
             </p>
           </Panel>
           <Panel>
             <h2 className="text-2xl font-semibold text-white">Built for DefendableCloud members, open to builders</h2>
             <p className="mt-4 text-slate-300">
-              v0 has no auth or payment wall. The architecture leaves room for member-only storage,
-              signed receipts, object backends, API access, and fine-tune job handoff.
+              Member-ready datasets can be indexed now, with room for signed receipts,
+              object backends, API access, and fine-tune job handoff.
             </p>
           </Panel>
         </div>

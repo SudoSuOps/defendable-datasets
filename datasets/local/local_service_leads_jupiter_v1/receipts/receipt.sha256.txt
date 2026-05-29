@@ -1,1 +1,5 @@
-sha256:demo-jupiter-leads  splits/leads.csv
+dataset_id=local_service_leads_jupiter_v1
+created_at=2026-05-28T00:00:00.000Z
+record_count=5447
+size_bytes=37511272
+3f179b67fc0453ef1776a954f350815e89347e4be01aed9f8af6f41c104957ae  nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/marketing/swarmmarket_v2.jsonl  records=5447  bytes=37511272

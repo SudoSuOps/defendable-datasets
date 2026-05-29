@@ -1,1 +1,36 @@
-{ "id": "medical_billing_appeals_v1", "status": "demo", "card": "dataset.card.md", "samples": "samples/", "receipts": "receipts/", "splits": "splits/" }
+{
+  "id": "medical_billing_appeals_v1",
+  "title": "Medical Billing Appeals v1",
+  "registry_path": "data/registry/datasets.json",
+  "status": "verified",
+  "access": "members",
+  "license": "defendable-community-research",
+  "card": "dataset.card.md",
+  "samples": "samples/",
+  "receipts": "receipts/",
+  "splits": "splits/",
+  "record_count": 385626,
+  "size_bytes": 837134357,
+  "files": [
+    {
+      "id": "medical_master_gold_jsonl",
+      "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/medical/MASTER_GOLD.jsonl",
+      "format": "jsonl",
+      "size_bytes": 837134357,
+      "sha256": "45304fde5bcf9d49d4bd4b0e531d99f2ac9cde9dae46687e943c29aab2bc67ca",
+      "record_count": 385626,
+      "split": "full",
+      "downloadable": false
+    }
+  ],
+  "external_sources": [
+    {
+      "label": "Medical Master Gold Jsonl",
+      "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/medical/MASTER_GOLD.jsonl",
+      "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/medical/MASTER_GOLD.jsonl",
+      "size_bytes": 837134357,
+      "sha256": "45304fde5bcf9d49d4bd4b0e531d99f2ac9cde9dae46687e943c29aab2bc67ca",
+      "notes": "Gated dataset source. Request access before file transfer."
+    }
+  ]
+}

@@ -1,12 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Database, ExternalLink, GitBranch, Mail, MessageSquare, Package, ScrollText } from "lucide-react";
+import { Database, ExternalLink, GitBranch, Mail, MessageSquare, Package, ScrollText, ShieldCheck } from "lucide-react";
 import { PackProvider } from "./PackProvider";
 
 const nav = [
   { href: "/graph", label: "Graph", icon: GitBranch },
   { href: "/registry", label: "Registry", icon: Database },
   { href: "/pack", label: "Pack", icon: Package },
+  { href: "/access", label: "Access", icon: ShieldCheck },
   { href: "/docs", label: "Docs", icon: ScrollText },
 ];
 

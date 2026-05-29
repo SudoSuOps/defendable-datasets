@@ -6,9 +6,9 @@ Live: https://defendabledatasets.com
 
 ![DefendableDatasets social graph preview](public/og.svg)
 
-DefendableDatasets is the open-source dataset layer for the DefendableCloud / DefendableOS ecosystem. It is a static-first dataset registry, graph browser, selector, verifier, and export system for AI builders.
+DefendableDatasets is the open-source dataset layer for the DefendableCloud / DefendableOS ecosystem. It is a static-first dataset registry, graph browser, selector, verifier, access surface, and export system for AI builders.
 
-The v0 app lets users browse demo registry entries by domain, category, license, format, task type, quality score, and status; inspect dataset metadata; add datasets to a pack; and export client-side manifests.
+The live app lets users browse NAS-indexed and verified registry entries by domain, category, license, format, task type, quality score, source, and status; inspect dataset metadata; add datasets to a pack; and export manifests.
 
 Doctrine: No proof, no honey.
 
@@ -59,6 +59,7 @@ After Cloudflare auth is configured, bind the domain in Cloudflare Pages to the 
 - `/registry` dataset table view
 - `/datasets/[id]` dataset detail pages
 - `/pack` client-side pack builder and exports
+- `/access` dataset access request and download quota policy
 - `/contribute` contributor workflow
 - `/docs` schema, receipts, license policy, and roadmap
 
@@ -82,8 +83,6 @@ Dataset asset packages live under `/datasets/[domain]/[dataset_id]` with:
 - `receipts/`
 - `splits/`
 
-The current seed entries are demo metadata unless real split files and matching receipts are added.
-
 Some entries include `external_locations` pointing at the mounted Synology NAS:
 
 ```text
@@ -99,6 +98,17 @@ The Minechain master inventory is indexed from the NAS path:
 ```
 
 That share is reachable over NAS SSH and may not be exposed through the `/mnt/swarm` NFS mount.
+
+## Dataset Access Controls
+
+Public metadata stays open. Large files and gated corpora should be delivered through a download gateway, not direct static links.
+
+Current policy:
+
+- 500 successful file downloads per email per rolling 30-day window.
+- Public metadata exports remain available from the static app.
+- Gated files require an access request or member identity.
+- The deployable Cloudflare Worker scaffold lives in `/workers/download-gate`.
 
 ## CLI
 
@@ -163,16 +173,12 @@ Add datasets from the graph, registry, or detail page. Visit `/pack` and export:
 - Dataset lineage graph
 - Dataset license compatibility checker
 
-## Not Included Yet
+## Production Boundaries
 
-- Public hosting of large real dataset split files
-- Authenticated member access
-- Backend API
-- Hosted validation workers
-- Automatic Hugging Face sync
-- Signed Merkle proofs
-- Clinical, legal, or financial deployment clearance
+- Large source files stay on NAS or object storage, referenced by receipt-backed manifests.
+- The static app does not enforce bot limits by itself; the Worker download gateway owns quota enforcement.
+- Clinical, legal, financial, or member-only datasets require explicit access review before file transfer.
 
 ## Community Model
 
-Free datasets for the community. Contributors should submit metadata, proof, hashes, license clarity, and small reviewable samples first. Large real data files should move to object storage once that backend lands.
+Free datasets for the community. Contributors should submit metadata, proof, hashes, license clarity, and small reviewable samples first. Large data files move through NAS or object storage with gated delivery.

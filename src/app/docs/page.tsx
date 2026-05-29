@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const roadmap = [
-  "Real dataset file hosting",
+  "Object-storage dataset delivery",
   "Hugging Face sync",
   "S3/object storage backend",
   "DefendableCloud member access",
@@ -39,8 +39,9 @@ export default function DocsPage() {
         <Doc title="Graph Schema" text="The graph contains DOMAIN, CATEGORY, DATASET, VERSION, FILE, LICENSE, FORMAT, TASK, and RECEIPT nodes connected by typed edges such as CONTAINS, HAS_FILE, LICENSED_AS, AVAILABLE_AS, SUPPORTS_TASK, and VERIFIED_BY." />
         <Doc title="How to Add a Dataset" text="Add a registry entry, create a dataset folder under /datasets/[domain]/[dataset_id], include manifest.json, dataset.card.md, samples, receipts, and split files where licensing allows." />
         <Doc title="How to Export a Pack" text="Use the graph, registry, or detail page to add datasets to the pack. The pack page exports pack.manifest.json, hf_dataset_card.md, fine_tune_manifest.json, sha256_manifest.json, and README snippets." />
-        <Doc title="How Receipts Work" text="Receipts are proof objects that describe hashes, validation runs, license checks, provenance summaries, or future Merkle proofs. v0 includes demo placeholders; verified datasets require real receipt files." />
-        <Doc title="License Policy" text="Every dataset must declare a license and whether commercial use is allowed. Packs warn when demo or restricted licenses are mixed into exports." />
+        <Doc title="How Receipts Work" text="Receipts are proof objects that describe hashes, validation runs, license checks, provenance summaries, or future Merkle proofs. Verified entries require receipt records and file-level SHA256 hashes." />
+        <Doc title="License Policy" text="Every dataset must declare a license and whether commercial use is allowed. Packs warn when gated research or attribution licenses are mixed into exports." />
+        <Doc title="Download Quotas" text="Public metadata remains open. Production file delivery should use the Cloudflare Worker download gate with 500 successful file downloads per email per rolling 30-day window." />
         <Doc title="CLI" text="Use defendable-datasets validate, defendable-datasets hash, and defendable-datasets pack to check registry integrity, generate SHA256 receipts, and create pack manifests before opening pull requests." />
       </div>
 

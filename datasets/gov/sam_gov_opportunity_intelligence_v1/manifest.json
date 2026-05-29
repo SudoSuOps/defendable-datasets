@@ -1,1 +1,36 @@
-{ "id": "sam_gov_opportunity_intelligence_v1", "status": "demo", "card": "dataset.card.md", "samples": "samples/", "receipts": "receipts/", "splits": "splits/" }
+{
+  "id": "sam_gov_opportunity_intelligence_v1",
+  "title": "SAM.gov Opportunity Intelligence v1",
+  "registry_path": "data/registry/datasets.json",
+  "status": "verified",
+  "access": "public",
+  "license": "cc-by-4.0",
+  "card": "dataset.card.md",
+  "samples": "samples/",
+  "receipts": "receipts/",
+  "splits": "splits/",
+  "record_count": 19703,
+  "size_bytes": 202584590,
+  "files": [
+    {
+      "id": "grants_train_jsonl",
+      "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/grants/train.jsonl",
+      "format": "jsonl",
+      "size_bytes": 202584590,
+      "sha256": "35f5d2aeb494814646654d1fd11d38a95d06a5950887f9ffa54aaf6f958f4c17",
+      "record_count": 19703,
+      "split": "full",
+      "downloadable": false
+    }
+  ],
+  "external_sources": [
+    {
+      "label": "Grants Train Jsonl",
+      "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/grants/train.jsonl",
+      "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/grants/train.jsonl",
+      "size_bytes": 202584590,
+      "sha256": "35f5d2aeb494814646654d1fd11d38a95d06a5950887f9ffa54aaf6f958f4c17",
+      "notes": "NAS-indexed source file with SHA256 receipt."
+    }
+  ]
+}

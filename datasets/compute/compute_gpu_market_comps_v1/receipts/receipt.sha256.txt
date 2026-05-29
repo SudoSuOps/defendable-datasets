@@ -1,1 +1,5 @@
-sha256:demo-gpu-train  splits/train.jsonl
+dataset_id=compute_gpu_market_comps_v1
+created_at=2026-05-28T00:00:00.000Z
+record_count=40647
+size_bytes=304209452
+580bb1956df5656c667abe1c2acc8bff70779dbe248ac6d4346eed565efcee62  nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/openalex/gpu_compute_2022_2026.jsonl  records=40647  bytes=304209452

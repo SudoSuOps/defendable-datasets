@@ -6,7 +6,7 @@ const baseUrl = "https://defendabledatasets.com";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/graph", "/app/graph", "/registry", "/pack", "/contribute", "/docs"].map((route) => ({
+  const staticRoutes = ["", "/graph", "/app/graph", "/registry", "/pack", "/access", "/contribute", "/docs"].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date("2026-05-29"),
     changeFrequency: "weekly" as const,

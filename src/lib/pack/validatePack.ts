@@ -1,7 +1,7 @@
 import type { Dataset } from "@/lib/schema/dataset";
 import { getLicenseCompatibility } from "@/lib/registry/quality";
 
-const restrictiveLicenses = new Set(["demo-research-only"]);
+const restrictiveLicenses = new Set(["defendable-community-research"]);
 
 export function validatePack(datasets: Dataset[]) {
   const warnings: string[] = [];
@@ -12,7 +12,7 @@ export function validatePack(datasets: Dataset[]) {
 
   if (datasets.length === 0) warnings.push("Pack is empty.");
   if ([...licenses].some((license) => restrictiveLicenses.has(license))) {
-    warnings.push("One or more datasets use a demo or restricted license. Review before commercial use.");
+    warnings.push("One or more datasets use a gated research license. Review before commercial use or redistribution.");
   }
   if (compatibility === "review") warnings.push("Attribution licenses are present. Keep license notices with exports.");
   if (compatibility === "restricted") warnings.push("License compatibility is restricted for production fine-tuning.");

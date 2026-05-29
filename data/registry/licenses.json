@@ -3,5 +3,5 @@
   { "id": "cc0-1.0", "name": "CC0 1.0", "url": "https://creativecommons.org/publicdomain/zero/1.0/", "commercial_use": true },
   { "id": "apache-2.0", "name": "Apache 2.0", "url": "https://www.apache.org/licenses/LICENSE-2.0", "commercial_use": true },
   { "id": "mit", "name": "MIT", "url": "https://opensource.org/license/mit", "commercial_use": true },
-  { "id": "demo-research-only", "name": "Demo Research Only", "url": "", "commercial_use": false }
+  { "id": "defendable-community-research", "name": "Defendable Community Research", "url": "/docs#license-policy", "commercial_use": false }
 ]

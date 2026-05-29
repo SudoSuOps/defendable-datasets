@@ -1,1 +1,36 @@
-{ "id": "legal_letter_templates_v1", "status": "demo", "card": "dataset.card.md", "samples": "samples/", "receipts": "receipts/", "splits": "splits/" }
+{
+  "id": "legal_letter_templates_v1",
+  "title": "Legal Letter Templates v1",
+  "registry_path": "data/registry/datasets.json",
+  "status": "verified",
+  "access": "public",
+  "license": "mit",
+  "card": "dataset.card.md",
+  "samples": "samples/",
+  "receipts": "receipts/",
+  "splits": "splits/",
+  "record_count": 9160,
+  "size_bytes": 109794304,
+  "files": [
+    {
+      "id": "legal_consumer_all_jsonl",
+      "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/legal/legal_consumer_all.jsonl",
+      "format": "jsonl",
+      "size_bytes": 109794304,
+      "sha256": "3d3246c9e288340acaf2c2c4e9e1d7747bcf2db931b8a4709f1ebe01fc5b9702",
+      "record_count": 9160,
+      "split": "full",
+      "downloadable": false
+    }
+  ],
+  "external_sources": [
+    {
+      "label": "Legal Consumer All Jsonl",
+      "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/legal/legal_consumer_all.jsonl",
+      "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/legal/legal_consumer_all.jsonl",
+      "size_bytes": 109794304,
+      "sha256": "3d3246c9e288340acaf2c2c4e9e1d7747bcf2db931b8a4709f1ebe01fc5b9702",
+      "notes": "NAS-indexed source file with SHA256 receipt."
+    }
+  ]
+}

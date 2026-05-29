@@ -1,1 +1,36 @@
-{ "id": "energy_site_assessment_v1", "status": "demo", "card": "dataset.card.md", "samples": "samples/", "receipts": "receipts/", "splits": "splits/" }
+{
+  "id": "energy_site_assessment_v1",
+  "title": "Energy Site Assessment v1",
+  "registry_path": "data/registry/datasets.json",
+  "status": "verified",
+  "access": "public",
+  "license": "apache-2.0",
+  "card": "dataset.card.md",
+  "samples": "samples/",
+  "receipts": "receipts/",
+  "splits": "splits/",
+  "record_count": 14865,
+  "size_bytes": 169376617,
+  "files": [
+    {
+      "id": "energy_stream_jsonl",
+      "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/capital-markets/stream_energy.jsonl",
+      "format": "jsonl",
+      "size_bytes": 169376617,
+      "sha256": "9727c7626492587c39170b86657ba3294783316e9e36cef694b8fd06499827f0",
+      "record_count": 14865,
+      "split": "full",
+      "downloadable": false
+    }
+  ],
+  "external_sources": [
+    {
+      "label": "Energy Stream Jsonl",
+      "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/capital-markets/stream_energy.jsonl",
+      "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/capital-markets/stream_energy.jsonl",
+      "size_bytes": 169376617,
+      "sha256": "9727c7626492587c39170b86657ba3294783316e9e36cef694b8fd06499827f0",
+      "notes": "NAS-indexed source file with SHA256 receipt."
+    }
+  ]
+}

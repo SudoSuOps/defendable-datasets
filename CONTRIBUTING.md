@@ -10,7 +10,7 @@ DefendableDatasets is registry-first. A useful contribution is not just a file; 
 - Add small, safe examples under `samples/`.
 - Add source, license, validation, and SHA256 receipts under `receipts/`.
 - Add split files under `splits/` only when redistribution is allowed.
-- Keep demo or restricted data clearly labeled.
+- Keep gated, private, or restricted data clearly labeled.
 - Run `npm run registry:validate`, `npm run lint`, and `npm run cf:build`.
 
 ## Required Proof

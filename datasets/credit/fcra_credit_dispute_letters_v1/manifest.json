@@ -1,1 +1,36 @@
-{ "id": "fcra_credit_dispute_letters_v1", "status": "demo", "card": "dataset.card.md", "samples": "samples/", "receipts": "receipts/", "splits": "splits/" }
+{
+  "id": "fcra_credit_dispute_letters_v1",
+  "title": "FCRA Credit Dispute Letters v1",
+  "registry_path": "data/registry/datasets.json",
+  "status": "verified",
+  "access": "public",
+  "license": "cc-by-4.0",
+  "card": "dataset.card.md",
+  "samples": "samples/",
+  "receipts": "receipts/",
+  "splits": "splits/",
+  "record_count": 26113,
+  "size_bytes": 185802801,
+  "files": [
+    {
+      "id": "creditsniper_dispute_letters_jsonl",
+      "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/finance/swarm_cooks_creditsniper_cook__dispute_letters.jsonl",
+      "format": "jsonl",
+      "size_bytes": 185802801,
+      "sha256": "3529f482d01e5830c170c0fa69417964fa72065352711904935227f7fc4ae919",
+      "record_count": 26113,
+      "split": "full",
+      "downloadable": false
+    }
+  ],
+  "external_sources": [
+    {
+      "label": "Creditsniper Dispute Letters Jsonl",
+      "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/finance/swarm_cooks_creditsniper_cook__dispute_letters.jsonl",
+      "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/finance/swarm_cooks_creditsniper_cook__dispute_letters.jsonl",
+      "size_bytes": 185802801,
+      "sha256": "3529f482d01e5830c170c0fa69417964fa72065352711904935227f7fc4ae919",
+      "notes": "NAS-indexed source file with SHA256 receipt."
+    }
+  ]
+}

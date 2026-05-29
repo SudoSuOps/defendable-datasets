@@ -1,20 +1,101 @@
 [
   {
-    "id": "receipt-demo-policy",
-    "dataset_id": "general_agent_instruction_pairs_v1",
-    "type": "provenance",
+    "id": "receipt-cre-underwriting-royal-jelly-v1",
+    "dataset_id": "cre_underwriting_royal_jelly_v1",
+    "type": "sha256",
     "created_at": "2026-05-28T00:00:00.000Z",
-    "summary": "Demo registry seed receipt. Replace with signed source receipt when real files are added.",
-    "hash": "sha256:demo-receipt-policy",
-    "path": "data/registry/receipts.json"
+    "summary": "CRE Underwriting Royal Jelly v1 file inventory indexed with 2 file(s), 1,461,572 records, 4,197,267,267 bytes, and SHA256 receipts.",
+    "hash": "15adfccc3d3b9c38e30059bb6bd2da2006ec6740ea8faad135b9438eede63ec6",
+    "path": "datasets/cre/cre_underwriting_royal_jelly_v1/receipts/receipt.sha256.txt"
+  },
+  {
+    "id": "receipt-compute-gpu-market-comps-v1",
+    "dataset_id": "compute_gpu_market_comps_v1",
+    "type": "sha256",
+    "created_at": "2026-05-28T00:00:00.000Z",
+    "summary": "Compute GPU Market Comps v1 file inventory indexed with 1 file(s), 40,647 records, 304,209,452 bytes, and SHA256 receipts.",
+    "hash": "580bb1956df5656c667abe1c2acc8bff70779dbe248ac6d4346eed565efcee62",
+    "path": "datasets/compute/compute_gpu_market_comps_v1/receipts/receipt.sha256.txt"
+  },
+  {
+    "id": "receipt-medical-billing-appeals-v1",
+    "dataset_id": "medical_billing_appeals_v1",
+    "type": "sha256",
+    "created_at": "2026-05-28T00:00:00.000Z",
+    "summary": "Medical Billing Appeals v1 file inventory indexed with 1 file(s), 385,626 records, 837,134,357 bytes, and SHA256 receipts.",
+    "hash": "45304fde5bcf9d49d4bd4b0e531d99f2ac9cde9dae46687e943c29aab2bc67ca",
+    "path": "datasets/medical/medical_billing_appeals_v1/receipts/receipt.sha256.txt"
+  },
+  {
+    "id": "receipt-fcra-credit-dispute-letters-v1",
+    "dataset_id": "fcra_credit_dispute_letters_v1",
+    "type": "sha256",
+    "created_at": "2026-05-28T00:00:00.000Z",
+    "summary": "FCRA Credit Dispute Letters v1 file inventory indexed with 1 file(s), 26,113 records, 185,802,801 bytes, and SHA256 receipts.",
+    "hash": "3529f482d01e5830c170c0fa69417964fa72065352711904935227f7fc4ae919",
+    "path": "datasets/credit/fcra_credit_dispute_letters_v1/receipts/receipt.sha256.txt"
+  },
+  {
+    "id": "receipt-sam-gov-opportunity-intelligence-v1",
+    "dataset_id": "sam_gov_opportunity_intelligence_v1",
+    "type": "sha256",
+    "created_at": "2026-05-28T00:00:00.000Z",
+    "summary": "SAM.gov Opportunity Intelligence v1 file inventory indexed with 1 file(s), 19,703 records, 202,584,590 bytes, and SHA256 receipts.",
+    "hash": "35f5d2aeb494814646654d1fd11d38a95d06a5950887f9ffa54aaf6f958f4c17",
+    "path": "datasets/gov/sam_gov_opportunity_intelligence_v1/receipts/receipt.sha256.txt"
+  },
+  {
+    "id": "receipt-legal-letter-templates-v1",
+    "dataset_id": "legal_letter_templates_v1",
+    "type": "sha256",
+    "created_at": "2026-05-28T00:00:00.000Z",
+    "summary": "Legal Letter Templates v1 file inventory indexed with 1 file(s), 9,160 records, 109,794,304 bytes, and SHA256 receipts.",
+    "hash": "3d3246c9e288340acaf2c2c4e9e1d7747bcf2db931b8a4709f1ebe01fc5b9702",
+    "path": "datasets/legal/legal_letter_templates_v1/receipts/receipt.sha256.txt"
+  },
+  {
+    "id": "receipt-energy-site-assessment-v1",
+    "dataset_id": "energy_site_assessment_v1",
+    "type": "sha256",
+    "created_at": "2026-05-28T00:00:00.000Z",
+    "summary": "Energy Site Assessment v1 file inventory indexed with 1 file(s), 14,865 records, 169,376,617 bytes, and SHA256 receipts.",
+    "hash": "9727c7626492587c39170b86657ba3294783316e9e36cef694b8fd06499827f0",
+    "path": "datasets/energy/energy_site_assessment_v1/receipts/receipt.sha256.txt"
+  },
+  {
+    "id": "receipt-local-service-leads-jupiter-v1",
+    "dataset_id": "local_service_leads_jupiter_v1",
+    "type": "sha256",
+    "created_at": "2026-05-28T00:00:00.000Z",
+    "summary": "Local Service Leads Jupiter v1 file inventory indexed with 1 file(s), 5,447 records, 37,511,272 bytes, and SHA256 receipts.",
+    "hash": "3f179b67fc0453ef1776a954f350815e89347e4be01aed9f8af6f41c104957ae",
+    "path": "datasets/local/local_service_leads_jupiter_v1/receipts/receipt.sha256.txt"
+  },
+  {
+    "id": "receipt-mining-ops-qa-v1",
+    "dataset_id": "mining_ops_qa_v1",
+    "type": "sha256",
+    "created_at": "2026-05-28T00:00:00.000Z",
+    "summary": "Mining Ops Q&A v1 file inventory indexed with 1 file(s), 5,046 records, 62,332,143 bytes, and SHA256 receipts.",
+    "hash": "f9f4e61706c63e8122eabd6292b6637beb020466b2fcc29b6fc7511630ba7fc8",
+    "path": "datasets/mining/mining_ops_qa_v1/receipts/receipt.sha256.txt"
+  },
+  {
+    "id": "receipt-general-agent-instruction-pairs-v1",
+    "dataset_id": "general_agent_instruction_pairs_v1",
+    "type": "sha256",
+    "created_at": "2026-05-28T00:00:00.000Z",
+    "summary": "General Agent Instruction Pairs v1 file inventory indexed with 2 file(s), 553,324 records, 2,295,095,293 bytes, and SHA256 receipts.",
+    "hash": "8b00646bce0faf1bebf6eab82c89b778356b6fb220cdfb5fece48a6c6e1c0af9",
+    "path": "datasets/general/general_agent_instruction_pairs_v1/receipts/receipt.sha256.txt"
   },
   {
     "id": "receipt-minechain-master-inventory-v1",
     "dataset_id": "minechain_master_inventory_v1",
     "type": "sha256",
     "created_at": "2026-05-28T00:00:00.000Z",
-    "summary": "SHA256 and record-count receipts captured from /volume1/minechain-data/master-inventory on the Synology NAS.",
-    "hash": "sha256:minechain-master-inventory-v1-receipt",
+    "summary": "Minechain Master Inventory v1 file inventory indexed with 4 file(s), 436,617 records, 1,001,810,211 bytes, and SHA256 receipts.",
+    "hash": "25e3b58238f384e58925b980c69c1b6f20d80b92f87b9cbf5a26ef35de05568c",
     "path": "datasets/general/minechain_master_inventory_v1/receipts/receipt.sha256.txt"
   }
 ]

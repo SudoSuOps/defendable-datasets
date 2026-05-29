@@ -1,36 +1,90 @@
 {
   "id": "minechain_master_inventory_v1",
+  "title": "Minechain Master Inventory v1",
   "registry_path": "data/registry/datasets.json",
-  "status": "nas-indexed",
+  "status": "verified",
+  "access": "members",
+  "license": "defendable-community-research",
   "card": "dataset.card.md",
   "samples": "samples/",
   "receipts": "receipts/",
   "splits": "splits/",
-  "external_sources": [
+  "record_count": 436617,
+  "size_bytes": 1001810211,
+  "files": [
     {
-      "label": "MASTER_GOLD_FULL",
-      "mounted_path": "/volume1/minechain-data/master-inventory/MASTER_GOLD_FULL.jsonl",
+      "id": "minechain_master_gold_full",
+      "path": "datasets/general/minechain_master_inventory_v1/splits/MASTER_GOLD_FULL.jsonl",
+      "format": "jsonl",
       "size_bytes": 61024612,
-      "sha256": "25e3b58238f384e58925b980c69c1b6f20d80b92f87b9cbf5a26ef35de05568c"
+      "sha256": "25e3b58238f384e58925b980c69c1b6f20d80b92f87b9cbf5a26ef35de05568c",
+      "record_count": 19792,
+      "split": "full",
+      "downloadable": false
     },
     {
-      "label": "MASTER_GOLD_ORIGINAL",
-      "mounted_path": "/volume1/minechain-data/master-inventory/MASTER_GOLD_ORIGINAL.jsonl",
+      "id": "minechain_master_gold_original",
+      "path": "datasets/general/minechain_master_inventory_v1/splits/MASTER_GOLD_ORIGINAL.jsonl",
+      "format": "jsonl",
       "size_bytes": 20224866,
-      "sha256": "5662f3bf140a744372e8ba0d0993dcc7c896bebc8af0d3ed7ca3f8c47a4e6f34"
+      "sha256": "5662f3bf140a744372e8ba0d0993dcc7c896bebc8af0d3ed7ca3f8c47a4e6f34",
+      "record_count": 9456,
+      "split": "full",
+      "downloadable": false
     },
     {
-      "label": "MASTER_PLATINUM_FULL",
-      "mounted_path": "/volume1/minechain-data/master-inventory/MASTER_PLATINUM_FULL.jsonl",
+      "id": "minechain_master_platinum_full",
+      "path": "datasets/general/minechain_master_inventory_v1/splits/MASTER_PLATINUM_FULL.jsonl",
+      "format": "jsonl",
       "size_bytes": 879633553,
-      "sha256": "5319496ee1c453f35d5618d57ed18d28a55600fb0e36c689c4fc74b7f42155c7"
+      "sha256": "5319496ee1c453f35d5618d57ed18d28a55600fb0e36c689c4fc74b7f42155c7",
+      "record_count": 391991,
+      "split": "full",
+      "downloadable": false
     },
     {
-      "label": "MASTER_PLATINUM_ORIGINAL",
-      "mounted_path": "/volume1/minechain-data/master-inventory/MASTER_PLATINUM_ORIGINAL.jsonl",
+      "id": "minechain_master_platinum_original",
+      "path": "datasets/general/minechain_master_inventory_v1/splits/MASTER_PLATINUM_ORIGINAL.jsonl",
+      "format": "jsonl",
       "size_bytes": 40931180,
-      "sha256": "d6c944fc41ad844aa158070968ad5380303d32ba5f67ee2fb3e4cf0a104761e3"
+      "sha256": "d6c944fc41ad844aa158070968ad5380303d32ba5f67ee2fb3e4cf0a104761e3",
+      "record_count": 15378,
+      "split": "full",
+      "downloadable": false
     }
   ],
-  "record_count": 436617
+  "external_sources": [
+    {
+      "label": "NAS MASTER_GOLD_FULL",
+      "uri": "nas://192.168.0.102/volume1/minechain-data/master-inventory/MASTER_GOLD_FULL.jsonl",
+      "mounted_path": "/volume1/minechain-data/master-inventory/MASTER_GOLD_FULL.jsonl",
+      "size_bytes": 61024612,
+      "sha256": "25e3b58238f384e58925b980c69c1b6f20d80b92f87b9cbf5a26ef35de05568c",
+      "notes": "Direct NAS path; not exposed by the /mnt/swarm NFS mount."
+    },
+    {
+      "label": "NAS MASTER_GOLD_ORIGINAL",
+      "uri": "nas://192.168.0.102/volume1/minechain-data/master-inventory/MASTER_GOLD_ORIGINAL.jsonl",
+      "mounted_path": "/volume1/minechain-data/master-inventory/MASTER_GOLD_ORIGINAL.jsonl",
+      "size_bytes": 20224866,
+      "sha256": "5662f3bf140a744372e8ba0d0993dcc7c896bebc8af0d3ed7ca3f8c47a4e6f34",
+      "notes": "Direct NAS path; not exposed by the /mnt/swarm NFS mount."
+    },
+    {
+      "label": "NAS MASTER_PLATINUM_FULL",
+      "uri": "nas://192.168.0.102/volume1/minechain-data/master-inventory/MASTER_PLATINUM_FULL.jsonl",
+      "mounted_path": "/volume1/minechain-data/master-inventory/MASTER_PLATINUM_FULL.jsonl",
+      "size_bytes": 879633553,
+      "sha256": "5319496ee1c453f35d5618d57ed18d28a55600fb0e36c689c4fc74b7f42155c7",
+      "notes": "Direct NAS path; not exposed by the /mnt/swarm NFS mount."
+    },
+    {
+      "label": "NAS MASTER_PLATINUM_ORIGINAL",
+      "uri": "nas://192.168.0.102/volume1/minechain-data/master-inventory/MASTER_PLATINUM_ORIGINAL.jsonl",
+      "mounted_path": "/volume1/minechain-data/master-inventory/MASTER_PLATINUM_ORIGINAL.jsonl",
+      "size_bytes": 40931180,
+      "sha256": "d6c944fc41ad844aa158070968ad5380303d32ba5f67ee2fb3e4cf0a104761e3",
+      "notes": "Direct NAS path; not exposed by the /mnt/swarm NFS mount."
+    }
+  ]
 }

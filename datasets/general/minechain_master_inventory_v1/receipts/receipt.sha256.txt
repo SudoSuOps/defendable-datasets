@@ -1,9 +1,8 @@
-25e3b58238f384e58925b980c69c1b6f20d80b92f87b9cbf5a26ef35de05568c  /volume1/minechain-data/master-inventory/MASTER_GOLD_FULL.jsonl
-5662f3bf140a744372e8ba0d0993dcc7c896bebc8af0d3ed7ca3f8c47a4e6f34  /volume1/minechain-data/master-inventory/MASTER_GOLD_ORIGINAL.jsonl
-5319496ee1c453f35d5618d57ed18d28a55600fb0e36c689c4fc74b7f42155c7  /volume1/minechain-data/master-inventory/MASTER_PLATINUM_FULL.jsonl
-d6c944fc41ad844aa158070968ad5380303d32ba5f67ee2fb3e4cf0a104761e3  /volume1/minechain-data/master-inventory/MASTER_PLATINUM_ORIGINAL.jsonl
-
-records:19792  /volume1/minechain-data/master-inventory/MASTER_GOLD_FULL.jsonl
-records:9456  /volume1/minechain-data/master-inventory/MASTER_GOLD_ORIGINAL.jsonl
-records:391991  /volume1/minechain-data/master-inventory/MASTER_PLATINUM_FULL.jsonl
-records:15378  /volume1/minechain-data/master-inventory/MASTER_PLATINUM_ORIGINAL.jsonl
+dataset_id=minechain_master_inventory_v1
+created_at=2026-05-28T00:00:00.000Z
+record_count=436617
+size_bytes=1001810211
+25e3b58238f384e58925b980c69c1b6f20d80b92f87b9cbf5a26ef35de05568c  datasets/general/minechain_master_inventory_v1/splits/MASTER_GOLD_FULL.jsonl  records=19792  bytes=61024612
+5662f3bf140a744372e8ba0d0993dcc7c896bebc8af0d3ed7ca3f8c47a4e6f34  datasets/general/minechain_master_inventory_v1/splits/MASTER_GOLD_ORIGINAL.jsonl  records=9456  bytes=20224866
+5319496ee1c453f35d5618d57ed18d28a55600fb0e36c689c4fc74b7f42155c7  datasets/general/minechain_master_inventory_v1/splits/MASTER_PLATINUM_FULL.jsonl  records=391991  bytes=879633553
+d6c944fc41ad844aa158070968ad5380303d32ba5f67ee2fb3e4cf0a104761e3  datasets/general/minechain_master_inventory_v1/splits/MASTER_PLATINUM_ORIGINAL.jsonl  records=15378  bytes=40931180

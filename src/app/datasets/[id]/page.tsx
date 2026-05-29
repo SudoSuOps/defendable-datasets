@@ -60,6 +60,9 @@ export default async function DatasetDetailPage({ params }: { params: Promise<{ 
             <a href={`data:application/json;charset=utf-8,${encodeURIComponent(JSON.stringify(dataset, null, 2))}`} download={`${dataset.id}.json`} className="rounded-md border border-white/10 px-3 py-2 text-sm text-white hover:bg-white/10">
               Download metadata JSON
             </a>
+            <a href="/access" className="rounded-md border border-amber-300/30 bg-amber-300/10 px-3 py-2 text-sm text-amber-100 hover:bg-amber-300/15">
+              Request file access
+            </a>
           </div>
         </section>
         <Panel className="rounded-md">

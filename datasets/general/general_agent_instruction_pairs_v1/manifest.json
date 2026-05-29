@@ -1,21 +1,54 @@
 {
   "id": "general_agent_instruction_pairs_v1",
-  "status": "demo",
+  "title": "General Agent Instruction Pairs v1",
+  "registry_path": "data/registry/datasets.json",
+  "status": "verified",
+  "access": "public",
+  "license": "cc0-1.0",
   "card": "dataset.card.md",
   "samples": "samples/",
   "receipts": "receipts/",
   "splits": "splits/",
-  "external_sources": [
+  "record_count": 553324,
+  "size_bytes": 2295095293,
+  "files": [
     {
-      "label": "NAS agent training corpus",
-      "mounted_path": "/mnt/swarm/swarm-and-bee-datasets/bee-hive/agent_train_v1.jsonl",
+      "id": "agent_train_v1_jsonl",
+      "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/bee-hive/agent_train_v1.jsonl",
+      "format": "jsonl",
       "size_bytes": 6824309,
-      "sha256": "8b00646bce0faf1bebf6eab82c89b778356b6fb220cdfb5fece48a6c6e1c0af9"
+      "sha256": "8b00646bce0faf1bebf6eab82c89b778356b6fb220cdfb5fece48a6c6e1c0af9",
+      "record_count": 3811,
+      "split": "full",
+      "downloadable": false
     },
     {
-      "label": "NAS instruction following corpus",
-      "mounted_path": "/mnt/swarm/swarm-and-bee-datasets/bee-hive/instruction_following.jsonl",
-      "size_bytes": 2362237244
+      "id": "instruction_following_jsonl",
+      "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/bee-hive/instruction_following.jsonl",
+      "format": "jsonl",
+      "size_bytes": 2288270984,
+      "sha256": "253be000d865b75b407396438c3df94feff52298e16a3e722eef2451d8591763",
+      "record_count": 549513,
+      "split": "full",
+      "downloadable": false
+    }
+  ],
+  "external_sources": [
+    {
+      "label": "Agent Train V1 Jsonl",
+      "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/bee-hive/agent_train_v1.jsonl",
+      "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/bee-hive/agent_train_v1.jsonl",
+      "size_bytes": 6824309,
+      "sha256": "8b00646bce0faf1bebf6eab82c89b778356b6fb220cdfb5fece48a6c6e1c0af9",
+      "notes": "NAS-indexed source file with SHA256 receipt."
+    },
+    {
+      "label": "Instruction Following Jsonl",
+      "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/bee-hive/instruction_following.jsonl",
+      "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/bee-hive/instruction_following.jsonl",
+      "size_bytes": 2288270984,
+      "sha256": "253be000d865b75b407396438c3df94feff52298e16a3e722eef2451d8591763",
+      "notes": "NAS-indexed source file with SHA256 receipt."
     }
   ]
 }

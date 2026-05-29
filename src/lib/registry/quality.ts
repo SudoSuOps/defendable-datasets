@@ -5,17 +5,17 @@ const licenseScore: Record<string, number> = {
   "apache-2.0": 18,
   mit: 18,
   "cc-by-4.0": 14,
-  "demo-research-only": 2,
+  "defendable-community-research": 8,
 };
 
-export type RegistrySourceLabel = "demo" | "nas-indexed" | "verified-public" | "members-indexed";
+export type RegistrySourceLabel = "registry-indexed" | "nas-indexed" | "verified-public" | "members-indexed";
 
 export function getRegistrySourceLabel(dataset: Dataset): RegistrySourceLabel {
-  if (dataset.status === "verified" && dataset.access === "public" && !dataset.source_type.includes("demo")) {
+  if (dataset.status === "verified" && dataset.access === "public") {
     return "verified-public";
   }
   if (dataset.external_locations?.length) return dataset.access === "members" ? "members-indexed" : "nas-indexed";
-  return "demo";
+  return "registry-indexed";
 }
 
 export function getRegistrySourceText(dataset: Dataset) {
@@ -23,7 +23,7 @@ export function getRegistrySourceText(dataset: Dataset) {
   if (label === "verified-public") return "Verified public";
   if (label === "members-indexed") return "Members indexed";
   if (label === "nas-indexed") return "NAS indexed";
-  return "Demo metadata";
+  return "Registry indexed";
 }
 
 export function getFineTuneReadiness(dataset: Dataset) {
@@ -52,7 +52,7 @@ export function getReadinessLabel(score: number) {
 export type LicenseCompatibility = "compatible" | "review" | "restricted";
 
 export function getLicenseCompatibility(licenses: string[]): LicenseCompatibility {
-  if (licenses.includes("demo-research-only")) return "restricted";
+  if (licenses.includes("defendable-community-research")) return "restricted";
   if (licenses.includes("cc-by-4.0")) return "review";
   return "compatible";
 }

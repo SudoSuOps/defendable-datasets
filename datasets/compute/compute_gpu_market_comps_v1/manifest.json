@@ -1,16 +1,36 @@
 {
   "id": "compute_gpu_market_comps_v1",
+  "title": "Compute GPU Market Comps v1",
   "registry_path": "data/registry/datasets.json",
-  "status": "demo",
+  "status": "verified",
+  "access": "public",
+  "license": "cc-by-4.0",
   "card": "dataset.card.md",
   "samples": "samples/",
   "receipts": "receipts/",
   "splits": "splits/",
+  "record_count": 40647,
+  "size_bytes": 304209452,
+  "files": [
+    {
+      "id": "gpu_compute_openalex_jsonl",
+      "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/openalex/gpu_compute_2022_2026.jsonl",
+      "format": "jsonl",
+      "size_bytes": 304209452,
+      "sha256": "580bb1956df5656c667abe1c2acc8bff70779dbe248ac6d4346eed565efcee62",
+      "record_count": 40647,
+      "split": "full",
+      "downloadable": false
+    }
+  ],
   "external_sources": [
     {
-      "label": "NAS OpenAlex GPU compute corpus",
-      "mounted_path": "/mnt/swarm/swarm-and-bee-datasets/openalex/gpu_compute_2022_2026.jsonl",
-      "size_bytes": 304209452
+      "label": "Gpu Compute Openalex Jsonl",
+      "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/openalex/gpu_compute_2022_2026.jsonl",
+      "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/openalex/gpu_compute_2022_2026.jsonl",
+      "size_bytes": 304209452,
+      "sha256": "580bb1956df5656c667abe1c2acc8bff70779dbe248ac6d4346eed565efcee62",
+      "notes": "NAS-indexed source file with SHA256 receipt."
     }
   ]
 }

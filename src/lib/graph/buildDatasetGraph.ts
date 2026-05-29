@@ -160,7 +160,7 @@ export function buildDatasetGraph(filters: DatasetGraphFilters = {}): DatasetGra
         id: `receipt:${receiptId}`,
         type: "RECEIPT",
         label: receiptId,
-        summary: receipt?.summary ?? "Receipt placeholder",
+        summary: receipt?.summary ?? "Receipt record reserved",
         datasetId: dataset.id,
         meta: receipt,
       });

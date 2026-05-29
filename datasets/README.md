@@ -1,6 +1,6 @@
 # Dataset Asset Layout
 
-Dataset packages live beside the registry so the project can evolve from metadata-only entries to real, hashed assets.
+Dataset packages live beside the registry and point to real, hashed assets in git, NAS, or object storage.
 
 ```text
 datasets/
@@ -13,4 +13,4 @@ datasets/
       splits/
 ```
 
-The current packages are demo scaffolds unless a split file contains real data and a matching SHA256 receipt.
+Large split files may remain outside git. The manifest and receipt files are the source of truth for file locations, counts, sizes, and SHA256 hashes.

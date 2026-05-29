@@ -21,8 +21,8 @@ export default function ContributePage() {
       <Badge>Contributor workflow</Badge>
       <h1 className="mt-4 text-4xl font-semibold text-white">Add datasets with proof</h1>
       <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-300">
-        DefendableDatasets accepts registry-first contributions. v0 does not include authenticated upload;
-        contributors add metadata, receipts, samples, and manifests through pull requests.
+        DefendableDatasets accepts registry-first contributions. Contributors add metadata, receipts,
+        samples, and manifests through pull requests; large files move through NAS or object storage.
       </p>
 
       <div className="mt-8 grid gap-6 lg:grid-cols-2">
@@ -37,7 +37,7 @@ export default function ContributePage() {
           <p className="mt-4 text-sm leading-6 text-slate-300">
             Every dataset needs a license, source summary, receipt path, and SHA256 hashes for every file.
             Public records still need source URLs, retrieval dates, and terms review. Private or member data
-            must stay out of public pull requests until access controls exist.
+            must stay out of public pull requests and route through gated access controls.
           </p>
         </Panel>
       </div>
@@ -75,8 +75,8 @@ export default function ContributePage() {
       <Panel className="mt-6 rounded-md">
         <h2 className="font-semibold text-white">CLI Roadmap</h2>
         <p className="mt-4 text-sm leading-6 text-slate-300">
-          Planned commands: `defendable-datasets validate`, `defendable-datasets hash`,
-          `defendable-datasets receipt`, and `defendable-datasets pack`.
+          Available commands: `defendable-datasets validate`, `defendable-datasets hash`,
+          and `defendable-datasets pack`. Next command: `defendable-datasets receipt`.
         </p>
       </Panel>
     </main>

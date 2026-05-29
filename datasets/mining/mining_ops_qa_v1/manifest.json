@@ -1,1 +1,36 @@
-{ "id": "mining_ops_qa_v1", "status": "demo", "card": "dataset.card.md", "samples": "samples/", "receipts": "receipts/", "splits": "splits/" }
+{
+  "id": "mining_ops_qa_v1",
+  "title": "Mining Ops Q&A v1",
+  "registry_path": "data/registry/datasets.json",
+  "status": "verified",
+  "access": "public",
+  "license": "apache-2.0",
+  "card": "dataset.card.md",
+  "samples": "samples/",
+  "receipts": "receipts/",
+  "splits": "splits/",
+  "record_count": 5046,
+  "size_bytes": 62332143,
+  "files": [
+    {
+      "id": "blockchain_stream_jsonl",
+      "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/capital-markets/stream_blockchain.jsonl",
+      "format": "jsonl",
+      "size_bytes": 62332143,
+      "sha256": "f9f4e61706c63e8122eabd6292b6637beb020466b2fcc29b6fc7511630ba7fc8",
+      "record_count": 5046,
+      "split": "full",
+      "downloadable": false
+    }
+  ],
+  "external_sources": [
+    {
+      "label": "Blockchain Stream Jsonl",
+      "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/capital-markets/stream_blockchain.jsonl",
+      "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/capital-markets/stream_blockchain.jsonl",
+      "size_bytes": 62332143,
+      "sha256": "f9f4e61706c63e8122eabd6292b6637beb020466b2fcc29b6fc7511630ba7fc8",
+      "notes": "NAS-indexed source file with SHA256 receipt."
+    }
+  ]
+}

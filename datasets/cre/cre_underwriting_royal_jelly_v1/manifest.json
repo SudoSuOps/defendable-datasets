@@ -1,22 +1,54 @@
 {
   "id": "cre_underwriting_royal_jelly_v1",
+  "title": "CRE Underwriting Royal Jelly v1",
   "registry_path": "data/registry/datasets.json",
-  "status": "demo",
+  "status": "verified",
+  "access": "public",
+  "license": "cc-by-4.0",
   "card": "dataset.card.md",
   "samples": "samples/",
   "receipts": "receipts/",
   "splits": "splits/",
-  "external_sources": [
+  "record_count": 1461572,
+  "size_bytes": 4197267267,
+  "files": [
     {
-      "label": "NAS canonical CRE dedup JSONL",
-      "mounted_path": "/mnt/swarm/swarm-and-bee-datasets/cre/swarmcre_canonical_dedup.jsonl",
+      "id": "cre_canonical_dedup_jsonl",
+      "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/cre/swarmcre_canonical_dedup.jsonl",
+      "format": "jsonl",
       "size_bytes": 1334445999,
-      "sha256": "15adfccc3d3b9c38e30059bb6bd2da2006ec6740ea8faad135b9438eede63ec6"
+      "sha256": "15adfccc3d3b9c38e30059bb6bd2da2006ec6740ea8faad135b9438eede63ec6",
+      "record_count": 651475,
+      "split": "full",
+      "downloadable": false
     },
     {
-      "label": "NAS stamped CRE JSONL",
-      "mounted_path": "/mnt/swarm/swarm-and-bee-datasets/cre/cre_honey_stamped.jsonl",
-      "size_bytes": 2862821268
+      "id": "cre_honey_stamped_jsonl",
+      "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/cre/cre_honey_stamped.jsonl",
+      "format": "jsonl",
+      "size_bytes": 2862821268,
+      "sha256": "770942e35d62581b22841fdc1a0a10d17252ce9243a02848a45df6079051c97f",
+      "record_count": 810097,
+      "split": "full",
+      "downloadable": false
+    }
+  ],
+  "external_sources": [
+    {
+      "label": "Cre Canonical Dedup Jsonl",
+      "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/cre/swarmcre_canonical_dedup.jsonl",
+      "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/cre/swarmcre_canonical_dedup.jsonl",
+      "size_bytes": 1334445999,
+      "sha256": "15adfccc3d3b9c38e30059bb6bd2da2006ec6740ea8faad135b9438eede63ec6",
+      "notes": "NAS-indexed source file with SHA256 receipt."
+    },
+    {
+      "label": "Cre Honey Stamped Jsonl",
+      "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/cre/cre_honey_stamped.jsonl",
+      "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/cre/cre_honey_stamped.jsonl",
+      "size_bytes": 2862821268,
+      "sha256": "770942e35d62581b22841fdc1a0a10d17252ce9243a02848a45df6079051c97f",
+      "notes": "NAS-indexed source file with SHA256 receipt."
     }
   ]
 }

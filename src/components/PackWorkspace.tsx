@@ -1,11 +1,13 @@
 "use client";
 
 import { Download, Trash2 } from "lucide-react";
+import Link from "next/link";
 import { buildPackManifest } from "@/lib/pack/buildPackManifest";
 import { downloadText, renderPackExport, type PackExportKind } from "@/lib/pack/exportPack";
 import { formatBytes, formatNumber } from "@/lib/registry/data";
 import { usePack } from "./PackProvider";
 import { Badge, Panel } from "./ui";
+import { DOWNLOADS_PER_EMAIL_LIMIT } from "@/lib/access/downloadPolicy";
 
 const exports: PackExportKind[] = [
   "pack.manifest.json",
@@ -69,7 +71,7 @@ export function PackWorkspace() {
         <Panel className="rounded-md">
           <h2 className="font-semibold text-white">Export Options</h2>
           <p className="mt-2 text-sm leading-6 text-slate-400">
-            Pack selections persist in this browser. Exports are generated entirely client-side.
+            Metadata exports are generated in this browser. Production file downloads are gated at {DOWNLOADS_PER_EMAIL_LIMIT} downloads per email.
           </p>
           <div className="mt-4 grid gap-2">
             {exports.map((kind) => (
@@ -89,6 +91,9 @@ export function PackWorkspace() {
             {manifest.warnings.map((warning) => <li key={warning}>{warning}</li>)}
             {!manifest.warnings.length ? <li className="text-emerald-100">No pack warnings generated.</li> : null}
           </ul>
+          <Link href="/access" className="mt-5 inline-flex w-full items-center justify-center rounded-md border border-amber-300/30 bg-amber-300/10 px-3 py-2 text-sm font-medium text-amber-100 transition hover:bg-amber-300/15">
+            Review access policy
+          </Link>
         </Panel>
       </div>
     </div>

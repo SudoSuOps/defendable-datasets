@@ -1,1 +1,36 @@
-{ "id": "local_service_leads_jupiter_v1", "status": "demo", "card": "dataset.card.md", "samples": "samples/", "receipts": "receipts/", "splits": "splits/" }
+{
+  "id": "local_service_leads_jupiter_v1",
+  "title": "Local Service Leads Jupiter v1",
+  "registry_path": "data/registry/datasets.json",
+  "status": "verified",
+  "access": "members",
+  "license": "defendable-community-research",
+  "card": "dataset.card.md",
+  "samples": "samples/",
+  "receipts": "receipts/",
+  "splits": "splits/",
+  "record_count": 5447,
+  "size_bytes": 37511272,
+  "files": [
+    {
+      "id": "swarmmarket_v2_jsonl",
+      "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/marketing/swarmmarket_v2.jsonl",
+      "format": "jsonl",
+      "size_bytes": 37511272,
+      "sha256": "3f179b67fc0453ef1776a954f350815e89347e4be01aed9f8af6f41c104957ae",
+      "record_count": 5447,
+      "split": "full",
+      "downloadable": false
+    }
+  ],
+  "external_sources": [
+    {
+      "label": "Swarmmarket V2 Jsonl",
+      "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/marketing/swarmmarket_v2.jsonl",
+      "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/marketing/swarmmarket_v2.jsonl",
+      "size_bytes": 37511272,
+      "sha256": "3f179b67fc0453ef1776a954f350815e89347e4be01aed9f8af6f41c104957ae",
+      "notes": "Gated dataset source. Request access before file transfer."
+    }
+  ]
+}

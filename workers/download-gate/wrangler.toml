@@ -1,0 +1,11 @@
+name = "defendable-datasets-download-gate"
+main = "src/index.ts"
+compatibility_date = "2026-05-28"
+
+[[kv_namespaces]]
+binding = "DATASET_DOWNLOAD_QUOTA"
+id = "replace-with-kv-namespace-id"
+
+[vars]
+DATASET_DOWNLOAD_LIMIT = "500"
+

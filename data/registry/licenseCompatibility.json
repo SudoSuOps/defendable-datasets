@@ -24,9 +24,9 @@
     "requirements": "Attribution required. Keep source and license notices with exports."
   },
   {
-    "license": "demo-research-only",
+    "license": "defendable-community-research",
     "commercial_use": false,
-    "fine_tune_use": "restricted",
-    "requirements": "Do not use for production training or commercial deployment without replacement license."
+    "fine_tune_use": "gated review",
+    "requirements": "Research and evaluation access is gated. Commercial training or redistribution requires explicit written approval."
   }
 ]

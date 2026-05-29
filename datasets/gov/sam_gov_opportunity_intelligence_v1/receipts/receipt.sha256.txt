@@ -1,1 +1,5 @@
-sha256:demo-sam-full  splits/full.jsonl
+dataset_id=sam_gov_opportunity_intelligence_v1
+created_at=2026-05-28T00:00:00.000Z
+record_count=19703
+size_bytes=202584590
+35f5d2aeb494814646654d1fd11d38a95d06a5950887f9ffa54aaf6f958f4c17  nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/grants/train.jsonl  records=19703  bytes=202584590
