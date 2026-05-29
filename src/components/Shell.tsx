@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Database, ExternalLink, GitBranch, Mail, MessageSquare, Package, ScrollText } from "lucide-react";
 import { PackProvider } from "./PackProvider";
 
@@ -14,6 +15,7 @@ const ecosystem = [
   { label: "DefendableCloud", href: "https://defendablecloud.com" },
   { label: "DefendableDatasets", href: "https://defendabledatasets.com" },
   { label: "Defendable Router", href: "https://defendablerouter.com" },
+  { label: "Defendable GRO Ops", href: "https://defendableos.com" },
 ];
 
 export function Shell({ children }: { children: React.ReactNode }) {
@@ -25,7 +27,15 @@ export function Shell({ children }: { children: React.ReactNode }) {
         <header className="sticky top-0 z-40 border-b border-white/10 bg-[#080b0f]/86 backdrop-blur-xl">
           <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
             <Link href="/" className="flex items-center gap-3">
-              <div className="grid size-9 place-items-center rounded-md border border-amber-300/30 bg-amber-300/10 text-amber-200">
+              <Image
+                src="/defendablelogo.png"
+                alt="Defendable logo"
+                width={38}
+                height={38}
+                className="hidden rounded-md md:block"
+                priority
+              />
+              <div className="grid size-9 place-items-center rounded-md border border-amber-300/30 bg-amber-300/10 text-amber-200 md:hidden">
                 DD
               </div>
               <div>
@@ -58,7 +68,14 @@ export function Shell({ children }: { children: React.ReactNode }) {
           <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 md:grid-cols-[1.2fr_1fr_1fr] lg:px-8">
             <div>
               <div className="flex items-center gap-3">
-                <div className="grid size-9 place-items-center rounded-md border border-amber-300/30 bg-amber-300/10 text-amber-200">
+                <Image
+                  src="/defendablelogo.png"
+                  alt="Defendable logo"
+                  width={40}
+                  height={40}
+                  className="hidden rounded-md md:block"
+                />
+                <div className="grid size-9 place-items-center rounded-md border border-amber-300/30 bg-amber-300/10 text-amber-200 md:hidden">
                   DD
                 </div>
                 <div>

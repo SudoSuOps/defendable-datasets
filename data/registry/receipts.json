@@ -13,7 +13,7 @@
     "dataset_id": "minechain_master_inventory_v1",
     "type": "sha256",
     "created_at": "2026-05-28T00:00:00.000Z",
-    "summary": "SHA256 receipts captured from /volume1/minechain-data/master-inventory on the Synology NAS.",
+    "summary": "SHA256 and record-count receipts captured from /volume1/minechain-data/master-inventory on the Synology NAS.",
     "hash": "sha256:minechain-master-inventory-v1-receipt",
     "path": "datasets/general/minechain_master_inventory_v1/receipts/receipt.sha256.txt"
   }

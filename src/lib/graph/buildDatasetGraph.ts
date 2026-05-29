@@ -93,7 +93,12 @@ export function buildDatasetGraph(filters: DatasetGraphFilters = {}): DatasetGra
       category: dataset.category,
       status: dataset.status,
       quality: dataset.quality_score,
-      meta: { records: dataset.record_count, access: dataset.access },
+      meta: {
+        records: dataset.record_count,
+        access: dataset.access,
+        source_type: dataset.source_type,
+        nas_backed: Boolean(dataset.external_locations?.length),
+      },
     });
     addNode({
       id: `version:${dataset.id}:${dataset.version}`,

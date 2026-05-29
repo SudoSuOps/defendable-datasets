@@ -2,11 +2,17 @@
   "name": "defendable-datasets",
   "version": "0.1.0",
   "private": true,
+  "bin": {
+    "defendable-datasets": "./bin/defendable-datasets.mjs"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "cf:build": "next build",
     "cf:deploy": "wrangler pages deploy out --project-name defendable-datasets",
+    "registry:validate": "node bin/defendable-datasets.mjs validate",
+    "registry:pack": "node bin/defendable-datasets.mjs pack",
+    "registry:hash": "node bin/defendable-datasets.mjs hash",
     "start": "next start",
     "lint": "eslint"
   },

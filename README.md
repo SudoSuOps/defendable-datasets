@@ -2,6 +2,10 @@
 
 Open datasets with receipts.
 
+Live: https://defendabledatasets.com
+
+![DefendableDatasets social graph preview](public/og.svg)
+
 DefendableDatasets is the open-source dataset layer for the DefendableCloud / DefendableOS ecosystem. It is a static-first dataset registry, graph browser, selector, verifier, and export system for AI builders.
 
 The v0 app lets users browse demo registry entries by domain, category, license, format, task type, quality score, and status; inspect dataset metadata; add datasets to a pack; and export client-side manifests.
@@ -16,6 +20,15 @@ npm run dev
 ```
 
 Open `http://localhost:3000`.
+
+## Screenshots
+
+The public launch pages are static and live at:
+
+- Homepage: https://defendabledatasets.com
+- Graph: https://defendabledatasets.com/graph
+- Registry: https://defendabledatasets.com/registry
+- Minechain detail: https://defendabledatasets.com/datasets/minechain_master_inventory_v1
 
 ## Deploy to Cloudflare Pages
 
@@ -87,13 +100,43 @@ The Minechain master inventory is indexed from the NAS path:
 
 That share is reachable over NAS SSH and may not be exposed through the `/mnt/swarm` NFS mount.
 
+## CLI
+
+Run registry checks and generate receipts before opening pull requests:
+
+```bash
+npm run registry:validate
+npm run registry:hash -- datasets/general/minechain_master_inventory_v1/samples/sample.jsonl
+npm run registry:pack -- minechain_master_inventory_v1 --out pack.manifest.json
+```
+
+Direct binary usage:
+
+```bash
+npx defendable-datasets validate
+npx defendable-datasets hash <file...>
+npx defendable-datasets pack <dataset-id...> [--out file.json]
+```
+
 ## Add a Dataset
 
 1. Add the metadata entry to `/data/registry/datasets.json`.
 2. Create `datasets/[domain]/[dataset_id]/`.
 3. Add `dataset.card.md`, `manifest.json`, sample rows, receipts, and split files where licensing permits.
 4. Include SHA256 hashes for every file.
-5. Run `npm run lint` and `npm run build`.
+5. Add license compatibility expectations to `/data/registry/licenseCompatibility.json` if introducing a new license.
+6. Run `npm run registry:validate`, `npm run lint`, and `npm run cf:build`.
+
+Example package:
+
+```text
+datasets/general/minechain_master_inventory_v1/
+  dataset.card.md
+  manifest.json
+  samples/sample.jsonl
+  receipts/receipt.sha256.txt
+  splits/README.md
+```
 
 ## Export a Pack
 
@@ -119,6 +162,16 @@ Add datasets from the graph, registry, or detail page. Visit `/pack` and export:
 - Model compatibility scoring
 - Dataset lineage graph
 - Dataset license compatibility checker
+
+## Not Included Yet
+
+- Public hosting of large real dataset split files
+- Authenticated member access
+- Backend API
+- Hosted validation workers
+- Automatic Hugging Face sync
+- Signed Merkle proofs
+- Clinical, legal, or financial deployment clearance
 
 ## Community Model
 

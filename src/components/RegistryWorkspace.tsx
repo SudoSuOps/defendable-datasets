@@ -7,6 +7,7 @@ import { AddToPackButton } from "@/components/AddToPackButton";
 import { CopyButton } from "@/components/CopyButton";
 import { Badge, Panel, statusClass } from "@/components/ui";
 import { formatBytes, formatNumber, labelFor } from "@/lib/registry/data";
+import { getFineTuneReadiness, getReadinessLabel, getRegistrySourceText } from "@/lib/registry/quality";
 import type { Category, Dataset, Domain, FormatDefinition, LicenseDefinition, TaskDefinition } from "@/lib/schema/dataset";
 
 type RegistryWorkspaceProps = {
@@ -34,6 +35,7 @@ export function RegistryWorkspace({
   const [status, setStatus] = useState("");
   const [source, setSource] = useState("");
   const [minQuality, setMinQuality] = useState(0);
+  const [minReadiness, setMinReadiness] = useState(0);
 
   const filtered = useMemo(() => {
     const normalized = query.trim().toLowerCase();
@@ -63,10 +65,11 @@ export function RegistryWorkspace({
         (!task || dataset.tasks.includes(task)) &&
         (!status || dataset.status === status) &&
         (!source || (source === "nas" && Boolean(dataset.external_locations?.length))) &&
-        dataset.quality_score >= minQuality
+        dataset.quality_score >= minQuality &&
+        getFineTuneReadiness(dataset) >= minReadiness
       );
     });
-  }, [datasets, domain, format, license, minQuality, query, source, status, task]);
+  }, [datasets, domain, format, license, minQuality, minReadiness, query, source, status, task]);
 
   const totals = useMemo(
     () => ({
@@ -87,6 +90,7 @@ export function RegistryWorkspace({
     setStatus("");
     setSource("");
     setMinQuality(0);
+    setMinReadiness(0);
   };
 
   return (
@@ -152,56 +156,28 @@ export function RegistryWorkspace({
               className="h-9 accent-amber-300"
             />
           </label>
+          <label className="grid gap-1 text-xs text-slate-400 lg:col-span-2">
+            Fine-tune readiness {minReadiness}+
+            <input
+              type="range"
+              min="0"
+              max="100"
+              value={minReadiness}
+              onChange={(event) => setMinReadiness(Number(event.target.value))}
+              className="h-9 accent-teal-300"
+            />
+          </label>
         </div>
       </Panel>
 
       <div className="mt-6 grid gap-4">
         {filtered.map((dataset) => (
-          <article key={dataset.id} className="rounded-md border border-white/10 bg-[#0a0f15]/82 p-4 transition hover:border-amber-200/30 hover:bg-white/[.055]">
-            <div className="grid gap-4 lg:grid-cols-[1fr_260px]">
-              <div>
-                <div className="flex flex-wrap items-center gap-2">
-                  <Badge className={statusClass(dataset.status)}>{dataset.status}</Badge>
-                  {dataset.external_locations?.length ? <Badge className="border-sky-300/30 bg-sky-300/10 text-sky-100">NAS proof</Badge> : null}
-                  <Badge>{dataset.license}</Badge>
-                  <Badge>{dataset.access}</Badge>
-                </div>
-                <Link href={`/datasets/${dataset.id}`} className="mt-3 block text-xl font-semibold text-white transition hover:text-amber-200">
-                  {dataset.title}
-                </Link>
-                <p className="mt-2 max-w-4xl text-sm leading-6 text-slate-400">{dataset.description}</p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  <Badge>{labelFor(domains, dataset.domain)}</Badge>
-                  <Badge>{labelFor(categories, dataset.category)}</Badge>
-                  {dataset.formats.map((item) => <Badge key={item}>{item}</Badge>)}
-                  {dataset.tasks.slice(0, 4).map((item) => <Badge key={item}>{item}</Badge>)}
-                </div>
-              </div>
-              <div className="rounded-md border border-white/10 bg-black/20 p-3">
-                <div className="grid grid-cols-2 gap-3 text-sm">
-                  <Mini label="Records" value={dataset.record_count ? formatNumber(dataset.record_count) : "pending"} />
-                  <Mini label="Size" value={formatBytes(dataset.size_bytes)} />
-                  <Mini label="Quality" value={`${dataset.quality_score}/100`} />
-                  <Mini label="Hashes" value={dataset.hashes.length.toString()} />
-                </div>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  <Link href={`/datasets/${dataset.id}`} className="rounded-md border border-white/10 px-3 py-2 text-sm text-white transition hover:bg-white/10">
-                    View
-                  </Link>
-                  <AddToPackButton dataset={dataset} />
-                  <CopyButton label="Copy" value={JSON.stringify(dataset, null, 2)} />
-                  <a
-                    href={`data:application/json;charset=utf-8,${encodeURIComponent(JSON.stringify(dataset, null, 2))}`}
-                    download={`${dataset.id}.metadata.json`}
-                    className="rounded-md border border-white/10 px-3 py-2 text-sm text-white transition hover:bg-white/10"
-                    aria-label={`Download ${dataset.title} metadata JSON`}
-                  >
-                    <Download className="size-4" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </article>
+          <DatasetRow
+            key={dataset.id}
+            dataset={dataset}
+            domains={domains}
+            categories={categories}
+          />
         ))}
         {!filtered.length ? (
           <Panel className="rounded-md">
@@ -212,6 +188,75 @@ export function RegistryWorkspace({
         ) : null}
       </div>
     </main>
+  );
+}
+
+function DatasetRow({
+  dataset,
+  domains,
+  categories,
+}: {
+  dataset: Dataset;
+  domains: Domain[];
+  categories: Category[];
+}) {
+  const readiness = getFineTuneReadiness(dataset);
+  return (
+    <article className="rounded-md border border-white/10 bg-[#0a0f15]/82 p-4 transition hover:border-amber-200/30 hover:bg-white/[.055]">
+      <div className="grid gap-4 lg:grid-cols-[1fr_260px]">
+        <div>
+          <div className="flex flex-wrap items-center gap-2">
+            <Badge className={statusClass(dataset.status)}>{dataset.status}</Badge>
+            <Badge className="border-teal-300/30 bg-teal-300/10 text-teal-100">{getRegistrySourceText(dataset)}</Badge>
+            {dataset.external_locations?.length ? <Badge className="border-sky-300/30 bg-sky-300/10 text-sky-100">NAS proof</Badge> : null}
+            <Badge>{dataset.license}</Badge>
+            <Badge>{dataset.access}</Badge>
+          </div>
+          <Link href={`/datasets/${dataset.id}`} className="mt-3 block text-xl font-semibold text-white transition hover:text-amber-200">
+            {dataset.title}
+          </Link>
+          <p className="mt-2 max-w-4xl text-sm leading-6 text-slate-400">{dataset.description}</p>
+          <div className="mt-4 flex flex-wrap gap-2">
+            <Badge>{labelFor(domains, dataset.domain)}</Badge>
+            <Badge>{labelFor(categories, dataset.category)}</Badge>
+            {dataset.formats.map((item) => <Badge key={item}>{item}</Badge>)}
+            {dataset.tasks.slice(0, 4).map((item) => <Badge key={item}>{item}</Badge>)}
+          </div>
+        </div>
+        <div className="rounded-md border border-white/10 bg-black/20 p-3">
+          <div className="grid grid-cols-2 gap-3 text-sm">
+            <Mini label="Records" value={dataset.record_count ? formatNumber(dataset.record_count) : "pending"} />
+            <Mini label="Size" value={formatBytes(dataset.size_bytes)} />
+            <Mini label="Quality" value={`${dataset.quality_score}/100`} />
+            <Mini label="Readiness" value={`${readiness}/100`} />
+          </div>
+          <div className="mt-3">
+            <div className="flex items-center justify-between text-xs text-slate-400">
+              <span>{getReadinessLabel(readiness)}</span>
+              <span>{dataset.hashes.length} hashes</span>
+            </div>
+            <div className="mt-2 h-2 rounded-full bg-white/10">
+              <div className="h-2 rounded-full bg-gradient-to-r from-amber-300 to-teal-300" style={{ width: `${readiness}%` }} />
+            </div>
+          </div>
+          <div className="mt-3 flex flex-wrap gap-2">
+            <Link href={`/datasets/${dataset.id}`} className="rounded-md border border-white/10 px-3 py-2 text-sm text-white transition hover:bg-white/10">
+              View
+            </Link>
+            <AddToPackButton dataset={dataset} />
+            <CopyButton label="Copy" value={JSON.stringify(dataset, null, 2)} />
+            <a
+              href={`data:application/json;charset=utf-8,${encodeURIComponent(JSON.stringify(dataset, null, 2))}`}
+              download={`${dataset.id}.metadata.json`}
+              className="rounded-md border border-white/10 px-3 py-2 text-sm text-white transition hover:bg-white/10"
+              aria-label={`Download ${dataset.title} metadata JSON`}
+            >
+              <Download className="size-4" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
   );
 }
 

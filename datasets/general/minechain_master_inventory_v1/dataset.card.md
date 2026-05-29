@@ -7,5 +7,6 @@ NAS-backed Minechain medical instruction corpus containing gold and platinum JSO
 - License: Demo Research Only pending review
 - Source: `/volume1/minechain-data/master-inventory`
 - Proof: SHA256 hashes captured for all four master files
+- Records: 436,617 JSONL rows counted on NAS
 
 This package is metadata-only in git. Real split files remain on the Synology NAS until redistribution and PHI review are complete.

@@ -3,6 +3,7 @@ import datasetsJson from "../../../data/registry/datasets.json";
 import domainsJson from "../../../data/registry/domains.json";
 import formatsJson from "../../../data/registry/formats.json";
 import licensesJson from "../../../data/registry/licenses.json";
+import licenseCompatibilityJson from "../../../data/registry/licenseCompatibility.json";
 import receiptsJson from "../../../data/registry/receipts.json";
 import tasksJson from "../../../data/registry/tasks.json";
 import type {
@@ -19,6 +20,12 @@ export const datasets = datasetsJson as Dataset[];
 export const domains = domainsJson as Domain[];
 export const categories = categoriesJson as Category[];
 export const licenses = licensesJson as LicenseDefinition[];
+export const licenseCompatibility = licenseCompatibilityJson as {
+  license: string;
+  commercial_use: boolean;
+  fine_tune_use: "compatible" | "review" | "restricted";
+  requirements: string;
+}[];
 export const formats = formatsJson as FormatDefinition[];
 export const tasks = tasksJson as TaskDefinition[];
 export const receipts = receiptsJson as DatasetReceipt[];

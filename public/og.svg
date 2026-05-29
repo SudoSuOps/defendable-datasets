@@ -1,0 +1,15 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#080B0F"/>
+  <path d="M0 110H1200M0 220H1200M0 330H1200M0 440H1200M0 550H1200M120 0V630M240 0V630M360 0V630M480 0V630M600 0V630M720 0V630M840 0V630M960 0V630M1080 0V630" stroke="#1E293B" stroke-width="1"/>
+  <circle cx="214" cy="170" r="58" fill="#FBBF24" fill-opacity=".18" stroke="#FBBF24" stroke-width="3"/>
+  <circle cx="438" cy="290" r="44" fill="#2DD4BF" fill-opacity=".16" stroke="#2DD4BF" stroke-width="3"/>
+  <circle cx="674" cy="190" r="66" fill="#38BDF8" fill-opacity=".16" stroke="#38BDF8" stroke-width="3"/>
+  <circle cx="840" cy="360" r="42" fill="#F59E0B" fill-opacity=".16" stroke="#F59E0B" stroke-width="3"/>
+  <circle cx="562" cy="460" r="38" fill="#FB7185" fill-opacity=".14" stroke="#FB7185" stroke-width="3"/>
+  <path d="M214 170L438 290L674 190L840 360L562 460L438 290" stroke="#64748B" stroke-width="4"/>
+  <text x="84" y="88" fill="#FDE68A" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="4">DEFENDABLEDATASETS</text>
+  <text x="84" y="122" fill="#5EEAD4" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="2">DEFENDABLEOS • DEFENDABLECLOUD • GRO OPS</text>
+  <text x="84" y="525" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="72" font-weight="700">Open datasets with receipts.</text>
+  <text x="88" y="575" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="28">Browse, verify, compose, and export fine-tune-ready datasets from a living graph.</text>
+  <text x="905" y="90" fill="#5EEAD4" font-family="Arial, sans-serif" font-size="24" font-weight="700">No proof, no honey.</text>
+</svg>

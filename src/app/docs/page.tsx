@@ -1,4 +1,11 @@
 import { Badge, Panel } from "@/components/ui";
+import { licenseCompatibility } from "@/lib/registry/data";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Docs",
+  description: "DefendableDatasets documentation for registry schema, graph schema, receipts, license policy, contribution workflow, and roadmap.",
+};
 
 const roadmap = [
   "Real dataset file hosting",
@@ -34,7 +41,21 @@ export default function DocsPage() {
         <Doc title="How to Export a Pack" text="Use the graph, registry, or detail page to add datasets to the pack. The pack page exports pack.manifest.json, hf_dataset_card.md, fine_tune_manifest.json, sha256_manifest.json, and README snippets." />
         <Doc title="How Receipts Work" text="Receipts are proof objects that describe hashes, validation runs, license checks, provenance summaries, or future Merkle proofs. v0 includes demo placeholders; verified datasets require real receipt files." />
         <Doc title="License Policy" text="Every dataset must declare a license and whether commercial use is allowed. Packs warn when demo or restricted licenses are mixed into exports." />
+        <Doc title="CLI" text="Use defendable-datasets validate, defendable-datasets hash, and defendable-datasets pack to check registry integrity, generate SHA256 receipts, and create pack manifests before opening pull requests." />
       </div>
+
+      <Panel className="mt-6 rounded-md">
+        <h2 className="font-semibold text-white">License Compatibility Matrix</h2>
+        <div className="mt-4 grid gap-2">
+          {licenseCompatibility.map((item) => (
+            <div key={item.license} className="grid gap-2 rounded-md border border-white/10 bg-white/[.04] p-3 text-sm text-slate-300 md:grid-cols-[160px_140px_1fr]">
+              <div className="font-mono text-amber-100">{item.license}</div>
+              <div className="text-white">{item.fine_tune_use}</div>
+              <div>{item.requirements}</div>
+            </div>
+          ))}
+        </div>
+      </Panel>
 
       <Panel className="mt-6 rounded-md">
         <h2 className="font-semibold text-white">Roadmap</h2>

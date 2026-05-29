@@ -1,4 +1,10 @@
 import { Badge, Panel } from "@/components/ui";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contribute",
+  description: "Learn how to contribute datasets with metadata, licenses, provenance receipts, SHA256 hashes, samples, and split files.",
+};
 
 const required = [
   "id, title, slug, description, domain, category, version",

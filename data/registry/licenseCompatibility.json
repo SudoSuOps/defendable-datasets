@@ -1,0 +1,32 @@
+[
+  {
+    "license": "cc0-1.0",
+    "commercial_use": true,
+    "fine_tune_use": "compatible",
+    "requirements": "Keep provenance and dataset card when possible."
+  },
+  {
+    "license": "apache-2.0",
+    "commercial_use": true,
+    "fine_tune_use": "compatible",
+    "requirements": "Preserve notices where applicable."
+  },
+  {
+    "license": "mit",
+    "commercial_use": true,
+    "fine_tune_use": "compatible",
+    "requirements": "Preserve license notice."
+  },
+  {
+    "license": "cc-by-4.0",
+    "commercial_use": true,
+    "fine_tune_use": "review",
+    "requirements": "Attribution required. Keep source and license notices with exports."
+  },
+  {
+    "license": "demo-research-only",
+    "commercial_use": false,
+    "fine_tune_use": "restricted",
+    "requirements": "Do not use for production training or commercial deployment without replacement license."
+  }
+]

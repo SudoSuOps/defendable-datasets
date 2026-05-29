@@ -34,10 +34,19 @@ const typeColor: Record<string, string> = {
 };
 
 function GraphNode({ data }: { data: DatasetGraphNode }) {
+  const isVerifiedDataset = data.type === "DATASET" && data.status === "verified";
+  const isNasBacked = Boolean(data.meta?.nas_backed);
   return (
     <div
       className="min-w-36 max-w-60 rounded-md border bg-[#0d141d]/95 px-3 py-2 text-left shadow-xl"
-      style={{ borderColor: `${typeColor[data.type]}88` }}
+      style={{
+        borderColor: isVerifiedDataset ? "#34d399" : `${typeColor[data.type]}88`,
+        boxShadow: isVerifiedDataset
+          ? "0 0 28px rgba(52, 211, 153, 0.22)"
+          : isNasBacked
+            ? "0 0 24px rgba(56, 189, 248, 0.18)"
+            : undefined,
+      }}
       title={data.summary}
     >
       <Handle type="target" position={Position.Top} className="opacity-0" />
@@ -46,6 +55,8 @@ function GraphNode({ data }: { data: DatasetGraphNode }) {
       </div>
       <div className="mt-1 line-clamp-2 text-sm font-semibold text-white">{data.label}</div>
       {data.quality ? <div className="mt-1 text-xs text-slate-400">Quality {data.quality}</div> : null}
+      {isVerifiedDataset ? <div className="mt-1 text-[10px] font-semibold uppercase tracking-wide text-emerald-200">Verified</div> : null}
+      {isNasBacked ? <div className="mt-1 text-[10px] font-semibold uppercase tracking-wide text-sky-200">NAS indexed</div> : null}
       <Handle type="source" position={Position.Bottom} className="opacity-0" />
     </div>
   );

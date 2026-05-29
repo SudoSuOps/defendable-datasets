@@ -57,6 +57,12 @@ External location object:
 - `sha256`
 - `notes`
 
+License compatibility lives in `/data/registry/licenseCompatibility.json` and classifies licenses as:
+
+- `compatible`
+- `review`
+- `restricted`
+
 Receipt object:
 
 - `id`

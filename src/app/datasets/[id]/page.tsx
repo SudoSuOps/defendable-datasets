@@ -3,11 +3,35 @@ import { AddToPackButton } from "@/components/AddToPackButton";
 import { CopyButton } from "@/components/CopyButton";
 import { Badge, Panel, statusClass } from "@/components/ui";
 import { categories, datasets, domains, formatBytes, formatNumber, getDatasetBySlug, labelFor, receipts } from "@/lib/registry/data";
+import { getFineTuneReadiness, getReadinessLabel, getRegistrySourceText } from "@/lib/registry/quality";
 import { buildPackManifest } from "@/lib/pack/buildPackManifest";
 import { renderDatasetCard } from "@/lib/pack/exportPack";
+import type { Metadata } from "next";
 
 export function generateStaticParams() {
   return datasets.flatMap((dataset) => [{ id: dataset.id }, { id: dataset.slug }]);
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params;
+  const dataset = getDatasetBySlug(id);
+  if (!dataset) return {};
+  return {
+    title: `${dataset.title} | DefendableDatasets`,
+    description: dataset.description,
+    openGraph: {
+      title: dataset.title,
+      description: dataset.description,
+      url: `https://defendabledatasets.com/datasets/${dataset.id}`,
+      images: ["/og.svg"],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: dataset.title,
+      description: dataset.description,
+      images: ["/og.svg"],
+    },
+  };
 }
 
 export default async function DatasetDetailPage({ params }: { params: Promise<{ id: string }> }) {
@@ -16,6 +40,7 @@ export default async function DatasetDetailPage({ params }: { params: Promise<{ 
   if (!dataset) notFound();
   const card = renderDatasetCard(buildPackManifest([dataset], { name: dataset.title, description: dataset.description }));
   const datasetReceipts = receipts.filter((receipt) => dataset.receipts.includes(receipt.id));
+  const readiness = getFineTuneReadiness(dataset);
 
   return (
     <main className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
@@ -25,6 +50,7 @@ export default async function DatasetDetailPage({ params }: { params: Promise<{ 
             <Badge className={statusClass(dataset.status)}>{dataset.status}</Badge>
             <Badge>{dataset.access}</Badge>
             <Badge>{dataset.license}</Badge>
+            <Badge className="border-teal-300/30 bg-teal-300/10 text-teal-100">{getRegistrySourceText(dataset)}</Badge>
           </div>
           <h1 className="mt-4 text-4xl font-semibold text-white">{dataset.title}</h1>
           <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-300">{dataset.description}</p>
@@ -45,6 +71,8 @@ export default async function DatasetDetailPage({ params }: { params: Promise<{ 
             <Row label="Records" value={formatNumber(dataset.record_count)} />
             <Row label="Size" value={formatBytes(dataset.size_bytes)} />
             <Row label="Quality" value={`${dataset.quality_score}/100`} />
+            <Row label="Fine-tune readiness" value={`${readiness}/100`} />
+            <Row label="Readiness label" value={getReadinessLabel(readiness)} />
             <Row label="Validation" value={dataset.validation.status} />
           </dl>
         </Panel>
