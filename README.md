@@ -30,6 +30,14 @@ npm run cf:deploy
 
 The Cloudflare project name is `defendable-datasets`, and the static output directory is `out`.
 
+Custom domain:
+
+```text
+defendabledatasets.com
+```
+
+After Cloudflare auth is configured, bind the domain in Cloudflare Pages to the `defendable-datasets` project and point DNS at the Pages target Cloudflare provides.
+
 ## Key Routes
 
 - `/` homepage for defendabledatasets.com
