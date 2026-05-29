@@ -14,7 +14,7 @@
   "files": [
     {
       "id": "minechain_master_gold_full",
-      "path": "datasets/general/minechain_master_inventory_v1/splits/MASTER_GOLD_FULL.jsonl",
+      "path": "defendable-storage://minechain_master_inventory_v1/minechain_master_gold_full",
       "format": "jsonl",
       "size_bytes": 61024612,
       "sha256": "25e3b58238f384e58925b980c69c1b6f20d80b92f87b9cbf5a26ef35de05568c",
@@ -24,7 +24,7 @@
     },
     {
       "id": "minechain_master_gold_original",
-      "path": "datasets/general/minechain_master_inventory_v1/splits/MASTER_GOLD_ORIGINAL.jsonl",
+      "path": "defendable-storage://minechain_master_inventory_v1/minechain_master_gold_original",
       "format": "jsonl",
       "size_bytes": 20224866,
       "sha256": "5662f3bf140a744372e8ba0d0993dcc7c896bebc8af0d3ed7ca3f8c47a4e6f34",
@@ -34,7 +34,7 @@
     },
     {
       "id": "minechain_master_platinum_full",
-      "path": "datasets/general/minechain_master_inventory_v1/splits/MASTER_PLATINUM_FULL.jsonl",
+      "path": "defendable-storage://minechain_master_inventory_v1/minechain_master_platinum_full",
       "format": "jsonl",
       "size_bytes": 879633553,
       "sha256": "5319496ee1c453f35d5618d57ed18d28a55600fb0e36c689c4fc74b7f42155c7",
@@ -44,7 +44,7 @@
     },
     {
       "id": "minechain_master_platinum_original",
-      "path": "datasets/general/minechain_master_inventory_v1/splits/MASTER_PLATINUM_ORIGINAL.jsonl",
+      "path": "defendable-storage://minechain_master_inventory_v1/minechain_master_platinum_original",
       "format": "jsonl",
       "size_bytes": 40931180,
       "sha256": "d6c944fc41ad844aa158070968ad5380303d32ba5f67ee2fb3e4cf0a104761e3",
@@ -56,35 +56,31 @@
   "external_sources": [
     {
       "label": "NAS MASTER_GOLD_FULL",
-      "uri": "nas://192.168.0.102/volume1/minechain-data/master-inventory/MASTER_GOLD_FULL.jsonl",
-      "mounted_path": "/volume1/minechain-data/master-inventory/MASTER_GOLD_FULL.jsonl",
+      "uri": "defendable-storage://minechain_master_inventory_v1/minechain_master_gold_full",
       "size_bytes": 61024612,
       "sha256": "25e3b58238f384e58925b980c69c1b6f20d80b92f87b9cbf5a26ef35de05568c",
-      "notes": "Direct NAS path; not exposed by the /mnt/swarm NFS mount."
+      "notes": "Internal storage source. Request access before file transfer."
     },
     {
       "label": "NAS MASTER_GOLD_ORIGINAL",
-      "uri": "nas://192.168.0.102/volume1/minechain-data/master-inventory/MASTER_GOLD_ORIGINAL.jsonl",
-      "mounted_path": "/volume1/minechain-data/master-inventory/MASTER_GOLD_ORIGINAL.jsonl",
+      "uri": "defendable-storage://minechain_master_inventory_v1/minechain_master_gold_original",
       "size_bytes": 20224866,
       "sha256": "5662f3bf140a744372e8ba0d0993dcc7c896bebc8af0d3ed7ca3f8c47a4e6f34",
-      "notes": "Direct NAS path; not exposed by the /mnt/swarm NFS mount."
+      "notes": "Internal storage source. Request access before file transfer."
     },
     {
       "label": "NAS MASTER_PLATINUM_FULL",
-      "uri": "nas://192.168.0.102/volume1/minechain-data/master-inventory/MASTER_PLATINUM_FULL.jsonl",
-      "mounted_path": "/volume1/minechain-data/master-inventory/MASTER_PLATINUM_FULL.jsonl",
+      "uri": "defendable-storage://minechain_master_inventory_v1/minechain_master_platinum_full",
       "size_bytes": 879633553,
       "sha256": "5319496ee1c453f35d5618d57ed18d28a55600fb0e36c689c4fc74b7f42155c7",
-      "notes": "Direct NAS path; not exposed by the /mnt/swarm NFS mount."
+      "notes": "Internal storage source. Request access before file transfer."
     },
     {
       "label": "NAS MASTER_PLATINUM_ORIGINAL",
-      "uri": "nas://192.168.0.102/volume1/minechain-data/master-inventory/MASTER_PLATINUM_ORIGINAL.jsonl",
-      "mounted_path": "/volume1/minechain-data/master-inventory/MASTER_PLATINUM_ORIGINAL.jsonl",
+      "uri": "defendable-storage://minechain_master_inventory_v1/minechain_master_platinum_original",
       "size_bytes": 40931180,
       "sha256": "d6c944fc41ad844aa158070968ad5380303d32ba5f67ee2fb3e4cf0a104761e3",
-      "notes": "Direct NAS path; not exposed by the /mnt/swarm NFS mount."
+      "notes": "Internal storage source. Request access before file transfer."
     }
   ]
 }

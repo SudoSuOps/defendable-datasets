@@ -85,21 +85,8 @@ Dataset asset packages live under `/datasets/[domain]/[dataset_id]` with:
 - `receipts/`
 - `splits/`
 
-Some entries include `external_locations` pointing at the mounted Synology NAS:
-
-```text
-/mnt/swarm/swarm-and-bee-datasets
-```
-
-Those paths document where the real source assets live without committing large or compliance-sensitive files into git.
-
-The Minechain master inventory is indexed from the NAS path:
-
-```text
-/volume1/minechain-data/master-inventory
-```
-
-That share is reachable over NAS SSH and may not be exposed through the `/mnt/swarm` NFS mount.
+Some entries include `external_locations` pointing at opaque `defendable-storage://` source IDs.
+Those IDs document where controlled source assets live without committing large files or exposing internal storage topology in git.
 
 ## Dataset Access Controls
 

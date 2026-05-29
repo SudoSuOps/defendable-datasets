@@ -14,7 +14,7 @@
   "files": [
     {
       "id": "agent_train_v1_jsonl",
-      "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/bee-hive/agent_train_v1.jsonl",
+      "path": "defendable-storage://general_agent_instruction_pairs_v1/agent_train_v1_jsonl",
       "format": "jsonl",
       "size_bytes": 6824309,
       "sha256": "8b00646bce0faf1bebf6eab82c89b778356b6fb220cdfb5fece48a6c6e1c0af9",
@@ -24,7 +24,7 @@
     },
     {
       "id": "instruction_following_jsonl",
-      "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/bee-hive/instruction_following.jsonl",
+      "path": "defendable-storage://general_agent_instruction_pairs_v1/instruction_following_jsonl",
       "format": "jsonl",
       "size_bytes": 2288270984,
       "sha256": "253be000d865b75b407396438c3df94feff52298e16a3e722eef2451d8591763",
@@ -36,19 +36,17 @@
   "external_sources": [
     {
       "label": "Agent Train V1 Jsonl",
-      "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/bee-hive/agent_train_v1.jsonl",
-      "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/bee-hive/agent_train_v1.jsonl",
+      "uri": "defendable-storage://general_agent_instruction_pairs_v1/agent_train_v1_jsonl",
       "size_bytes": 6824309,
       "sha256": "8b00646bce0faf1bebf6eab82c89b778356b6fb220cdfb5fece48a6c6e1c0af9",
-      "notes": "NAS-indexed source file with SHA256 receipt."
+      "notes": "Internal source file with SHA256 receipt."
     },
     {
       "label": "Instruction Following Jsonl",
-      "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/bee-hive/instruction_following.jsonl",
-      "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/bee-hive/instruction_following.jsonl",
+      "uri": "defendable-storage://general_agent_instruction_pairs_v1/instruction_following_jsonl",
       "size_bytes": 2288270984,
       "sha256": "253be000d865b75b407396438c3df94feff52298e16a3e722eef2451d8591763",
-      "notes": "NAS-indexed source file with SHA256 receipt."
+      "notes": "Internal source file with SHA256 receipt."
     }
   ]
 }

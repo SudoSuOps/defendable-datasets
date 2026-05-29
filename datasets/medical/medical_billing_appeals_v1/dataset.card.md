@@ -30,6 +30,6 @@ Not medical, legal, billing, or reimbursement advice; never use with PHI without
 
 ## Files
 
-- medical_master_gold_jsonl: nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/medical/MASTER_GOLD.jsonl (385626 records, sha256 45304fde5bcf9d49d4bd4b0e531d99f2ac9cde9dae46687e943c29aab2bc67ca)
+- medical_master_gold_jsonl: defendable-storage://medical_billing_appeals_v1/medical_master_gold_jsonl (385626 records, sha256 45304fde5bcf9d49d4bd4b0e531d99f2ac9cde9dae46687e943c29aab2bc67ca)
 
 Doctrine: No proof, no honey.

@@ -14,7 +14,7 @@
   "files": [
     {
       "id": "swarmmarket_v2_jsonl",
-      "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/marketing/swarmmarket_v2.jsonl",
+      "path": "defendable-storage://local_service_leads_jupiter_v1/swarmmarket_v2_jsonl",
       "format": "jsonl",
       "size_bytes": 37511272,
       "sha256": "3f179b67fc0453ef1776a954f350815e89347e4be01aed9f8af6f41c104957ae",
@@ -26,8 +26,7 @@
   "external_sources": [
     {
       "label": "Swarmmarket V2 Jsonl",
-      "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/marketing/swarmmarket_v2.jsonl",
-      "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/marketing/swarmmarket_v2.jsonl",
+      "uri": "defendable-storage://local_service_leads_jupiter_v1/swarmmarket_v2_jsonl",
       "size_bytes": 37511272,
       "sha256": "3f179b67fc0453ef1776a954f350815e89347e4be01aed9f8af6f41c104957ae",
       "notes": "Gated dataset source. Request access before file transfer."

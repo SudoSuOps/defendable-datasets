@@ -14,7 +14,7 @@
   "files": [
     {
       "id": "legal_consumer_all_jsonl",
-      "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/legal/legal_consumer_all.jsonl",
+      "path": "defendable-storage://legal_letter_templates_v1/legal_consumer_all_jsonl",
       "format": "jsonl",
       "size_bytes": 109794304,
       "sha256": "3d3246c9e288340acaf2c2c4e9e1d7747bcf2db931b8a4709f1ebe01fc5b9702",
@@ -26,11 +26,10 @@
   "external_sources": [
     {
       "label": "Legal Consumer All Jsonl",
-      "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/legal/legal_consumer_all.jsonl",
-      "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/legal/legal_consumer_all.jsonl",
+      "uri": "defendable-storage://legal_letter_templates_v1/legal_consumer_all_jsonl",
       "size_bytes": 109794304,
       "sha256": "3d3246c9e288340acaf2c2c4e9e1d7747bcf2db931b8a4709f1ebe01fc5b9702",
-      "notes": "NAS-indexed source file with SHA256 receipt."
+      "notes": "Internal source file with SHA256 receipt."
     }
   ]
 }

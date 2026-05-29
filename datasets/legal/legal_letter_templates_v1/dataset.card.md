@@ -30,6 +30,6 @@ Not legal advice or jurisdiction-specific counsel.
 
 ## Files
 
-- legal_consumer_all_jsonl: nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/legal/legal_consumer_all.jsonl (9160 records, sha256 3d3246c9e288340acaf2c2c4e9e1d7747bcf2db931b8a4709f1ebe01fc5b9702)
+- legal_consumer_all_jsonl: defendable-storage://legal_letter_templates_v1/legal_consumer_all_jsonl (9160 records, sha256 3d3246c9e288340acaf2c2c4e9e1d7747bcf2db931b8a4709f1ebe01fc5b9702)
 
 Doctrine: No proof, no honey.

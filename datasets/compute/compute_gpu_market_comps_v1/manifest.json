@@ -14,7 +14,7 @@
   "files": [
     {
       "id": "gpu_compute_openalex_jsonl",
-      "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/openalex/gpu_compute_2022_2026.jsonl",
+      "path": "defendable-storage://compute_gpu_market_comps_v1/gpu_compute_openalex_jsonl",
       "format": "jsonl",
       "size_bytes": 304209452,
       "sha256": "580bb1956df5656c667abe1c2acc8bff70779dbe248ac6d4346eed565efcee62",
@@ -26,11 +26,10 @@
   "external_sources": [
     {
       "label": "Gpu Compute Openalex Jsonl",
-      "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/openalex/gpu_compute_2022_2026.jsonl",
-      "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/openalex/gpu_compute_2022_2026.jsonl",
+      "uri": "defendable-storage://compute_gpu_market_comps_v1/gpu_compute_openalex_jsonl",
       "size_bytes": 304209452,
       "sha256": "580bb1956df5656c667abe1c2acc8bff70779dbe248ac6d4346eed565efcee62",
-      "notes": "NAS-indexed source file with SHA256 receipt."
+      "notes": "Internal source file with SHA256 receipt."
     }
   ]
 }

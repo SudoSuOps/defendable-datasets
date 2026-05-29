@@ -30,6 +30,6 @@ Not safety, financial, or electrical engineering advice.
 
 ## Files
 
-- blockchain_stream_jsonl: nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/capital-markets/stream_blockchain.jsonl (5046 records, sha256 f9f4e61706c63e8122eabd6292b6637beb020466b2fcc29b6fc7511630ba7fc8)
+- blockchain_stream_jsonl: defendable-storage://mining_ops_qa_v1/blockchain_stream_jsonl (5046 records, sha256 f9f4e61706c63e8122eabd6292b6637beb020466b2fcc29b6fc7511630ba7fc8)
 
 Doctrine: No proof, no honey.

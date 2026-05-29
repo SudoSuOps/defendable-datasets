@@ -2,5 +2,5 @@ dataset_id=cre_underwriting_royal_jelly_v1
 created_at=2026-05-28T00:00:00.000Z
 record_count=1461572
 size_bytes=4197267267
-15adfccc3d3b9c38e30059bb6bd2da2006ec6740ea8faad135b9438eede63ec6  nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/cre/swarmcre_canonical_dedup.jsonl  records=651475  bytes=1334445999
-770942e35d62581b22841fdc1a0a10d17252ce9243a02848a45df6079051c97f  nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/cre/cre_honey_stamped.jsonl  records=810097  bytes=2862821268
+15adfccc3d3b9c38e30059bb6bd2da2006ec6740ea8faad135b9438eede63ec6  defendable-storage://cre_underwriting_royal_jelly_v1/source-1  records=651475  bytes=1334445999
+770942e35d62581b22841fdc1a0a10d17252ce9243a02848a45df6079051c97f  defendable-storage://cre_underwriting_royal_jelly_v1/source-2  records=810097  bytes=2862821268

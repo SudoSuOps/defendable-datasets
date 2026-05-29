@@ -14,7 +14,7 @@
   "files": [
     {
       "id": "grants_train_jsonl",
-      "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/grants/train.jsonl",
+      "path": "defendable-storage://sam_gov_opportunity_intelligence_v1/grants_train_jsonl",
       "format": "jsonl",
       "size_bytes": 202584590,
       "sha256": "35f5d2aeb494814646654d1fd11d38a95d06a5950887f9ffa54aaf6f958f4c17",
@@ -26,11 +26,10 @@
   "external_sources": [
     {
       "label": "Grants Train Jsonl",
-      "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/grants/train.jsonl",
-      "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/grants/train.jsonl",
+      "uri": "defendable-storage://sam_gov_opportunity_intelligence_v1/grants_train_jsonl",
       "size_bytes": 202584590,
       "sha256": "35f5d2aeb494814646654d1fd11d38a95d06a5950887f9ffa54aaf6f958f4c17",
-      "notes": "NAS-indexed source file with SHA256 receipt."
+      "notes": "Internal source file with SHA256 receipt."
     }
   ]
 }

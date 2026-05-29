@@ -30,6 +30,6 @@ Not for live pricing, procurement, or financial reporting without current verifi
 
 ## Files
 
-- gpu_compute_openalex_jsonl: nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/openalex/gpu_compute_2022_2026.jsonl (40647 records, sha256 580bb1956df5656c667abe1c2acc8bff70779dbe248ac6d4346eed565efcee62)
+- gpu_compute_openalex_jsonl: defendable-storage://compute_gpu_market_comps_v1/gpu_compute_openalex_jsonl (40647 records, sha256 580bb1956df5656c667abe1c2acc8bff70779dbe248ac6d4346eed565efcee62)
 
 Doctrine: No proof, no honey.

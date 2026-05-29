@@ -30,6 +30,6 @@ Not legal advice or a substitute for consumer-law review.
 
 ## Files
 
-- creditsniper_dispute_letters_jsonl: nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/finance/swarm_cooks_creditsniper_cook__dispute_letters.jsonl (26113 records, sha256 3529f482d01e5830c170c0fa69417964fa72065352711904935227f7fc4ae919)
+- creditsniper_dispute_letters_jsonl: defendable-storage://fcra_credit_dispute_letters_v1/creditsniper_dispute_letters_jsonl (26113 records, sha256 3529f482d01e5830c170c0fa69417964fa72065352711904935227f7fc4ae919)
 
 Doctrine: No proof, no honey.

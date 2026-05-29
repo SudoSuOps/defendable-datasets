@@ -14,7 +14,7 @@
   "files": [
     {
       "id": "blockchain_stream_jsonl",
-      "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/capital-markets/stream_blockchain.jsonl",
+      "path": "defendable-storage://mining_ops_qa_v1/blockchain_stream_jsonl",
       "format": "jsonl",
       "size_bytes": 62332143,
       "sha256": "f9f4e61706c63e8122eabd6292b6637beb020466b2fcc29b6fc7511630ba7fc8",
@@ -26,11 +26,10 @@
   "external_sources": [
     {
       "label": "Blockchain Stream Jsonl",
-      "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/capital-markets/stream_blockchain.jsonl",
-      "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/capital-markets/stream_blockchain.jsonl",
+      "uri": "defendable-storage://mining_ops_qa_v1/blockchain_stream_jsonl",
       "size_bytes": 62332143,
       "sha256": "f9f4e61706c63e8122eabd6292b6637beb020466b2fcc29b6fc7511630ba7fc8",
-      "notes": "NAS-indexed source file with SHA256 receipt."
+      "notes": "Internal source file with SHA256 receipt."
     }
   ]
 }

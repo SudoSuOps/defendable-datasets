@@ -14,7 +14,7 @@ Commercial real estate underwriting corpus for rent-roll normalization, NOI reas
 
 ## Provenance
 
-Indexed from Synology NAS CRE corpora under /volume1/swarm/swarm-and-bee-datasets/cre with SHA256 receipts and record counts captured from mounted JSONL sources. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.
+Indexed from Synology NAS CRE corpora under internal-storage-redacted with SHA256 receipts and record counts captured from mounted JSONL sources. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.
 
 ## Compute Provenance
 
@@ -30,7 +30,7 @@ Not for investment advice, lending decisions, or valuation without verified sour
 
 ## Files
 
-- cre_canonical_dedup_jsonl: nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/cre/swarmcre_canonical_dedup.jsonl (651475 records, sha256 15adfccc3d3b9c38e30059bb6bd2da2006ec6740ea8faad135b9438eede63ec6)
-- cre_honey_stamped_jsonl: nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/cre/cre_honey_stamped.jsonl (810097 records, sha256 770942e35d62581b22841fdc1a0a10d17252ce9243a02848a45df6079051c97f)
+- cre_canonical_dedup_jsonl: defendable-storage://cre_underwriting_royal_jelly_v1/cre_canonical_dedup_jsonl (651475 records, sha256 15adfccc3d3b9c38e30059bb6bd2da2006ec6740ea8faad135b9438eede63ec6)
+- cre_honey_stamped_jsonl: defendable-storage://cre_underwriting_royal_jelly_v1/cre_canonical_dedup_jsonl (810097 records, sha256 770942e35d62581b22841fdc1a0a10d17252ce9243a02848a45df6079051c97f)
 
 Doctrine: No proof, no honey.

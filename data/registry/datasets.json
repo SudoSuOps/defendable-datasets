@@ -27,7 +27,7 @@
     "created_at": "2026-05-28T00:00:00.000Z",
     "updated_at": "2026-05-28T00:00:00.000Z",
     "source_type": "nas",
-    "provenance_summary": "Indexed from Synology NAS CRE corpora under /volume1/swarm/swarm-and-bee-datasets/cre with SHA256 receipts and record counts captured from mounted JSONL sources. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.",
+    "provenance_summary": "Indexed from internal CRE storage corpus with SHA256 receipts and record counts captured from controlled JSONL sources. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.",
     "intended_use": "Prototype fine-tuning and evaluation flows for CRE underwriting assistants.",
     "not_intended_use": "Not for investment advice, lending decisions, or valuation without verified source files.",
     "quality_score": 91,
@@ -38,7 +38,7 @@
     "files": [
       {
         "id": "cre_canonical_dedup_jsonl",
-        "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/cre/swarmcre_canonical_dedup.jsonl",
+        "path": "defendable-storage://cre_underwriting_royal_jelly_v1/cre_canonical_dedup_jsonl",
         "format": "jsonl",
         "size_bytes": 1334445999,
         "sha256": "15adfccc3d3b9c38e30059bb6bd2da2006ec6740ea8faad135b9438eede63ec6",
@@ -48,7 +48,7 @@
       },
       {
         "id": "cre_honey_stamped_jsonl",
-        "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/cre/cre_honey_stamped.jsonl",
+        "path": "defendable-storage://cre_underwriting_royal_jelly_v1/cre_honey_stamped_jsonl",
         "format": "jsonl",
         "size_bytes": 2862821268,
         "sha256": "770942e35d62581b22841fdc1a0a10d17252ce9243a02848a45df6079051c97f",
@@ -60,19 +60,17 @@
     "external_locations": [
       {
         "label": "Cre Canonical Dedup Jsonl",
-        "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/cre/swarmcre_canonical_dedup.jsonl",
-        "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/cre/swarmcre_canonical_dedup.jsonl",
+        "uri": "defendable-storage://cre_underwriting_royal_jelly_v1/cre_canonical_dedup_jsonl",
         "size_bytes": 1334445999,
         "sha256": "15adfccc3d3b9c38e30059bb6bd2da2006ec6740ea8faad135b9438eede63ec6",
-        "notes": "NAS-indexed source file with SHA256 receipt."
+        "notes": "Internal source file with SHA256 receipt."
       },
       {
         "label": "Cre Honey Stamped Jsonl",
-        "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/cre/cre_honey_stamped.jsonl",
-        "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/cre/cre_honey_stamped.jsonl",
+        "uri": "defendable-storage://cre_underwriting_royal_jelly_v1/cre_honey_stamped_jsonl",
         "size_bytes": 2862821268,
         "sha256": "770942e35d62581b22841fdc1a0a10d17252ce9243a02848a45df6079051c97f",
-        "notes": "NAS-indexed source file with SHA256 receipt."
+        "notes": "Internal source file with SHA256 receipt."
       }
     ],
     "hashes": [
@@ -146,7 +144,7 @@
     "created_at": "2026-05-28T00:00:00.000Z",
     "updated_at": "2026-05-28T00:00:00.000Z",
     "source_type": "nas",
-    "provenance_summary": "Indexed from OpenAlex-derived GPU compute corpus on Synology NAS with SHA256 and record-count receipt. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.",
+    "provenance_summary": "Indexed from OpenAlex-derived GPU compute corpus on internal storage with SHA256 and record-count receipt. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.",
     "intended_use": "Build assistants that compare compute assets and explain valuation factors.",
     "not_intended_use": "Not for live pricing, procurement, or financial reporting without current verified market feeds.",
     "quality_score": 88,
@@ -157,7 +155,7 @@
     "files": [
       {
         "id": "gpu_compute_openalex_jsonl",
-        "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/openalex/gpu_compute_2022_2026.jsonl",
+        "path": "defendable-storage://compute_gpu_market_comps_v1/gpu_compute_openalex_jsonl",
         "format": "jsonl",
         "size_bytes": 304209452,
         "sha256": "580bb1956df5656c667abe1c2acc8bff70779dbe248ac6d4346eed565efcee62",
@@ -169,11 +167,10 @@
     "external_locations": [
       {
         "label": "Gpu Compute Openalex Jsonl",
-        "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/openalex/gpu_compute_2022_2026.jsonl",
-        "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/openalex/gpu_compute_2022_2026.jsonl",
+        "uri": "defendable-storage://compute_gpu_market_comps_v1/gpu_compute_openalex_jsonl",
         "size_bytes": 304209452,
         "sha256": "580bb1956df5656c667abe1c2acc8bff70779dbe248ac6d4346eed565efcee62",
-        "notes": "NAS-indexed source file with SHA256 receipt."
+        "notes": "Internal source file with SHA256 receipt."
       }
     ],
     "hashes": [
@@ -234,7 +231,7 @@
     "created_at": "2026-05-28T00:00:00.000Z",
     "updated_at": "2026-05-28T00:00:00.000Z",
     "source_type": "nas",
-    "provenance_summary": "Indexed from Synology NAS medical MASTER_GOLD corpus with SHA256 and record-count receipt; access remains gated for compliance review. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.",
+    "provenance_summary": "Indexed from internal storage medical MASTER_GOLD corpus with SHA256 and record-count receipt; access remains gated for compliance review. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.",
     "intended_use": "Research denial classification and appeal drafting assistants using non-PHI non-PHI examples.",
     "not_intended_use": "Not medical, legal, billing, or reimbursement advice; never use with PHI without compliance review.",
     "quality_score": 84,
@@ -245,7 +242,7 @@
     "files": [
       {
         "id": "medical_master_gold_jsonl",
-        "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/medical/MASTER_GOLD.jsonl",
+        "path": "defendable-storage://medical_billing_appeals_v1/medical_master_gold_jsonl",
         "format": "jsonl",
         "size_bytes": 837134357,
         "sha256": "45304fde5bcf9d49d4bd4b0e531d99f2ac9cde9dae46687e943c29aab2bc67ca",
@@ -257,8 +254,7 @@
     "external_locations": [
       {
         "label": "Medical Master Gold Jsonl",
-        "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/medical/MASTER_GOLD.jsonl",
-        "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/medical/MASTER_GOLD.jsonl",
+        "uri": "defendable-storage://medical_billing_appeals_v1/medical_master_gold_jsonl",
         "size_bytes": 837134357,
         "sha256": "45304fde5bcf9d49d4bd4b0e531d99f2ac9cde9dae46687e943c29aab2bc67ca",
         "notes": "Gated dataset source. Request access before file transfer."
@@ -323,7 +319,7 @@
     "created_at": "2026-05-28T00:00:00.000Z",
     "updated_at": "2026-05-28T00:00:00.000Z",
     "source_type": "nas",
-    "provenance_summary": "Indexed from Synology NAS CreditSniper dispute-letter corpus with SHA256 and record-count receipt. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.",
+    "provenance_summary": "Indexed from internal storage CreditSniper dispute-letter corpus with SHA256 and record-count receipt. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.",
     "intended_use": "Train assistants to classify dispute reasons and generate editable letter drafts.",
     "not_intended_use": "Not legal advice or a substitute for consumer-law review.",
     "quality_score": 90,
@@ -334,7 +330,7 @@
     "files": [
       {
         "id": "creditsniper_dispute_letters_jsonl",
-        "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/finance/swarm_cooks_creditsniper_cook__dispute_letters.jsonl",
+        "path": "defendable-storage://fcra_credit_dispute_letters_v1/creditsniper_dispute_letters_jsonl",
         "format": "jsonl",
         "size_bytes": 185802801,
         "sha256": "3529f482d01e5830c170c0fa69417964fa72065352711904935227f7fc4ae919",
@@ -346,11 +342,10 @@
     "external_locations": [
       {
         "label": "Creditsniper Dispute Letters Jsonl",
-        "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/finance/swarm_cooks_creditsniper_cook__dispute_letters.jsonl",
-        "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/finance/swarm_cooks_creditsniper_cook__dispute_letters.jsonl",
+        "uri": "defendable-storage://fcra_credit_dispute_letters_v1/creditsniper_dispute_letters_jsonl",
         "size_bytes": 185802801,
         "sha256": "3529f482d01e5830c170c0fa69417964fa72065352711904935227f7fc4ae919",
-        "notes": "NAS-indexed source file with SHA256 receipt."
+        "notes": "Internal source file with SHA256 receipt."
       }
     ],
     "hashes": [
@@ -412,7 +407,7 @@
     "created_at": "2026-05-28T00:00:00.000Z",
     "updated_at": "2026-05-28T00:00:00.000Z",
     "source_type": "nas",
-    "provenance_summary": "Indexed from Synology NAS grants training corpus with SHA256 and record-count receipt. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.",
+    "provenance_summary": "Indexed from internal storage grants training corpus with SHA256 and record-count receipt. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.",
     "intended_use": "Prototype opportunity triage, summarization, and qualification workflows.",
     "not_intended_use": "Not a live SAM.gov feed or procurement compliance system.",
     "quality_score": 86,
@@ -423,7 +418,7 @@
     "files": [
       {
         "id": "grants_train_jsonl",
-        "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/grants/train.jsonl",
+        "path": "defendable-storage://sam_gov_opportunity_intelligence_v1/grants_train_jsonl",
         "format": "jsonl",
         "size_bytes": 202584590,
         "sha256": "35f5d2aeb494814646654d1fd11d38a95d06a5950887f9ffa54aaf6f958f4c17",
@@ -467,11 +462,10 @@
     "external_locations": [
       {
         "label": "Grants Train Jsonl",
-        "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/grants/train.jsonl",
-        "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/grants/train.jsonl",
+        "uri": "defendable-storage://sam_gov_opportunity_intelligence_v1/grants_train_jsonl",
         "size_bytes": 202584590,
         "sha256": "35f5d2aeb494814646654d1fd11d38a95d06a5950887f9ffa54aaf6f958f4c17",
-        "notes": "NAS-indexed source file with SHA256 receipt."
+        "notes": "Internal source file with SHA256 receipt."
       }
     ]
   },
@@ -502,7 +496,7 @@
     "created_at": "2026-05-28T00:00:00.000Z",
     "updated_at": "2026-05-28T00:00:00.000Z",
     "source_type": "nas",
-    "provenance_summary": "Indexed from Synology NAS legal consumer corpus with SHA256 and record-count receipt. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.",
+    "provenance_summary": "Indexed from internal storage legal consumer corpus with SHA256 and record-count receipt. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.",
     "intended_use": "Generate editable professional letter drafts with clear disclaimers.",
     "not_intended_use": "Not legal advice or jurisdiction-specific counsel.",
     "quality_score": 89,
@@ -513,7 +507,7 @@
     "files": [
       {
         "id": "legal_consumer_all_jsonl",
-        "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/legal/legal_consumer_all.jsonl",
+        "path": "defendable-storage://legal_letter_templates_v1/legal_consumer_all_jsonl",
         "format": "jsonl",
         "size_bytes": 109794304,
         "sha256": "3d3246c9e288340acaf2c2c4e9e1d7747bcf2db931b8a4709f1ebe01fc5b9702",
@@ -525,11 +519,10 @@
     "external_locations": [
       {
         "label": "Legal Consumer All Jsonl",
-        "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/legal/legal_consumer_all.jsonl",
-        "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/legal/legal_consumer_all.jsonl",
+        "uri": "defendable-storage://legal_letter_templates_v1/legal_consumer_all_jsonl",
         "size_bytes": 109794304,
         "sha256": "3d3246c9e288340acaf2c2c4e9e1d7747bcf2db931b8a4709f1ebe01fc5b9702",
-        "notes": "NAS-indexed source file with SHA256 receipt."
+        "notes": "Internal source file with SHA256 receipt."
       }
     ],
     "hashes": [
@@ -595,7 +588,7 @@
     "created_at": "2026-05-28T00:00:00.000Z",
     "updated_at": "2026-05-28T00:00:00.000Z",
     "source_type": "nas",
-    "provenance_summary": "Indexed from Synology NAS capital-markets energy stream with SHA256 and record-count receipt. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.",
+    "provenance_summary": "Indexed from internal storage capital-markets energy stream with SHA256 and record-count receipt. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.",
     "intended_use": "Prototype assistants that score energy sites and identify missing diligence fields.",
     "not_intended_use": "Not engineering advice or an interconnection study.",
     "quality_score": 87,
@@ -606,7 +599,7 @@
     "files": [
       {
         "id": "energy_stream_jsonl",
-        "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/capital-markets/stream_energy.jsonl",
+        "path": "defendable-storage://energy_site_assessment_v1/energy_stream_jsonl",
         "format": "jsonl",
         "size_bytes": 169376617,
         "sha256": "9727c7626492587c39170b86657ba3294783316e9e36cef694b8fd06499827f0",
@@ -618,11 +611,10 @@
     "external_locations": [
       {
         "label": "Energy Stream Jsonl",
-        "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/capital-markets/stream_energy.jsonl",
-        "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/capital-markets/stream_energy.jsonl",
+        "uri": "defendable-storage://energy_site_assessment_v1/energy_stream_jsonl",
         "size_bytes": 169376617,
         "sha256": "9727c7626492587c39170b86657ba3294783316e9e36cef694b8fd06499827f0",
-        "notes": "NAS-indexed source file with SHA256 receipt."
+        "notes": "Internal source file with SHA256 receipt."
       }
     ],
     "hashes": [
@@ -687,7 +679,7 @@
     "created_at": "2026-05-28T00:00:00.000Z",
     "updated_at": "2026-05-28T00:00:00.000Z",
     "source_type": "nas",
-    "provenance_summary": "Indexed from Synology NAS marketing corpus with SHA256 and record-count receipt; access remains gated for anti-abuse controls. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.",
+    "provenance_summary": "Indexed from internal storage marketing corpus with SHA256 and record-count receipt; access remains gated for anti-abuse controls. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.",
     "intended_use": "Prototype local lead scoring and deduplication flows.",
     "not_intended_use": "Not for spam, unlawful outreach, or personal data processing without compliance review.",
     "quality_score": 82,
@@ -698,7 +690,7 @@
     "files": [
       {
         "id": "swarmmarket_v2_jsonl",
-        "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/marketing/swarmmarket_v2.jsonl",
+        "path": "defendable-storage://local_service_leads_jupiter_v1/swarmmarket_v2_jsonl",
         "format": "jsonl",
         "size_bytes": 37511272,
         "sha256": "3f179b67fc0453ef1776a954f350815e89347e4be01aed9f8af6f41c104957ae",
@@ -743,8 +735,7 @@
     "external_locations": [
       {
         "label": "Swarmmarket V2 Jsonl",
-        "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/marketing/swarmmarket_v2.jsonl",
-        "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/marketing/swarmmarket_v2.jsonl",
+        "uri": "defendable-storage://local_service_leads_jupiter_v1/swarmmarket_v2_jsonl",
         "size_bytes": 37511272,
         "sha256": "3f179b67fc0453ef1776a954f350815e89347e4be01aed9f8af6f41c104957ae",
         "notes": "Gated dataset source. Request access before file transfer."
@@ -777,7 +768,7 @@
     "created_at": "2026-05-28T00:00:00.000Z",
     "updated_at": "2026-05-28T00:00:00.000Z",
     "source_type": "nas",
-    "provenance_summary": "Indexed from Synology NAS blockchain stream with SHA256 and record-count receipt. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.",
+    "provenance_summary": "Indexed from internal storage blockchain stream with SHA256 and record-count receipt. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.",
     "intended_use": "Prototype assistants that answer mining facility operations questions.",
     "not_intended_use": "Not safety, financial, or electrical engineering advice.",
     "quality_score": 86,
@@ -788,7 +779,7 @@
     "files": [
       {
         "id": "blockchain_stream_jsonl",
-        "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/capital-markets/stream_blockchain.jsonl",
+        "path": "defendable-storage://mining_ops_qa_v1/blockchain_stream_jsonl",
         "format": "jsonl",
         "size_bytes": 62332143,
         "sha256": "f9f4e61706c63e8122eabd6292b6637beb020466b2fcc29b6fc7511630ba7fc8",
@@ -829,11 +820,10 @@
     "external_locations": [
       {
         "label": "Blockchain Stream Jsonl",
-        "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/capital-markets/stream_blockchain.jsonl",
-        "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/capital-markets/stream_blockchain.jsonl",
+        "uri": "defendable-storage://mining_ops_qa_v1/blockchain_stream_jsonl",
         "size_bytes": 62332143,
         "sha256": "f9f4e61706c63e8122eabd6292b6637beb020466b2fcc29b6fc7511630ba7fc8",
-        "notes": "NAS-indexed source file with SHA256 receipt."
+        "notes": "Internal source file with SHA256 receipt."
       }
     ]
   },
@@ -865,7 +855,7 @@
     "created_at": "2026-05-28T00:00:00.000Z",
     "updated_at": "2026-05-28T00:00:00.000Z",
     "source_type": "nas",
-    "provenance_summary": "Indexed from Synology NAS agent and instruction-following corpora with SHA256 and record-count receipts. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.",
+    "provenance_summary": "Indexed from internal storage agent and instruction-following corpora with SHA256 and record-count receipts. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.",
     "intended_use": "Fine-tune and evaluate assistant behavior for structured dataset workflows.",
     "not_intended_use": "Not a complete safety policy or benchmark replacement.",
     "quality_score": 93,
@@ -876,7 +866,7 @@
     "files": [
       {
         "id": "agent_train_v1_jsonl",
-        "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/bee-hive/agent_train_v1.jsonl",
+        "path": "defendable-storage://general_agent_instruction_pairs_v1/agent_train_v1_jsonl",
         "format": "jsonl",
         "size_bytes": 6824309,
         "sha256": "8b00646bce0faf1bebf6eab82c89b778356b6fb220cdfb5fece48a6c6e1c0af9",
@@ -886,7 +876,7 @@
       },
       {
         "id": "instruction_following_jsonl",
-        "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/bee-hive/instruction_following.jsonl",
+        "path": "defendable-storage://general_agent_instruction_pairs_v1/instruction_following_jsonl",
         "format": "jsonl",
         "size_bytes": 2288270984,
         "sha256": "253be000d865b75b407396438c3df94feff52298e16a3e722eef2451d8591763",
@@ -898,19 +888,17 @@
     "external_locations": [
       {
         "label": "Agent Train V1 Jsonl",
-        "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/bee-hive/agent_train_v1.jsonl",
-        "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/bee-hive/agent_train_v1.jsonl",
+        "uri": "defendable-storage://general_agent_instruction_pairs_v1/agent_train_v1_jsonl",
         "size_bytes": 6824309,
         "sha256": "8b00646bce0faf1bebf6eab82c89b778356b6fb220cdfb5fece48a6c6e1c0af9",
-        "notes": "NAS-indexed source file with SHA256 receipt."
+        "notes": "Internal source file with SHA256 receipt."
       },
       {
         "label": "Instruction Following Jsonl",
-        "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/bee-hive/instruction_following.jsonl",
-        "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/bee-hive/instruction_following.jsonl",
+        "uri": "defendable-storage://general_agent_instruction_pairs_v1/instruction_following_jsonl",
         "size_bytes": 2288270984,
         "sha256": "253be000d865b75b407396438c3df94feff52298e16a3e722eef2451d8591763",
-        "notes": "NAS-indexed source file with SHA256 receipt."
+        "notes": "Internal source file with SHA256 receipt."
       }
     ],
     "hashes": [
@@ -977,7 +965,7 @@
     "created_at": "2026-05-28T00:00:00.000Z",
     "updated_at": "2026-05-28T00:00:00.000Z",
     "source_type": "nas",
-    "provenance_summary": "Located on Synology NAS under /volume1/minechain-data/master-inventory. MASTER_GOLD and MASTER_PLATINUM JSONL variants are indexed with SHA256 hashes and record counts. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.",
+    "provenance_summary": "Located in internal Minechain storage. MASTER_GOLD and MASTER_PLATINUM JSONL variants are indexed with SHA256 hashes and record counts. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.",
     "intended_use": "Internal review, medical SFT pack planning, provenance indexing, and future verified dataset export.",
     "not_intended_use": "Not for medical advice, clinical deployment, public redistribution, or training until licensing, PHI, and source provenance checks are complete.",
     "quality_score": 86,
@@ -988,7 +976,7 @@
     "files": [
       {
         "id": "minechain_master_gold_full",
-        "path": "datasets/general/minechain_master_inventory_v1/splits/MASTER_GOLD_FULL.jsonl",
+        "path": "defendable-storage://minechain_master_inventory_v1/minechain_master_gold_full",
         "format": "jsonl",
         "size_bytes": 61024612,
         "sha256": "25e3b58238f384e58925b980c69c1b6f20d80b92f87b9cbf5a26ef35de05568c",
@@ -998,7 +986,7 @@
       },
       {
         "id": "minechain_master_gold_original",
-        "path": "datasets/general/minechain_master_inventory_v1/splits/MASTER_GOLD_ORIGINAL.jsonl",
+        "path": "defendable-storage://minechain_master_inventory_v1/minechain_master_gold_original",
         "format": "jsonl",
         "size_bytes": 20224866,
         "sha256": "5662f3bf140a744372e8ba0d0993dcc7c896bebc8af0d3ed7ca3f8c47a4e6f34",
@@ -1008,7 +996,7 @@
       },
       {
         "id": "minechain_master_platinum_full",
-        "path": "datasets/general/minechain_master_inventory_v1/splits/MASTER_PLATINUM_FULL.jsonl",
+        "path": "defendable-storage://minechain_master_inventory_v1/minechain_master_platinum_full",
         "format": "jsonl",
         "size_bytes": 879633553,
         "sha256": "5319496ee1c453f35d5618d57ed18d28a55600fb0e36c689c4fc74b7f42155c7",
@@ -1018,7 +1006,7 @@
       },
       {
         "id": "minechain_master_platinum_original",
-        "path": "datasets/general/minechain_master_inventory_v1/splits/MASTER_PLATINUM_ORIGINAL.jsonl",
+        "path": "defendable-storage://minechain_master_inventory_v1/minechain_master_platinum_original",
         "format": "jsonl",
         "size_bytes": 40931180,
         "sha256": "d6c944fc41ad844aa158070968ad5380303d32ba5f67ee2fb3e4cf0a104761e3",
@@ -1030,35 +1018,31 @@
     "external_locations": [
       {
         "label": "NAS MASTER_GOLD_FULL",
-        "uri": "nas://192.168.0.102/volume1/minechain-data/master-inventory/MASTER_GOLD_FULL.jsonl",
-        "mounted_path": "/volume1/minechain-data/master-inventory/MASTER_GOLD_FULL.jsonl",
+        "uri": "defendable-storage://minechain_master_inventory_v1/minechain_master_gold_full",
         "size_bytes": 61024612,
         "sha256": "25e3b58238f384e58925b980c69c1b6f20d80b92f87b9cbf5a26ef35de05568c",
-        "notes": "Direct NAS path; not exposed by the /mnt/swarm NFS mount."
+        "notes": "Internal storage source. Request access before file transfer."
       },
       {
         "label": "NAS MASTER_GOLD_ORIGINAL",
-        "uri": "nas://192.168.0.102/volume1/minechain-data/master-inventory/MASTER_GOLD_ORIGINAL.jsonl",
-        "mounted_path": "/volume1/minechain-data/master-inventory/MASTER_GOLD_ORIGINAL.jsonl",
+        "uri": "defendable-storage://minechain_master_inventory_v1/minechain_master_gold_original",
         "size_bytes": 20224866,
         "sha256": "5662f3bf140a744372e8ba0d0993dcc7c896bebc8af0d3ed7ca3f8c47a4e6f34",
-        "notes": "Direct NAS path; not exposed by the /mnt/swarm NFS mount."
+        "notes": "Internal storage source. Request access before file transfer."
       },
       {
         "label": "NAS MASTER_PLATINUM_FULL",
-        "uri": "nas://192.168.0.102/volume1/minechain-data/master-inventory/MASTER_PLATINUM_FULL.jsonl",
-        "mounted_path": "/volume1/minechain-data/master-inventory/MASTER_PLATINUM_FULL.jsonl",
+        "uri": "defendable-storage://minechain_master_inventory_v1/minechain_master_platinum_full",
         "size_bytes": 879633553,
         "sha256": "5319496ee1c453f35d5618d57ed18d28a55600fb0e36c689c4fc74b7f42155c7",
-        "notes": "Direct NAS path; not exposed by the /mnt/swarm NFS mount."
+        "notes": "Internal storage source. Request access before file transfer."
       },
       {
         "label": "NAS MASTER_PLATINUM_ORIGINAL",
-        "uri": "nas://192.168.0.102/volume1/minechain-data/master-inventory/MASTER_PLATINUM_ORIGINAL.jsonl",
-        "mounted_path": "/volume1/minechain-data/master-inventory/MASTER_PLATINUM_ORIGINAL.jsonl",
+        "uri": "defendable-storage://minechain_master_inventory_v1/minechain_master_platinum_original",
         "size_bytes": 40931180,
         "sha256": "d6c944fc41ad844aa158070968ad5380303d32ba5f67ee2fb3e4cf0a104761e3",
-        "notes": "Direct NAS path; not exposed by the /mnt/swarm NFS mount."
+        "notes": "Internal storage source. Request access before file transfer."
       }
     ],
     "hashes": [

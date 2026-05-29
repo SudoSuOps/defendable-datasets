@@ -30,6 +30,6 @@ Not for spam, unlawful outreach, or personal data processing without compliance 
 
 ## Files
 
-- swarmmarket_v2_jsonl: nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/marketing/swarmmarket_v2.jsonl (5447 records, sha256 3f179b67fc0453ef1776a954f350815e89347e4be01aed9f8af6f41c104957ae)
+- swarmmarket_v2_jsonl: defendable-storage://local_service_leads_jupiter_v1/swarmmarket_v2_jsonl (5447 records, sha256 3f179b67fc0453ef1776a954f350815e89347e4be01aed9f8af6f41c104957ae)
 
 Doctrine: No proof, no honey.

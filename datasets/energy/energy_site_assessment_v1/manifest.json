@@ -14,7 +14,7 @@
   "files": [
     {
       "id": "energy_stream_jsonl",
-      "path": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/capital-markets/stream_energy.jsonl",
+      "path": "defendable-storage://energy_site_assessment_v1/energy_stream_jsonl",
       "format": "jsonl",
       "size_bytes": 169376617,
       "sha256": "9727c7626492587c39170b86657ba3294783316e9e36cef694b8fd06499827f0",
@@ -26,11 +26,10 @@
   "external_sources": [
     {
       "label": "Energy Stream Jsonl",
-      "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/capital-markets/stream_energy.jsonl",
-      "mounted_path": "/mnt/swarm/swarm/swarm-and-bee-datasets/capital-markets/stream_energy.jsonl",
+      "uri": "defendable-storage://energy_site_assessment_v1/energy_stream_jsonl",
       "size_bytes": 169376617,
       "sha256": "9727c7626492587c39170b86657ba3294783316e9e36cef694b8fd06499827f0",
-      "notes": "NAS-indexed source file with SHA256 receipt."
+      "notes": "Internal source file with SHA256 receipt."
     }
   ]
 }

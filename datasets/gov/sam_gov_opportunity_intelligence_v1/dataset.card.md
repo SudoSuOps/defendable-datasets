@@ -30,6 +30,6 @@ Not a live SAM.gov feed or procurement compliance system.
 
 ## Files
 
-- grants_train_jsonl: nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/grants/train.jsonl (19703 records, sha256 35f5d2aeb494814646654d1fd11d38a95d06a5950887f9ffa54aaf6f958f4c17)
+- grants_train_jsonl: defendable-storage://sam_gov_opportunity_intelligence_v1/grants_train_jsonl (19703 records, sha256 35f5d2aeb494814646654d1fd11d38a95d06a5950887f9ffa54aaf6f958f4c17)
 
 Doctrine: No proof, no honey.
