@@ -68,12 +68,16 @@ export function PackWorkspace() {
         </div>
         <Panel className="rounded-md">
           <h2 className="font-semibold text-white">Export Options</h2>
+          <p className="mt-2 text-sm leading-6 text-slate-400">
+            Pack selections persist in this browser. Exports are generated entirely client-side.
+          </p>
           <div className="mt-4 grid gap-2">
             {exports.map((kind) => (
               <button
                 key={kind}
                 onClick={() => downloadText(kind, renderPackExport(manifest, kind), kind.endsWith(".json") ? "application/json" : "text/markdown")}
-                className="inline-flex items-center justify-between rounded-md border border-white/10 px-3 py-2 text-sm hover:bg-white/10"
+                disabled={!datasets.length}
+                className="inline-flex items-center justify-between rounded-md border border-white/10 px-3 py-2 text-sm hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-45"
               >
                 {kind}
                 <Download className="size-4" />
@@ -83,6 +87,7 @@ export function PackWorkspace() {
           <h3 className="mt-6 text-sm font-semibold text-white">Warnings</h3>
           <ul className="mt-3 space-y-2 text-sm text-amber-100">
             {manifest.warnings.map((warning) => <li key={warning}>{warning}</li>)}
+            {!manifest.warnings.length ? <li className="text-emerald-100">No pack warnings generated.</li> : null}
           </ul>
         </Panel>
       </div>

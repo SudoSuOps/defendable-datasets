@@ -5,6 +5,8 @@ import { ButtonLink, Panel } from "@/components/ui";
 export default function Home() {
   const records = datasets.reduce((sum, dataset) => sum + dataset.record_count, 0);
   const size = datasets.reduce((sum, dataset) => sum + dataset.size_bytes, 0);
+  const nasBacked = datasets.filter((dataset) => dataset.external_locations?.length).length;
+  const verified = datasets.filter((dataset) => dataset.status === "verified").length;
 
   return (
     <main>
@@ -36,10 +38,30 @@ export default function Home() {
 
       <section className="px-4 pb-12 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-4 md:grid-cols-4">
-          <Stat icon={Database} label="Demo datasets" value={datasets.length.toString()} />
+          <Stat icon={Database} label="Indexed datasets" value={datasets.length.toString()} />
           <Stat icon={GitBranch} label="Seed domains" value={domains.length.toString()} />
-          <Stat icon={FileCheck2} label="Registry records" value={formatNumber(records)} />
-          <Stat icon={Package} label="Estimated size" value={formatBytes(size)} />
+          <Stat icon={FileCheck2} label="Verified entries" value={verified.toString()} />
+          <Stat icon={Package} label="NAS-backed assets" value={nasBacked.toString()} />
+        </div>
+      </section>
+
+      <section className="px-4 pb-12 sm:px-6 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-4 lg:grid-cols-[1fr_1fr_1fr]">
+          <Panel className="rounded-md">
+            <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">Registry mass</div>
+            <div className="mt-3 text-3xl font-semibold text-white">{formatBytes(size)}</div>
+            <p className="mt-2 text-sm text-slate-400">Metadata-indexed local and NAS-backed assets ready for receipt hardening.</p>
+          </Panel>
+          <Panel className="rounded-md">
+            <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">Record count</div>
+            <div className="mt-3 text-3xl font-semibold text-white">{formatNumber(records)}</div>
+            <p className="mt-2 text-sm text-slate-400">Known records in v0 metadata; large NAS corpora are marked pending until counted.</p>
+          </Panel>
+          <Panel className="rounded-md">
+            <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">Live domain</div>
+            <div className="mt-3 text-3xl font-semibold text-white">defendabledatasets.com</div>
+            <p className="mt-2 text-sm text-slate-400">Cloudflare Pages static deploy with SSL enabled.</p>
+          </Panel>
         </div>
       </section>
 
