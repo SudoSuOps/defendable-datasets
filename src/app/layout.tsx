@@ -55,7 +55,7 @@ export const metadata: Metadata = {
       "Browse, verify, compose, and export fine-tune-ready datasets for DefendableOS, DefendableCloud, GRO Ops, and builders from a living graph.",
     images: [
       {
-        url: "/og.svg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "DefendableDatasets living dataset graph",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     title: "DefendableDatasets | Open datasets with receipts",
     description:
       "Browse, verify, compose, and export fine-tune-ready datasets for DefendableOS, DefendableCloud, GRO Ops, and builders from a living graph.",
-    images: ["/og.svg"],
+    images: ["/og-image.png"],
   },
 };
 

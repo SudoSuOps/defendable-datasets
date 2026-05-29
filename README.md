@@ -4,7 +4,7 @@ Open datasets with receipts.
 
 Live: https://defendabledatasets.com
 
-![DefendableDatasets social graph preview](public/og.svg)
+![DefendableDatasets social graph preview](public/og-image.png)
 
 DefendableDatasets is the open-source dataset layer for the DefendableCloud / DefendableOS ecosystem. It is a static-first dataset registry, graph browser, selector, verifier, access surface, and export system for AI builders.
 

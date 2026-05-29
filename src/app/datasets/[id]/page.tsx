@@ -23,13 +23,13 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       title: dataset.title,
       description: dataset.description,
       url: `https://defendabledatasets.com/datasets/${dataset.id}`,
-      images: ["/og.svg"],
+      images: ["/og-image.png"],
     },
     twitter: {
       card: "summary_large_image",
       title: dataset.title,
       description: dataset.description,
-      images: ["/og.svg"],
+      images: ["/og-image.png"],
     },
   };
 }
