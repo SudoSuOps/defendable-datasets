@@ -5,5 +5,12 @@
   "card": "dataset.card.md",
   "samples": "samples/",
   "receipts": "receipts/",
-  "splits": "splits/"
+  "splits": "splits/",
+  "external_sources": [
+    {
+      "label": "NAS OpenAlex GPU compute corpus",
+      "mounted_path": "/mnt/swarm/swarm-and-bee-datasets/openalex/gpu_compute_2022_2026.jsonl",
+      "size_bytes": 304209452
+    }
+  ]
 }

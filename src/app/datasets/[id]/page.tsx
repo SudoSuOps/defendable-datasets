@@ -88,6 +88,23 @@ export default async function DatasetDetailPage({ params }: { params: Promise<{ 
             </tbody>
           </table>
         </div>
+        {dataset.external_locations?.length ? (
+          <div className="mt-5">
+            <h3 className="text-sm font-semibold text-white">External Storage Locations</h3>
+            <div className="mt-3 grid gap-3">
+              {dataset.external_locations.map((location) => (
+                <div key={location.uri} className="rounded-md border border-white/10 bg-white/[.04] p-3 text-sm text-slate-300">
+                  <div className="font-semibold text-white">{location.label}</div>
+                  <div className="mt-1 font-mono text-xs text-amber-100">{location.uri}</div>
+                  {location.mounted_path ? <div className="mt-1 font-mono text-xs text-slate-400">{location.mounted_path}</div> : null}
+                  {location.size_bytes ? <div className="mt-1">{formatBytes(location.size_bytes)}</div> : null}
+                  {location.sha256 ? <div className="mt-1 font-mono text-xs text-slate-400">{location.sha256}</div> : null}
+                  {location.notes ? <div className="mt-1">{location.notes}</div> : null}
+                </div>
+              ))}
+            </div>
+          </div>
+        ) : null}
         <div className="mt-4 grid gap-3">
           {datasetReceipts.length ? datasetReceipts.map((receipt) => (
             <div key={receipt.id} className="rounded-md border border-white/10 bg-white/[.04] p-3 text-sm text-slate-300">

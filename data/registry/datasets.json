@@ -27,6 +27,10 @@
       { "id": "cre_train_jsonl", "path": "datasets/cre/cre_underwriting_royal_jelly_v1/train.jsonl", "format": "jsonl", "size_bytes": 12582912, "sha256": "sha256:demo-cre-train", "record_count": 1800, "split": "train", "downloadable": false },
       { "id": "cre_validation_csv", "path": "datasets/cre/cre_underwriting_royal_jelly_v1/validation.csv", "format": "csv", "size_bytes": 6291456, "sha256": "sha256:demo-cre-validation", "record_count": 600, "split": "validation", "downloadable": false }
     ],
+    "external_locations": [
+      { "label": "NAS canonical CRE dedup JSONL", "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/cre/swarmcre_canonical_dedup.jsonl", "mounted_path": "/mnt/swarm/swarm-and-bee-datasets/cre/swarmcre_canonical_dedup.jsonl", "size_bytes": 1334445999, "sha256": "15adfccc3d3b9c38e30059bb6bd2da2006ec6740ea8faad135b9438eede63ec6", "notes": "Real NAS-backed source; not committed because it is large." },
+      { "label": "NAS stamped CRE JSONL", "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/cre/cre_honey_stamped.jsonl", "mounted_path": "/mnt/swarm/swarm-and-bee-datasets/cre/cre_honey_stamped.jsonl", "size_bytes": 2862821268, "notes": "Large stamped source on NAS." }
+    ],
     "hashes": ["sha256:demo-cre-train", "sha256:demo-cre-validation"],
     "receipts": ["receipt-cre-underwriting-demo"],
     "tags": ["cre", "underwriting", "rent-roll", "noi", "demo"],
@@ -62,6 +66,9 @@
     "quality_score": 78,
     "validation": { "status": "pending", "summary": "Demo hash placeholders only." },
     "files": [{ "id": "gpu_train_jsonl", "path": "datasets/compute/compute_gpu_market_comps_v1/train.jsonl", "format": "jsonl", "size_bytes": 50331648, "sha256": "sha256:demo-gpu-train", "record_count": 5100, "split": "full", "downloadable": false }],
+    "external_locations": [
+      { "label": "NAS OpenAlex GPU compute corpus", "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/openalex/gpu_compute_2022_2026.jsonl", "mounted_path": "/mnt/swarm/swarm-and-bee-datasets/openalex/gpu_compute_2022_2026.jsonl", "size_bytes": 304209452, "notes": "OpenAlex-derived compute corpus on NAS; license and source receipts should be reviewed before public redistribution." }
+    ],
     "hashes": ["sha256:demo-gpu-train"],
     "receipts": ["receipt-gpu-comps-demo"],
     "tags": ["gpu", "compute", "valuation", "market-comps"],
@@ -95,6 +102,9 @@
     "quality_score": 70,
     "validation": { "status": "pending", "summary": "Requires PHI-safety and source validation before production use." },
     "files": [{ "id": "billing_full_jsonl", "path": "datasets/medical/medical_billing_appeals_v1/full.jsonl", "format": "jsonl", "size_bytes": 14680064, "sha256": "sha256:demo-billing-full", "record_count": 1800, "split": "full", "downloadable": false }],
+    "external_locations": [
+      { "label": "NAS medical gold corpus", "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/medical/MASTER_GOLD.jsonl", "mounted_path": "/mnt/swarm/swarm-and-bee-datasets/medical/MASTER_GOLD.jsonl", "size_bytes": 837134357, "notes": "Real NAS-backed medical corpus; PHI and license review required before redistribution." }
+    ],
     "hashes": ["sha256:demo-billing-full"],
     "receipts": ["receipt-billing-demo"],
     "tags": ["medical-billing", "appeals", "denials", "no-phi"],
@@ -128,6 +138,9 @@
     "quality_score": 86,
     "validation": { "status": "passed", "summary": "Demo schema validates and includes placeholder SHA256 receipts." },
     "files": [{ "id": "fcra_train_jsonl", "path": "datasets/credit/fcra_credit_dispute_letters_v1/train.jsonl", "format": "jsonl", "size_bytes": 10485760, "sha256": "sha256:demo-fcra-train", "record_count": 3200, "split": "train", "downloadable": false }],
+    "external_locations": [
+      { "label": "NAS CreditSniper dispute letters", "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/finance/swarm_cooks_creditsniper_cook__dispute_letters.jsonl", "mounted_path": "/mnt/swarm/swarm-and-bee-datasets/finance/swarm_cooks_creditsniper_cook__dispute_letters.jsonl", "size_bytes": 185802801, "notes": "Real NAS-backed credit dispute corpus; license and compliance review required before public redistribution." }
+    ],
     "hashes": ["sha256:demo-fcra-train"],
     "receipts": ["receipt-fcra-demo"],
     "tags": ["fcra", "credit", "dispute", "letters"],
@@ -194,6 +207,9 @@
     "quality_score": 84,
     "validation": { "status": "passed", "summary": "Template metadata validates." },
     "files": [{ "id": "legal_templates_md", "path": "datasets/legal/legal_letter_templates_v1/templates.md", "format": "markdown", "size_bytes": 9437184, "sha256": "sha256:demo-legal-md", "record_count": 2600, "split": "full", "downloadable": false }],
+    "external_locations": [
+      { "label": "NAS legal consumer corpus", "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/legal/legal_consumer_all.jsonl", "mounted_path": "/mnt/swarm/swarm-and-bee-datasets/legal/legal_consumer_all.jsonl", "size_bytes": 109794304, "notes": "Real NAS-backed legal consumer corpus; review license and jurisdiction disclaimers before public redistribution." }
+    ],
     "hashes": ["sha256:demo-legal-md"],
     "receipts": ["receipt-legal-demo"],
     "tags": ["letters", "templates", "legal", "drafting"],
@@ -227,6 +243,9 @@
     "quality_score": 73,
     "validation": { "status": "pending", "summary": "Needs real site source receipts before verification." },
     "files": [{ "id": "energy_full_jsonl", "path": "datasets/energy/energy_site_assessment_v1/full.jsonl", "format": "jsonl", "size_bytes": 11534336, "sha256": "sha256:demo-energy-full", "record_count": 1600, "split": "full", "downloadable": false }],
+    "external_locations": [
+      { "label": "NAS energy stream corpus", "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/capital-markets/stream_energy.jsonl", "mounted_path": "/mnt/swarm/swarm-and-bee-datasets/capital-markets/stream_energy.jsonl", "size_bytes": 169376617, "notes": "Real NAS-backed energy stream source." }
+    ],
     "hashes": ["sha256:demo-energy-full"],
     "receipts": ["receipt-energy-demo"],
     "tags": ["energy", "site-selection", "diligence"],
@@ -326,6 +345,10 @@
     "quality_score": 90,
     "validation": { "status": "passed", "summary": "Demo registry entry has complete metadata and hash placeholders." },
     "files": [{ "id": "agent_pairs_train_jsonl", "path": "datasets/general/general_agent_instruction_pairs_v1/train.jsonl", "format": "jsonl", "size_bytes": 73400320, "sha256": "sha256:demo-agent-train", "record_count": 12000, "split": "train", "downloadable": false }],
+    "external_locations": [
+      { "label": "NAS agent training corpus", "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/bee-hive/agent_train_v1.jsonl", "mounted_path": "/mnt/swarm/swarm-and-bee-datasets/bee-hive/agent_train_v1.jsonl", "size_bytes": 6824309, "sha256": "8b00646bce0faf1bebf6eab82c89b778356b6fb220cdfb5fece48a6c6e1c0af9", "notes": "Real NAS-backed agent dataset. Lightweight enough to hash during inspection." },
+      { "label": "NAS instruction following corpus", "uri": "nas://192.168.0.102/volume1/swarm/swarm-and-bee-datasets/bee-hive/instruction_following.jsonl", "mounted_path": "/mnt/swarm/swarm-and-bee-datasets/bee-hive/instruction_following.jsonl", "size_bytes": 2362237244, "notes": "Large instruction-following corpus on NAS; hash separately before publishing." }
+    ],
     "hashes": ["sha256:demo-agent-train"],
     "receipts": ["receipt-demo-policy"],
     "tags": ["instruction-tuning", "agents", "tool-use", "public-good"],

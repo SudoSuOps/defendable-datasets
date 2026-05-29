@@ -5,5 +5,18 @@
   "card": "dataset.card.md",
   "samples": "samples/",
   "receipts": "receipts/",
-  "splits": "splits/"
+  "splits": "splits/",
+  "external_sources": [
+    {
+      "label": "NAS canonical CRE dedup JSONL",
+      "mounted_path": "/mnt/swarm/swarm-and-bee-datasets/cre/swarmcre_canonical_dedup.jsonl",
+      "size_bytes": 1334445999,
+      "sha256": "15adfccc3d3b9c38e30059bb6bd2da2006ec6740ea8faad135b9438eede63ec6"
+    },
+    {
+      "label": "NAS stamped CRE JSONL",
+      "mounted_path": "/mnt/swarm/swarm-and-bee-datasets/cre/cre_honey_stamped.jsonl",
+      "size_bytes": 2862821268
+    }
+  ]
 }

@@ -1,1 +1,21 @@
-{ "id": "general_agent_instruction_pairs_v1", "status": "demo", "card": "dataset.card.md", "samples": "samples/", "receipts": "receipts/", "splits": "splits/" }
+{
+  "id": "general_agent_instruction_pairs_v1",
+  "status": "demo",
+  "card": "dataset.card.md",
+  "samples": "samples/",
+  "receipts": "receipts/",
+  "splits": "splits/",
+  "external_sources": [
+    {
+      "label": "NAS agent training corpus",
+      "mounted_path": "/mnt/swarm/swarm-and-bee-datasets/bee-hive/agent_train_v1.jsonl",
+      "size_bytes": 6824309,
+      "sha256": "8b00646bce0faf1bebf6eab82c89b778356b6fb220cdfb5fece48a6c6e1c0af9"
+    },
+    {
+      "label": "NAS instruction following corpus",
+      "mounted_path": "/mnt/swarm/swarm-and-bee-datasets/bee-hive/instruction_following.jsonl",
+      "size_bytes": 2362237244
+    }
+  ]
+}

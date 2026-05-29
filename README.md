@@ -50,6 +50,14 @@ Dataset asset packages live under `/datasets/[domain]/[dataset_id]` with:
 
 The current seed entries are demo metadata unless real split files and matching receipts are added.
 
+Some entries include `external_locations` pointing at the mounted Synology NAS:
+
+```text
+/mnt/swarm/swarm-and-bee-datasets
+```
+
+Those paths document where the real source assets live without committing large or compliance-sensitive files into git.
+
 ## Add a Dataset
 
 1. Add the metadata entry to `/data/registry/datasets.json`.

@@ -28,6 +28,7 @@ Required fields:
 - `quality_score`
 - `validation`
 - `files`
+- `external_locations`
 - `hashes`
 - `receipts`
 - `tags`
@@ -46,6 +47,15 @@ File object:
 - `record_count`
 - `split`: `train`, `validation`, `test`, or `full`
 - `downloadable`
+
+External location object:
+
+- `label`
+- `uri`
+- `mounted_path`
+- `size_bytes`
+- `sha256`
+- `notes`
 
 Receipt object:
 

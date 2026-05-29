@@ -52,6 +52,14 @@ export type Dataset = {
     summary: string;
   };
   files: DatasetFile[];
+  external_locations?: {
+    label: string;
+    uri: string;
+    mounted_path?: string;
+    size_bytes?: number;
+    sha256?: string;
+    notes?: string;
+  }[];
   hashes: string[];
   receipts: string[];
   tags: string[];
