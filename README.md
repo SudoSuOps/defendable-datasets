@@ -17,6 +17,19 @@ npm run dev
 
 Open `http://localhost:3000`.
 
+## Deploy to Cloudflare Pages
+
+This app is configured for static export to Cloudflare Pages.
+
+```bash
+source ~/.nvm/nvm.sh
+nvm use 22
+npm run cf:build
+npm run cf:deploy
+```
+
+The Cloudflare project name is `defendable-datasets`, and the static output directory is `out`.
+
 ## Key Routes
 
 - `/` homepage for defendabledatasets.com

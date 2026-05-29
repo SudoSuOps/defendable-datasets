@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "cf:build": "next build",
+    "cf:deploy": "wrangler pages deploy out --project-name defendable-datasets",
     "start": "next start",
     "lint": "eslint"
   },
