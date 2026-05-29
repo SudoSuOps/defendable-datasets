@@ -170,6 +170,18 @@ Quality tiers:
 - `jelly`: questionable or repairable examples, 50-74
 - `propolis`: hard rejects or unsafe examples, below 50
 
+Edge reviewer preset:
+
+```bash
+HERMES_BASE_URL=https://your-private-agent-gateway/v1 \
+HERMES_MODEL=hf.co/LiquidAI/LFM2.5-8B-A1B-GGUF:Q4_K_M \
+defdata grade data/clean/input.deduped.jsonl \
+  --rubric configs/domains/finance.yaml \
+  --reviewer hack
+```
+
+Hack is registered as `node_hack_orin` / `worker_hack`, powered by `model_lfm2_5_8b_a1b`. The first WACC cook on edge silicon landed `JELLY` with 915 tokens, 63.9s inference time, and 17.7 steady tok/s.
+
 Run tests:
 
 ```bash

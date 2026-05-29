@@ -1,0 +1,22 @@
+domain: finance
+allowed_task_types:
+  - wacc_calculation
+  - capital_stack_analysis
+  - valuation_summary
+  - debt_service_review
+  - underwriting_review
+quality_rules:
+  min_instruction_chars: 20
+  min_output_chars: 80
+  max_output_chars: 10000
+  require_numeric_discipline: true
+  reject_placeholder_text: true
+  require_source_block: true
+red_flags:
+  - impossible_math
+  - unsupported_price_claim
+  - missing_formula
+  - missing_total_capital
+  - missing_rate
+  - unsafe_financial_advice
+

@@ -14,6 +14,7 @@ from .io import ensure_dirs, read_jsonl, write_json, write_jsonl
 from .manifest import build_manifest
 from .normalize import infer_domain, normalize_row
 from .receipts import StageTimer, write_receipt
+from .reviewers import reviewer_receipt_flags
 from .schemas import now_iso
 from .split import split_records
 from .validate import validate_records
@@ -105,12 +106,16 @@ def dedupe(input_path: Path, threshold: float = typer.Option(0.96, "--threshold"
 
 
 @app.command()
-def grade(input_path: Path, rubric: Optional[Path] = typer.Option(None, "--rubric")) -> None:
+def grade(
+    input_path: Path,
+    rubric: Optional[Path] = typer.Option(None, "--rubric"),
+    reviewer: Optional[str] = typer.Option(None, "--reviewer", help="Reviewer config name or path, for example hack."),
+) -> None:
     """Grade rows into royal_jelly, honey, jelly, and propolis."""
     timer = StageTimer()
     rows, _ = read_jsonl(input_path)
     dataset_id = str(rows[0].get("dataset_id") if rows else input_path.stem)
-    output_path, report_path, report = grade_records(input_path, rubric=rubric)
+    output_path, report_path, report = grade_records(input_path, rubric=rubric, reviewer=reviewer)
     write_receipt(
         dataset_id=dataset_id,
         stage="grade",
@@ -119,7 +124,7 @@ def grade(input_path: Path, rubric: Optional[Path] = typer.Option(None, "--rubri
         output_path=output_path,
         records_in=report["records_in"],
         records_out=report["records_out"],
-        flags=list(report["flags_summary"].keys()),
+        flags=list(report["flags_summary"].keys()) + reviewer_receipt_flags(report.get("reviewer")),
     )
     print_tiers(report["tier_counts"])
     console.print(f"[green]Graded[/green] {output_path} | report -> {report_path}")
@@ -185,4 +190,3 @@ def print_tiers(tier_counts: dict[str, int]) -> None:
 
 if __name__ == "__main__":
     app()
-

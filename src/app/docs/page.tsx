@@ -44,6 +44,7 @@ export default function DocsPage() {
         <Doc title="License Policy" text="Every dataset must declare a license and whether commercial use is allowed. Packs warn when gated research or attribution licenses are mixed into exports." />
         <Doc title="Download Quotas" text="Public metadata remains open. Production file delivery should use the Cloudflare Worker download gate with 500 successful file downloads per email per rolling 30-day window." />
         <Doc title="Quality Foundry" text="The defdata Python CLI turns raw JSONL into schema-valid, deduped, graded, split, hashed, manifest-backed packages with stage receipts. Tiers are royal_jelly, honey, jelly, and propolis." />
+        <Doc title="Hack Edge Reviewer" text="Hack is registered as node_hack_orin / worker_hack with model_lfm2_5_8b_a1b for edge-volume review. Use defdata grade --reviewer hack with the finance rubric for WACC and related referee passes." />
         <Doc title="CLI" text="Use defendable-datasets validate, defendable-datasets hash, and defendable-datasets pack to check registry integrity, generate SHA256 receipts, and create pack manifests before opening pull requests." />
       </div>
 

@@ -12,12 +12,12 @@ def workdir(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Path:
     return tmp_path
 
 
-def sample_record(record_id: str = "r1", instruction: str | None = None, output: str | None = None) -> dict:
+def sample_record(record_id: str = "r1", instruction: str | None = None, output: str | None = None, task_type: str = "investment_memo") -> dict:
     return {
         "id": record_id,
         "dataset_id": "SWARM-DATA-20260528-CRE-V1",
         "domain": "cre",
-        "task_type": "investment_memo",
+        "task_type": task_type,
         "instruction": "Write a clear investment memo for this stabilized multifamily acquisition." if instruction is None else instruction,
         "input": "NOI 1200000, purchase price 15000000, occupancy 94%.",
         "output": "The acquisition has an 8.00% going-in cap rate based on NOI of 1,200,000 and purchase price of 15,000,000. Review rent roll durability, expense load, debt service coverage, and market rent support before making a final investment decision." if output is None else output,

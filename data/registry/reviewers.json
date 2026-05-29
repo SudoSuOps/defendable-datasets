@@ -1,0 +1,31 @@
+[
+  {
+    "id": "hack",
+    "name": "Hack",
+    "node_id": "node_hack_orin",
+    "worker_id": "worker_hack",
+    "gpu_id": "gpu_hack_orin",
+    "model_id": "model_lfm2_5_8b_a1b",
+    "model": "hf.co/LiquidAI/LFM2.5-8B-A1B-GGUF:Q4_K_M",
+    "role": "edge_volume_reviewer",
+    "hardware": "Jetson Orin Nano 8GB",
+    "provider": "ollama",
+    "graph_url": "https://defendablegraph.com",
+    "routing": {
+      "base_url_env": "HERMES_BASE_URL",
+      "model_env": "HERMES_MODEL"
+    },
+    "benchmark": {
+      "target_sheet": "fin_wacc_calculation_v1",
+      "verdict": "JELLY",
+      "tokens": 915,
+      "inference_time_seconds": 63.9,
+      "steady_tokens_per_second": 17.7,
+      "referee_pass": 15,
+      "referee_warn": 10,
+      "referee_fail": 1,
+      "referee_flags": 0
+    }
+  }
+]
+
