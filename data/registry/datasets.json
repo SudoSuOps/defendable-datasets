@@ -356,5 +356,56 @@
     "example_records": [{ "instruction": "Summarize a dataset registry entry into a model card bullet list.", "output": "Include source, license, intended use, risks, formats, and receipts." }],
     "citation": "DefendableDatasets demo registry, General Agent Instruction Pairs v1.",
     "links": [{ "label": "Docs", "url": "/docs" }]
+  },
+  {
+    "id": "minechain_master_inventory_v1",
+    "title": "Minechain Master Inventory v1",
+    "slug": "minechain-master-inventory-v1",
+    "description": "NAS-backed Minechain master medical instruction corpus with gold and platinum JSONL inventories plus receipt-ready SHA256 hashes.",
+    "domain": "clinical-medicine",
+    "category": "medical-knowledge-sft",
+    "version": "1.0.0-nas",
+    "status": "draft",
+    "access": "members",
+    "license": "demo-research-only",
+    "formats": ["jsonl"],
+    "tasks": ["instruction-tuning", "qa", "summarization"],
+    "record_count": 0,
+    "size_bytes": 1001810211,
+    "language": ["en"],
+    "created_at": "2026-05-28T00:00:00.000Z",
+    "updated_at": "2026-05-28T00:00:00.000Z",
+    "source_type": "nas",
+    "provenance_summary": "Located on Synology NAS under /volume1/minechain-data/master-inventory. Contains MASTER_GOLD and MASTER_PLATINUM JSONL variants. Record counts require a non-blocking validation pass before public promotion.",
+    "intended_use": "Internal review, medical SFT pack planning, provenance indexing, and future verified dataset export.",
+    "not_intended_use": "Not for medical advice, clinical deployment, public redistribution, or training until licensing, PHI, and source provenance checks are complete.",
+    "quality_score": 76,
+    "validation": { "status": "pending", "summary": "SHA256 hashes captured for four master files; license, PHI, and record-count validation still required." },
+    "files": [
+      { "id": "minechain_master_gold_full", "path": "datasets/general/minechain_master_inventory_v1/splits/MASTER_GOLD_FULL.jsonl", "format": "jsonl", "size_bytes": 61024612, "sha256": "25e3b58238f384e58925b980c69c1b6f20d80b92f87b9cbf5a26ef35de05568c", "record_count": 0, "split": "full", "downloadable": false },
+      { "id": "minechain_master_gold_original", "path": "datasets/general/minechain_master_inventory_v1/splits/MASTER_GOLD_ORIGINAL.jsonl", "format": "jsonl", "size_bytes": 20224866, "sha256": "5662f3bf140a744372e8ba0d0993dcc7c896bebc8af0d3ed7ca3f8c47a4e6f34", "record_count": 0, "split": "full", "downloadable": false },
+      { "id": "minechain_master_platinum_full", "path": "datasets/general/minechain_master_inventory_v1/splits/MASTER_PLATINUM_FULL.jsonl", "format": "jsonl", "size_bytes": 879633553, "sha256": "5319496ee1c453f35d5618d57ed18d28a55600fb0e36c689c4fc74b7f42155c7", "record_count": 0, "split": "full", "downloadable": false },
+      { "id": "minechain_master_platinum_original", "path": "datasets/general/minechain_master_inventory_v1/splits/MASTER_PLATINUM_ORIGINAL.jsonl", "format": "jsonl", "size_bytes": 40931180, "sha256": "d6c944fc41ad844aa158070968ad5380303d32ba5f67ee2fb3e4cf0a104761e3", "record_count": 0, "split": "full", "downloadable": false }
+    ],
+    "external_locations": [
+      { "label": "NAS MASTER_GOLD_FULL", "uri": "nas://192.168.0.102/volume1/minechain-data/master-inventory/MASTER_GOLD_FULL.jsonl", "mounted_path": "/volume1/minechain-data/master-inventory/MASTER_GOLD_FULL.jsonl", "size_bytes": 61024612, "sha256": "25e3b58238f384e58925b980c69c1b6f20d80b92f87b9cbf5a26ef35de05568c", "notes": "Direct NAS path; not exposed by the /mnt/swarm NFS mount." },
+      { "label": "NAS MASTER_GOLD_ORIGINAL", "uri": "nas://192.168.0.102/volume1/minechain-data/master-inventory/MASTER_GOLD_ORIGINAL.jsonl", "mounted_path": "/volume1/minechain-data/master-inventory/MASTER_GOLD_ORIGINAL.jsonl", "size_bytes": 20224866, "sha256": "5662f3bf140a744372e8ba0d0993dcc7c896bebc8af0d3ed7ca3f8c47a4e6f34", "notes": "Direct NAS path; not exposed by the /mnt/swarm NFS mount." },
+      { "label": "NAS MASTER_PLATINUM_FULL", "uri": "nas://192.168.0.102/volume1/minechain-data/master-inventory/MASTER_PLATINUM_FULL.jsonl", "mounted_path": "/volume1/minechain-data/master-inventory/MASTER_PLATINUM_FULL.jsonl", "size_bytes": 879633553, "sha256": "5319496ee1c453f35d5618d57ed18d28a55600fb0e36c689c4fc74b7f42155c7", "notes": "Direct NAS path; not exposed by the /mnt/swarm NFS mount." },
+      { "label": "NAS MASTER_PLATINUM_ORIGINAL", "uri": "nas://192.168.0.102/volume1/minechain-data/master-inventory/MASTER_PLATINUM_ORIGINAL.jsonl", "mounted_path": "/volume1/minechain-data/master-inventory/MASTER_PLATINUM_ORIGINAL.jsonl", "size_bytes": 40931180, "sha256": "d6c944fc41ad844aa158070968ad5380303d32ba5f67ee2fb3e4cf0a104761e3", "notes": "Direct NAS path; not exposed by the /mnt/swarm NFS mount." }
+    ],
+    "hashes": [
+      "25e3b58238f384e58925b980c69c1b6f20d80b92f87b9cbf5a26ef35de05568c",
+      "5662f3bf140a744372e8ba0d0993dcc7c896bebc8af0d3ed7ca3f8c47a4e6f34",
+      "5319496ee1c453f35d5618d57ed18d28a55600fb0e36c689c4fc74b7f42155c7",
+      "d6c944fc41ad844aa158070968ad5380303d32ba5f67ee2fb3e4cf0a104761e3"
+    ],
+    "receipts": ["receipt-minechain-master-inventory-v1"],
+    "tags": ["minechain", "medical", "gold", "platinum", "sft", "nas"],
+    "compatible_models": ["gpt-oss", "llama", "mistral", "qwen"],
+    "example_records": [
+      { "question": "Structured medical or radiology prompt from Minechain master inventory.", "answer": "Long-form clinical reasoning answer. Full sample rows remain on NAS pending review." }
+    ],
+    "citation": "Minechain NAS master inventory, indexed by DefendableDatasets.",
+    "links": [{ "label": "Contributor workflow", "url": "/contribute" }]
   }
 ]

@@ -1,0 +1,35 @@
+{
+  "id": "minechain_master_inventory_v1",
+  "registry_path": "data/registry/datasets.json",
+  "status": "nas-indexed",
+  "card": "dataset.card.md",
+  "samples": "samples/",
+  "receipts": "receipts/",
+  "splits": "splits/",
+  "external_sources": [
+    {
+      "label": "MASTER_GOLD_FULL",
+      "mounted_path": "/volume1/minechain-data/master-inventory/MASTER_GOLD_FULL.jsonl",
+      "size_bytes": 61024612,
+      "sha256": "25e3b58238f384e58925b980c69c1b6f20d80b92f87b9cbf5a26ef35de05568c"
+    },
+    {
+      "label": "MASTER_GOLD_ORIGINAL",
+      "mounted_path": "/volume1/minechain-data/master-inventory/MASTER_GOLD_ORIGINAL.jsonl",
+      "size_bytes": 20224866,
+      "sha256": "5662f3bf140a744372e8ba0d0993dcc7c896bebc8af0d3ed7ca3f8c47a4e6f34"
+    },
+    {
+      "label": "MASTER_PLATINUM_FULL",
+      "mounted_path": "/volume1/minechain-data/master-inventory/MASTER_PLATINUM_FULL.jsonl",
+      "size_bytes": 879633553,
+      "sha256": "5319496ee1c453f35d5618d57ed18d28a55600fb0e36c689c4fc74b7f42155c7"
+    },
+    {
+      "label": "MASTER_PLATINUM_ORIGINAL",
+      "mounted_path": "/volume1/minechain-data/master-inventory/MASTER_PLATINUM_ORIGINAL.jsonl",
+      "size_bytes": 40931180,
+      "sha256": "d6c944fc41ad844aa158070968ad5380303d32ba5f67ee2fb3e4cf0a104761e3"
+    }
+  ]
+}

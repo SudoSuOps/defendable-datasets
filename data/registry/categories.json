@@ -8,5 +8,6 @@
   { "id": "site-assessment", "domain_id": "energy", "name": "Site Assessment" },
   { "id": "lead-intelligence", "domain_id": "local-services", "name": "Lead Intelligence" },
   { "id": "ops-qa", "domain_id": "mining-crypto", "name": "Operations Q&A" },
-  { "id": "agent-instructions", "domain_id": "general-instruction-tuning", "name": "Agent Instructions" }
+  { "id": "agent-instructions", "domain_id": "general-instruction-tuning", "name": "Agent Instructions" },
+  { "id": "medical-knowledge-sft", "domain_id": "clinical-medicine", "name": "Medical Knowledge SFT" }
 ]

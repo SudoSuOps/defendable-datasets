@@ -8,5 +8,6 @@
   { "id": "energy", "name": "Energy", "description": "Site assessment, infrastructure feasibility, usage profiles, and project scoring." },
   { "id": "local-services", "name": "Local Services", "description": "Local business lead data, service demand, and outreach readiness." },
   { "id": "mining-crypto", "name": "Mining / Crypto", "description": "Mining operations, facility Q&A, rig economics, and operating procedures." },
-  { "id": "general-instruction-tuning", "name": "General Instruction Tuning", "description": "Agent instructions, evaluation pairs, and broadly useful supervised fine-tuning examples." }
+  { "id": "general-instruction-tuning", "name": "General Instruction Tuning", "description": "Agent instructions, evaluation pairs, and broadly useful supervised fine-tuning examples." },
+  { "id": "clinical-medicine", "name": "Clinical Medicine", "description": "Medical knowledge, radiology, clinical reasoning, and healthcare fine-tuning corpora." }
 ]
