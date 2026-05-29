@@ -14,7 +14,11 @@ Agent instruction corpus for tool use, task decomposition, refusal boundaries, i
 
 ## Provenance
 
-Indexed from Synology NAS agent and instruction-following corpora with SHA256 and record-count receipts.
+Indexed from Synology NAS agent and instruction-following corpora with SHA256 and record-count receipts. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.
+
+## Compute Provenance
+
+Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.
 
 ## Intended Use
 

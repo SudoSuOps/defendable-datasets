@@ -10,6 +10,8 @@ DefendableDatasets is the open-source dataset layer for the DefendableCloud / De
 
 The live app lets users browse NAS-indexed and verified registry entries by domain, category, license, format, task type, quality score, source, and status; inspect dataset metadata; add datasets to a pack; and export manifests.
 
+All current DefendableDatasets corpora were curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.
+
 Doctrine: No proof, no honey.
 
 ## Run Locally
@@ -126,6 +128,53 @@ Direct binary usage:
 npx defendable-datasets validate
 npx defendable-datasets hash <file...>
 npx defendable-datasets pack <dataset-id...> [--out file.json]
+```
+
+## Quality Foundry
+
+The Python `defdata` CLI manufactures defendable, model-ready datasets with schema validation, dedupe, deterministic grading, train/val/test splits, manifests, reports, SHA256 hashes, and receipts.
+
+Install locally:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -e ".[dev]"
+```
+
+End-to-end flow:
+
+```bash
+defdata init --dataset-id SWARM-DATA-20260528-CRE-V1 --domain cre
+defdata ingest data/raw/sample_cre.jsonl --dataset-id SWARM-DATA-20260528-CRE-V1 --domain cre
+defdata validate data/staged/sample_cre.staged.jsonl
+defdata dedupe data/clean/sample_cre.valid.jsonl
+defdata grade data/clean/sample_cre.deduped.jsonl --rubric configs/domains/cre.yaml
+defdata split data/clean/sample_cre.graded.jsonl --train 0.90 --val 0.05 --test 0.05
+defdata manifest data/exports/SWARM-DATA-20260528-CRE-V1/
+defdata export --dataset-id SWARM-DATA-20260528-CRE-V1
+```
+
+Final packages include:
+
+- `train.jsonl`, `val.jsonl`, `test.jsonl`
+- `manifest.json`
+- `DATASET_CARD.md`
+- `QUALITY_REPORT.md`
+- `SHA256SUMS.txt`
+- stage receipts under `receipts/`
+
+Quality tiers:
+
+- `royal_jelly`: elite examples, 90-100
+- `honey`: approved examples, 75-89
+- `jelly`: questionable or repairable examples, 50-74
+- `propolis`: hard rejects or unsafe examples, below 50
+
+Run tests:
+
+```bash
+npm run quality:test
 ```
 
 ## Add a Dataset

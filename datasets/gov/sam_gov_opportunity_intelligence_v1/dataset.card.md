@@ -14,7 +14,11 @@ Government opportunity and grants intelligence corpus for qualification, capture
 
 ## Provenance
 
-Indexed from Synology NAS grants training corpus with SHA256 and record-count receipt.
+Indexed from Synology NAS grants training corpus with SHA256 and record-count receipt. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.
+
+## Compute Provenance
+
+Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.
 
 ## Intended Use
 

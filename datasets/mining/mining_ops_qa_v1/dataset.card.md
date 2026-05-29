@@ -14,7 +14,11 @@ Mining and blockchain operations corpus covering uptime, power, thermal constrai
 
 ## Provenance
 
-Indexed from Synology NAS blockchain stream with SHA256 and record-count receipt.
+Indexed from Synology NAS blockchain stream with SHA256 and record-count receipt. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.
+
+## Compute Provenance
+
+Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.
 
 ## Intended Use
 

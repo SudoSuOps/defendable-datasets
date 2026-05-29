@@ -14,7 +14,11 @@ Local service and market lead intelligence corpus for enrichment, categorization
 
 ## Provenance
 
-Indexed from Synology NAS marketing corpus with SHA256 and record-count receipt; access remains gated for anti-abuse controls.
+Indexed from Synology NAS marketing corpus with SHA256 and record-count receipt; access remains gated for anti-abuse controls. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.
+
+## Compute Provenance
+
+Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.
 
 ## Intended Use
 

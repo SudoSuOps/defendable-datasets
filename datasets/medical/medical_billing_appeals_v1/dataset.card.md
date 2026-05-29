@@ -14,7 +14,11 @@ Medical administrative and appeal-reasoning corpus for denial classification, bi
 
 ## Provenance
 
-Indexed from Synology NAS medical MASTER_GOLD corpus with SHA256 and record-count receipt; access remains gated for compliance review.
+Indexed from Synology NAS medical MASTER_GOLD corpus with SHA256 and record-count receipt; access remains gated for compliance review. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.
+
+## Compute Provenance
+
+Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.
 
 ## Intended Use
 

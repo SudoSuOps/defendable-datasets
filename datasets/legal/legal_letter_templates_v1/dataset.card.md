@@ -14,7 +14,11 @@ Legal and professional correspondence corpus for notices, demand letters, disput
 
 ## Provenance
 
-Indexed from Synology NAS legal consumer corpus with SHA256 and record-count receipt.
+Indexed from Synology NAS legal consumer corpus with SHA256 and record-count receipt. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.
+
+## Compute Provenance
+
+Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.
 
 ## Intended Use
 

@@ -1,0 +1,17 @@
+domain: legal_letters
+allowed_task_types:
+  - demand_letter
+  - dispute_letter
+  - notice
+  - response_template
+quality_rules:
+  min_instruction_chars: 20
+  min_output_chars: 100
+  max_output_chars: 12000
+  reject_placeholder_text: true
+  require_source_block: true
+red_flags:
+  - unsupported_legal_claim
+  - jurisdiction_error
+  - missing_disclaimer
+

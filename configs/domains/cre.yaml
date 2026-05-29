@@ -1,0 +1,24 @@
+domain: cre
+allowed_task_types:
+  - investment_memo
+  - loi
+  - lease_abstract
+  - cap_rate_analysis
+  - dscr_analysis
+  - market_summary
+  - underwriting_review
+quality_rules:
+  min_instruction_chars: 20
+  min_output_chars: 100
+  max_output_chars: 12000
+  require_numeric_discipline: true
+  reject_placeholder_text: true
+  require_source_block: true
+red_flags:
+  - hallucinated_source
+  - impossible_math
+  - missing_noi
+  - cap_rate_formula_error
+  - unsupported_legal_claim
+  - unsafe_financial_advice
+

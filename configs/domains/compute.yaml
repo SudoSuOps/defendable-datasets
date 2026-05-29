@@ -1,0 +1,21 @@
+domain: compute
+allowed_task_types:
+  - gpu_benchmark
+  - hardware_appraisal
+  - node_inventory
+  - rental_market_analysis
+  - proof_of_compute
+quality_rules:
+  min_instruction_chars: 20
+  min_output_chars: 80
+  max_output_chars: 10000
+  require_hardware_fields: true
+  require_source_block: true
+red_flags:
+  - missing_gpu_model
+  - missing_vram
+  - fake_benchmark
+  - unsupported_price_claim
+  - no_timestamp
+  - no_hash
+

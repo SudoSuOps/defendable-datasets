@@ -14,7 +14,11 @@ Commercial real estate underwriting corpus for rent-roll normalization, NOI reas
 
 ## Provenance
 
-Indexed from Synology NAS CRE corpora under /volume1/swarm/swarm-and-bee-datasets/cre with SHA256 receipts and record counts captured from mounted JSONL sources.
+Indexed from Synology NAS CRE corpora under /volume1/swarm/swarm-and-bee-datasets/cre with SHA256 receipts and record counts captured from mounted JSONL sources. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.
+
+## Compute Provenance
+
+Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.
 
 ## Intended Use
 

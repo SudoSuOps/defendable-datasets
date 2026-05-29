@@ -27,7 +27,7 @@
     "created_at": "2026-05-28T00:00:00.000Z",
     "updated_at": "2026-05-28T00:00:00.000Z",
     "source_type": "nas",
-    "provenance_summary": "Indexed from Synology NAS CRE corpora under /volume1/swarm/swarm-and-bee-datasets/cre with SHA256 receipts and record counts captured from mounted JSONL sources.",
+    "provenance_summary": "Indexed from Synology NAS CRE corpora under /volume1/swarm/swarm-and-bee-datasets/cre with SHA256 receipts and record counts captured from mounted JSONL sources. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.",
     "intended_use": "Prototype fine-tuning and evaluation flows for CRE underwriting assistants.",
     "not_intended_use": "Not for investment advice, lending decisions, or valuation without verified source files.",
     "quality_score": 91,
@@ -87,7 +87,10 @@
       "underwriting",
       "rent-roll",
       "noi",
-      "nas-indexed"
+      "nas-indexed",
+      "sovereign-bare-metal",
+      "rtx-6000",
+      "rtx-3090"
     ],
     "compatible_models": [
       "gpt-oss",
@@ -143,7 +146,7 @@
     "created_at": "2026-05-28T00:00:00.000Z",
     "updated_at": "2026-05-28T00:00:00.000Z",
     "source_type": "nas",
-    "provenance_summary": "Indexed from OpenAlex-derived GPU compute corpus on Synology NAS with SHA256 and record-count receipt.",
+    "provenance_summary": "Indexed from OpenAlex-derived GPU compute corpus on Synology NAS with SHA256 and record-count receipt. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.",
     "intended_use": "Build assistants that compare compute assets and explain valuation factors.",
     "not_intended_use": "Not for live pricing, procurement, or financial reporting without current verified market feeds.",
     "quality_score": 88,
@@ -184,7 +187,10 @@
       "compute",
       "valuation",
       "market-comps",
-      "nas-indexed"
+      "nas-indexed",
+      "sovereign-bare-metal",
+      "rtx-6000",
+      "rtx-3090"
     ],
     "compatible_models": [
       "llama",
@@ -228,7 +234,7 @@
     "created_at": "2026-05-28T00:00:00.000Z",
     "updated_at": "2026-05-28T00:00:00.000Z",
     "source_type": "nas",
-    "provenance_summary": "Indexed from Synology NAS medical MASTER_GOLD corpus with SHA256 and record-count receipt; access remains gated for compliance review.",
+    "provenance_summary": "Indexed from Synology NAS medical MASTER_GOLD corpus with SHA256 and record-count receipt; access remains gated for compliance review. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.",
     "intended_use": "Research denial classification and appeal drafting assistants using non-PHI non-PHI examples.",
     "not_intended_use": "Not medical, legal, billing, or reimbursement advice; never use with PHI without compliance review.",
     "quality_score": 84,
@@ -269,7 +275,10 @@
       "appeals",
       "denials",
       "gated",
-      "nas-indexed"
+      "nas-indexed",
+      "sovereign-bare-metal",
+      "rtx-6000",
+      "rtx-3090"
     ],
     "compatible_models": [
       "gpt-oss",
@@ -314,7 +323,7 @@
     "created_at": "2026-05-28T00:00:00.000Z",
     "updated_at": "2026-05-28T00:00:00.000Z",
     "source_type": "nas",
-    "provenance_summary": "Indexed from Synology NAS CreditSniper dispute-letter corpus with SHA256 and record-count receipt.",
+    "provenance_summary": "Indexed from Synology NAS CreditSniper dispute-letter corpus with SHA256 and record-count receipt. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.",
     "intended_use": "Train assistants to classify dispute reasons and generate editable letter drafts.",
     "not_intended_use": "Not legal advice or a substitute for consumer-law review.",
     "quality_score": 90,
@@ -355,7 +364,10 @@
       "credit",
       "dispute",
       "letters",
-      "nas-indexed"
+      "nas-indexed",
+      "sovereign-bare-metal",
+      "rtx-6000",
+      "rtx-3090"
     ],
     "compatible_models": [
       "gpt-oss",
@@ -400,7 +412,7 @@
     "created_at": "2026-05-28T00:00:00.000Z",
     "updated_at": "2026-05-28T00:00:00.000Z",
     "source_type": "nas",
-    "provenance_summary": "Indexed from Synology NAS grants training corpus with SHA256 and record-count receipt.",
+    "provenance_summary": "Indexed from Synology NAS grants training corpus with SHA256 and record-count receipt. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.",
     "intended_use": "Prototype opportunity triage, summarization, and qualification workflows.",
     "not_intended_use": "Not a live SAM.gov feed or procurement compliance system.",
     "quality_score": 86,
@@ -431,7 +443,10 @@
       "government-contracting",
       "grants",
       "capture",
-      "nas-indexed"
+      "nas-indexed",
+      "sovereign-bare-metal",
+      "rtx-6000",
+      "rtx-3090"
     ],
     "compatible_models": [
       "llama",
@@ -487,7 +502,7 @@
     "created_at": "2026-05-28T00:00:00.000Z",
     "updated_at": "2026-05-28T00:00:00.000Z",
     "source_type": "nas",
-    "provenance_summary": "Indexed from Synology NAS legal consumer corpus with SHA256 and record-count receipt.",
+    "provenance_summary": "Indexed from Synology NAS legal consumer corpus with SHA256 and record-count receipt. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.",
     "intended_use": "Generate editable professional letter drafts with clear disclaimers.",
     "not_intended_use": "Not legal advice or jurisdiction-specific counsel.",
     "quality_score": 89,
@@ -528,7 +543,10 @@
       "templates",
       "legal",
       "drafting",
-      "nas-indexed"
+      "nas-indexed",
+      "sovereign-bare-metal",
+      "rtx-6000",
+      "rtx-3090"
     ],
     "compatible_models": [
       "gpt-oss",
@@ -577,7 +595,7 @@
     "created_at": "2026-05-28T00:00:00.000Z",
     "updated_at": "2026-05-28T00:00:00.000Z",
     "source_type": "nas",
-    "provenance_summary": "Indexed from Synology NAS capital-markets energy stream with SHA256 and record-count receipt.",
+    "provenance_summary": "Indexed from Synology NAS capital-markets energy stream with SHA256 and record-count receipt. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.",
     "intended_use": "Prototype assistants that score energy sites and identify missing diligence fields.",
     "not_intended_use": "Not engineering advice or an interconnection study.",
     "quality_score": 87,
@@ -617,7 +635,10 @@
       "energy",
       "site-selection",
       "diligence",
-      "nas-indexed"
+      "nas-indexed",
+      "sovereign-bare-metal",
+      "rtx-6000",
+      "rtx-3090"
     ],
     "compatible_models": [
       "llama",
@@ -666,7 +687,7 @@
     "created_at": "2026-05-28T00:00:00.000Z",
     "updated_at": "2026-05-28T00:00:00.000Z",
     "source_type": "nas",
-    "provenance_summary": "Indexed from Synology NAS marketing corpus with SHA256 and record-count receipt; access remains gated for anti-abuse controls.",
+    "provenance_summary": "Indexed from Synology NAS marketing corpus with SHA256 and record-count receipt; access remains gated for anti-abuse controls. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.",
     "intended_use": "Prototype local lead scoring and deduplication flows.",
     "not_intended_use": "Not for spam, unlawful outreach, or personal data processing without compliance review.",
     "quality_score": 82,
@@ -698,7 +719,10 @@
       "jupiter",
       "enrichment",
       "gated",
-      "nas-indexed"
+      "nas-indexed",
+      "sovereign-bare-metal",
+      "rtx-6000",
+      "rtx-3090"
     ],
     "compatible_models": [
       "llama",
@@ -753,7 +777,7 @@
     "created_at": "2026-05-28T00:00:00.000Z",
     "updated_at": "2026-05-28T00:00:00.000Z",
     "source_type": "nas",
-    "provenance_summary": "Indexed from Synology NAS blockchain stream with SHA256 and record-count receipt.",
+    "provenance_summary": "Indexed from Synology NAS blockchain stream with SHA256 and record-count receipt. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.",
     "intended_use": "Prototype assistants that answer mining facility operations questions.",
     "not_intended_use": "Not safety, financial, or electrical engineering advice.",
     "quality_score": 86,
@@ -784,7 +808,10 @@
       "crypto",
       "ops",
       "qa",
-      "nas-indexed"
+      "nas-indexed",
+      "sovereign-bare-metal",
+      "rtx-6000",
+      "rtx-3090"
     ],
     "compatible_models": [
       "llama",
@@ -838,7 +865,7 @@
     "created_at": "2026-05-28T00:00:00.000Z",
     "updated_at": "2026-05-28T00:00:00.000Z",
     "source_type": "nas",
-    "provenance_summary": "Indexed from Synology NAS agent and instruction-following corpora with SHA256 and record-count receipts.",
+    "provenance_summary": "Indexed from Synology NAS agent and instruction-following corpora with SHA256 and record-count receipts. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.",
     "intended_use": "Fine-tune and evaluate assistant behavior for structured dataset workflows.",
     "not_intended_use": "Not a complete safety policy or benchmark replacement.",
     "quality_score": 93,
@@ -898,7 +925,10 @@
       "agents",
       "tool-use",
       "public-good",
-      "nas-indexed"
+      "nas-indexed",
+      "sovereign-bare-metal",
+      "rtx-6000",
+      "rtx-3090"
     ],
     "compatible_models": [
       "gpt-oss",
@@ -947,7 +977,7 @@
     "created_at": "2026-05-28T00:00:00.000Z",
     "updated_at": "2026-05-28T00:00:00.000Z",
     "source_type": "nas",
-    "provenance_summary": "Located on Synology NAS under /volume1/minechain-data/master-inventory. MASTER_GOLD and MASTER_PLATINUM JSONL variants are indexed with SHA256 hashes and record counts.",
+    "provenance_summary": "Located on Synology NAS under /volume1/minechain-data/master-inventory. MASTER_GOLD and MASTER_PLATINUM JSONL variants are indexed with SHA256 hashes and record counts. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.",
     "intended_use": "Internal review, medical SFT pack planning, provenance indexing, and future verified dataset export.",
     "not_intended_use": "Not for medical advice, clinical deployment, public redistribution, or training until licensing, PHI, and source provenance checks are complete.",
     "quality_score": 86,
@@ -1047,7 +1077,10 @@
       "platinum",
       "sft",
       "gated",
-      "nas-indexed"
+      "nas-indexed",
+      "sovereign-bare-metal",
+      "rtx-6000",
+      "rtx-3090"
     ],
     "compatible_models": [
       "gpt-oss",

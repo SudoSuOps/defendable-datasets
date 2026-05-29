@@ -1,0 +1,7 @@
+quality_rules:
+  reject_placeholder_text: true
+  require_source_block: true
+  min_instruction_chars: 20
+  min_output_chars: 80
+  max_output_chars: 12000
+

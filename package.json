@@ -13,6 +13,7 @@
     "registry:validate": "node bin/defendable-datasets.mjs validate",
     "registry:pack": "node bin/defendable-datasets.mjs pack",
     "registry:hash": "node bin/defendable-datasets.mjs hash",
+    "quality:test": "python3 -m pytest",
     "start": "next start",
     "lint": "eslint"
   },

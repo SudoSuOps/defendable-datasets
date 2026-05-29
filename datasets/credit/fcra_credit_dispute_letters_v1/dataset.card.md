@@ -14,7 +14,11 @@ FCRA dispute letter and credit repair workflow corpus for issue taxonomy, bureau
 
 ## Provenance
 
-Indexed from Synology NAS CreditSniper dispute-letter corpus with SHA256 and record-count receipt.
+Indexed from Synology NAS CreditSniper dispute-letter corpus with SHA256 and record-count receipt. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.
+
+## Compute Provenance
+
+Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.
 
 ## Intended Use
 

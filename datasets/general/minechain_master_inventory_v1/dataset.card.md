@@ -14,7 +14,11 @@ Minechain master medical instruction corpus with gold and platinum JSONL invento
 
 ## Provenance
 
-Located on Synology NAS under /volume1/minechain-data/master-inventory. MASTER_GOLD and MASTER_PLATINUM JSONL variants are indexed with SHA256 hashes and record counts.
+Located on Synology NAS under /volume1/minechain-data/master-inventory. MASTER_GOLD and MASTER_PLATINUM JSONL variants are indexed with SHA256 hashes and record counts. Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.
+
+## Compute Provenance
+
+Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.
 
 ## Intended Use
 

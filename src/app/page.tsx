@@ -23,6 +23,7 @@ export default function Home() {
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
               Browse, verify, compose, and export fine-tune-ready datasets from a living graph.
               Community datasets organized by domain, category, license, format, and proof.
+              Curated on sovereign bare-metal RTX 6000 fleet and RTX 3090 systems.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <ButtonLink href="/graph">Open Dataset Graph</ButtonLink>

@@ -31,7 +31,8 @@ export default function DocsPage() {
       <h1 className="mt-4 text-4xl font-semibold text-white">DefendableDatasets docs</h1>
       <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-300">
         DefendableDatasets is a static-first dataset store, registry, graph browser, selector,
-        verifier, and export system for AI builders.
+        verifier, and export system for AI builders. Current corpora were curated on sovereign
+        bare-metal RTX 6000 fleet and RTX 3090 systems.
       </p>
 
       <div className="mt-8 grid gap-6">
@@ -42,6 +43,7 @@ export default function DocsPage() {
         <Doc title="How Receipts Work" text="Receipts are proof objects that describe hashes, validation runs, license checks, provenance summaries, or future Merkle proofs. Verified entries require receipt records and file-level SHA256 hashes." />
         <Doc title="License Policy" text="Every dataset must declare a license and whether commercial use is allowed. Packs warn when gated research or attribution licenses are mixed into exports." />
         <Doc title="Download Quotas" text="Public metadata remains open. Production file delivery should use the Cloudflare Worker download gate with 500 successful file downloads per email per rolling 30-day window." />
+        <Doc title="Quality Foundry" text="The defdata Python CLI turns raw JSONL into schema-valid, deduped, graded, split, hashed, manifest-backed packages with stage receipts. Tiers are royal_jelly, honey, jelly, and propolis." />
         <Doc title="CLI" text="Use defendable-datasets validate, defendable-datasets hash, and defendable-datasets pack to check registry integrity, generate SHA256 receipts, and create pack manifests before opening pull requests." />
       </div>
 

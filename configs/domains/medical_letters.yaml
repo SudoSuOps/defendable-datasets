@@ -1,0 +1,18 @@
+domain: medical_letters
+allowed_task_types:
+  - appeal_letter
+  - denial_classification
+  - payer_response
+  - medical_necessity_summary
+quality_rules:
+  min_instruction_chars: 20
+  min_output_chars: 100
+  max_output_chars: 12000
+  reject_placeholder_text: true
+  require_source_block: true
+red_flags:
+  - phi_risk
+  - unsafe_medical_advice
+  - unsupported_clinical_claim
+  - missing_disclaimer
+
